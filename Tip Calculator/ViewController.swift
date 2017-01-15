@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var tipSelector: UISegmentedControl!
     @IBOutlet weak var tipAmountField: UITextField!
     @IBOutlet weak var totalField: UITextField!
+    @IBOutlet weak var numberOfPeopleTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +29,7 @@ class ViewController: UIViewController {
         guard let billAmount = Double(billAmountField.text!) else {
             //show error
             billAmountField.text = ""
+            numberOfPeopleTextField.text = ""
             tipAmountField.text = ""
             totalField.text = ""
             return
@@ -47,9 +49,9 @@ class ViewController: UIViewController {
         }
         
         let roundedBillAmount = round(100*billAmount)/100
-        let tipAmount = roundedBillAmount * tipPercentage
-        let roundedTipAmount = round(100*tipAmount)/100
-        let totalAmount = roundedBillAmount + roundedTipAmount
+        let tipAmount = (roundedBillAmount * tipPercentage)
+        let roundedTipAmount = (round(100*tipAmount)/100)
+        let totalAmount = (roundedBillAmount + roundedTipAmount) 
         
         if (!billAmountField.isEditing) {
             billAmountField.text = String(format: "%.2f", roundedBillAmount)
