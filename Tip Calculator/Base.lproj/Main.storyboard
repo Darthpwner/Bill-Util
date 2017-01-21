@@ -208,6 +208,7 @@
                     </view>
                     <connections>
                         <outlet property="billAmountField" destination="mnP-tF-6ee" id="zRb-Bh-uW0"/>
+                        <outlet property="calculateButton" destination="q4C-Gv-Miw" id="jKu-Bb-OeV"/>
                         <outlet property="numberOfPeopleTextField" destination="x2l-ED-pIi" id="N89-XG-vED"/>
                         <outlet property="tipAmountField" destination="f0o-4i-pWe" id="ene-BA-9nX"/>
                         <outlet property="tipAmountPerPersonField" destination="arP-ew-B9H" id="wBI-Yc-cUZ"/>
