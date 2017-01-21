@@ -59,9 +59,7 @@ class ViewController: UIViewController {
         let roundedTipAmount = round(100*tipAmount)/100
         let totalAmount = roundedBillAmount + roundedTipAmount
         
-        if (!billAmountField.isEditing) {
-            billAmountField.text = String(format: "$%.2f", roundedBillAmount)
-        }
+        billAmountField.text = String(format: "$%.2f", roundedBillAmount)
         tipAmountField.text = String(format: "$%.2f", roundedTipAmount)
         totalField.text = String(format: "$%.2f", totalAmount)
     }

@@ -43,7 +43,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="mnP-tF-6ee" userLabel="Bill Amount Text Field">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" adjustsFontSizeToFit="NO" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="mnP-tF-6ee" userLabel="Bill Amount Text Field">
                                                 <rect key="frame" x="106.66666666666669" y="0.0" width="85" height="30.000000000000028"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="85" id="cCl-kb-HKJ"/>
@@ -63,7 +63,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="x2l-ED-pIi" userLabel="Bill Amount Text Field">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="x2l-ED-pIi" userLabel="Bill Amount Text Field">
                                                 <rect key="frame" x="91.666666666666671" y="0.0" width="84.999999999999957" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="85" id="pYI-er-S5I"/>
