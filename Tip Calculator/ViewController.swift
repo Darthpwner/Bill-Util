@@ -11,7 +11,12 @@ import UIKit
 class ViewController: UIViewController {
     @IBOutlet weak var billAmountField: UITextField!
     @IBOutlet weak var numberOfPeopleTextField: UITextField!
-    @IBOutlet weak var tipSelector: UISegmentedControl!
+    
+    @IBOutlet weak var tipPercentageLabel: UILabel!
+    @IBOutlet weak var tipPercentageProgressView: UIProgressView!
+    @IBOutlet weak var setTipPercentageButton: UIButton!
+    
+    
     @IBOutlet weak var tipAmountField: UITextField!
     @IBOutlet weak var totalField: UITextField!
     @IBOutlet weak var tipAmountPerPersonField: UITextField!
@@ -46,6 +51,11 @@ class ViewController: UIViewController {
             //show error
             billAmountField.text = ""
             numberOfPeopleTextField.text = ""
+            
+            tipPercentageLabel.text = "0"
+
+            tipPercentageProgressView.progress = 0
+            
             tipAmountField.text = ""
             totalField.text = ""
             tipAmountPerPersonField.text = ""
@@ -61,17 +71,6 @@ class ViewController: UIViewController {
         }
         
         var tipPercentage = 0.0
-        
-        switch tipSelector.selectedSegmentIndex {
-        case 0:
-            tipPercentage = 0.15
-        case 1:
-            tipPercentage = 0.18
-        case 2:
-            tipPercentage = 0.20
-        default:
-            break
-        }
         
         let roundedBillAmount = round(100*billAmount)/100
         let tipAmount = (roundedBillAmount * tipPercentage)
