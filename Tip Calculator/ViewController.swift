@@ -23,7 +23,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var totalPerPersonField: UITextField!
 
     @IBOutlet weak var calculateButton: UIButton!
-//    var toggle = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -91,15 +90,8 @@ class ViewController: UIViewController {
         totalField.text = String(format: "$%.2f", totalAmount)
         tipAmountPerPersonField.text = String(format: "$%.2f", roundedTipAmountPerPerson)
         totalPerPersonField.text = String(format: "$%.2f", totalAmountPerPerson)
-        
-//        if(toggle == 0) {
-//            toggle = 1
-//            calculateButton.setTitle("Clear", for: .normal)
-//        } else {
-//            toggle = 0
-//            calculateButton.setTitle("Calculate", for: .normal)
-//        }
     }
 
 }
+
 
