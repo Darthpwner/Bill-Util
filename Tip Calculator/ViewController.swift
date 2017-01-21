@@ -10,10 +10,12 @@ import UIKit
 
 class ViewController: UIViewController {
     @IBOutlet weak var billAmountField: UITextField!
+    @IBOutlet weak var numberOfPeopleTextField: UITextField!
     @IBOutlet weak var tipSelector: UISegmentedControl!
     @IBOutlet weak var tipAmountField: UITextField!
+    @IBOutlet weak var tipAmountPerPersonField: UITextField!
     @IBOutlet weak var totalField: UITextField!
-    @IBOutlet weak var numberOfPeopleTextField: UITextField!
+    @IBOutlet weak var totalPerPersonField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,15 +31,18 @@ class ViewController: UIViewController {
         guard let billAmount = Double(billAmountField.text!) else {
             //show error
             billAmountField.text = ""
-//            numberOfPeopleTextField.text = ""
+            numberOfPeopleTextField.text = ""
             tipAmountField.text = ""
+            tipAmountPerPersonField.text = ""
             totalField.text = ""
+            totalPerPersonField.text = ""
             return
         }
         
         var numberOfPeopleAmount = Double(numberOfPeopleTextField.text!)
         
         if numberOfPeopleTextField.text == "" {
+            numberOfPeopleTextField.text = "1";
             numberOfPeopleAmount = 1
         }
         
@@ -55,13 +60,17 @@ class ViewController: UIViewController {
         }
         
         let roundedBillAmount = round(100*billAmount)/100
-        let tipAmount = (roundedBillAmount * tipPercentage) / numberOfPeopleAmount!
+        let tipAmount = (roundedBillAmount * tipPercentage)
         let roundedTipAmount = round(100*tipAmount)/100
+        let roundedTipAmountPerPerson = roundedTipAmount / numberOfPeopleAmount!
         let totalAmount = roundedBillAmount + roundedTipAmount
+        let totalAmountPerPerson = totalAmount / numberOfPeopleAmount!
         
         billAmountField.text = String(format: "$%.2f", roundedBillAmount)
         tipAmountField.text = String(format: "$%.2f", roundedTipAmount)
+        tipAmountPerPersonField.text = String(format: "$%.2f", roundedTipAmountPerPerson)
         totalField.text = String(format: "$%.2f", totalAmount)
+        totalPerPersonField.text = String(format: "$%.2f", totalAmountPerPerson)
     }
 
 }
