@@ -73,9 +73,7 @@ class ViewController: UIViewController {
             numberOfPeopleAmount = 1
         }
         
-
-        //BUG: Doesn't update tip percentage
-//        tipPercentageLabel.value(forKey: "\(tipPercentageProgressView.progress)")
+        tipPercentageLabel.text = "\(Int(tipPercentageProgressView.progress * 100))"
         let tipPercentage = Double(tipPercentageProgressView.progress)
         
         let roundedBillAmount = round(100*billAmount)/100
