@@ -423,7 +423,7 @@
 				INFOPLIST_FILE = "Tip Calculator/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "Matthew-Allen-Lin-Software.Tip-Calculator";
+				PRODUCT_BUNDLE_IDENTIFIER = "Matthew-Allen-Lin-Software.Bill-Util";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -437,7 +437,7 @@
 				INFOPLIST_FILE = "Tip Calculator/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "Matthew-Allen-Lin-Software.Tip-Calculator";
+				PRODUCT_BUNDLE_IDENTIFIER = "Matthew-Allen-Lin-Software.Bill-Util";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -520,6 +520,7 @@
 				6B53FF5F1E2AA093001DC5F1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6B53FF601E2AA093001DC5F1 /* Build configuration list for PBXNativeTarget "Tip CalculatorTests" */ = {
 			isa = XCConfigurationList;
@@ -528,6 +529,7 @@
 				6B53FF621E2AA093001DC5F1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6B53FF631E2AA093001DC5F1 /* Build configuration list for PBXNativeTarget "Tip CalculatorUITests" */ = {
 			isa = XCConfigurationList;
@@ -536,6 +538,7 @@
 				6B53FF651E2AA093001DC5F1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
