@@ -40,7 +40,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         
         //PickerView
         pickerViewHandler()
-        self.view.addSubview(tipPickerView)        
+        self.view.addSubview(tipPickerView)
     }
 
     //Calls this function when the tap is recognized.
@@ -59,8 +59,13 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         self.tipPickerView.isHidden = true
         self.tipPickerView.dataSource = self
         self.tipPickerView.delegate = self
-        self.tipPickerView.frame = CGRect(x: 100, y: 100, width: 100, height: 162)
-        self.tipPickerView.backgroundColor = UIColor.black
+        
+//        let screenSize = UIScreen.main.bounds
+//        let screenWidth = screenSize.width
+//        let screenHeight = screenSize.height
+        
+        self.tipPickerView.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height / 10)
+        self.tipPickerView.backgroundColor = UIColor.white
         self.tipPickerView.layer.borderColor = UIColor.white.cgColor
         self.tipPickerView.layer.borderWidth = 1
     }
@@ -68,7 +73,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     
     //Boilerplate PickerView Methods
     func numberOfComponents(in: UIPickerView) -> Int {
-        return 5
+        return 1
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
