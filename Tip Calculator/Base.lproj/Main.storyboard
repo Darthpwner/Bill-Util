@@ -101,6 +101,9 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vhA-ec-8qW">
                                                 <rect key="frame" x="234.33333333333334" y="0.0" width="46.666666666666657" height="16.666666666666657"/>
                                                 <state key="normal" title="Set"/>
+                                                <connections>
+                                                    <action selector="setTipPercentage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="96r-hY-HrM"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
