@@ -29,11 +29,13 @@ class ViewController: UIViewController {
         guard let billAmount = Double(billAmountField.text!) else {
             //show error
             billAmountField.text = ""
-            numberOfPeopleTextField.text = ""
+//            numberOfPeopleTextField.text = ""
             tipAmountField.text = ""
             totalField.text = ""
             return
         }
+        
+        var numberOfPeopleAmount = Double(numberOfPeopleTextField.text!)
         
         var tipPercentage = 0.0
         
@@ -49,15 +51,15 @@ class ViewController: UIViewController {
         }
         
         let roundedBillAmount = round(100*billAmount)/100
-        let tipAmount = (roundedBillAmount * tipPercentage)
-        let roundedTipAmount = (round(100*tipAmount)/100)
-        let totalAmount = (roundedBillAmount + roundedTipAmount) 
+        let tipAmount = (roundedBillAmount * tipPercentage) / numberOfPeopleAmount!
+        let roundedTipAmount = round(100*tipAmount)/100
+        let totalAmount = roundedBillAmount + roundedTipAmount
         
         if (!billAmountField.isEditing) {
-            billAmountField.text = String(format: "%.2f", roundedBillAmount)
+            billAmountField.text = String(format: "$%.2f", roundedBillAmount)
         }
-        tipAmountField.text = String(format: "%.2f", roundedTipAmount)
-        totalField.text = String(format: "%.2f", totalAmount)
+        tipAmountField.text = String(format: "$%.2f", roundedTipAmount)
+        totalField.text = String(format: "$%.2f", totalAmount)
     }
 
 }
