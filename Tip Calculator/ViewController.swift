@@ -13,8 +13,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var numberOfPeopleTextField: UITextField!
     @IBOutlet weak var tipSelector: UISegmentedControl!
     @IBOutlet weak var tipAmountField: UITextField!
-    @IBOutlet weak var tipAmountPerPersonField: UITextField!
     @IBOutlet weak var totalField: UITextField!
+    @IBOutlet weak var tipAmountPerPersonField: UITextField!
     @IBOutlet weak var totalPerPersonField: UITextField!
     
     override func viewDidLoad() {
@@ -33,8 +33,8 @@ class ViewController: UIViewController {
             billAmountField.text = ""
             numberOfPeopleTextField.text = ""
             tipAmountField.text = ""
-            tipAmountPerPersonField.text = ""
             totalField.text = ""
+            tipAmountPerPersonField.text = ""
             totalPerPersonField.text = ""
             return
         }
@@ -62,14 +62,14 @@ class ViewController: UIViewController {
         let roundedBillAmount = round(100*billAmount)/100
         let tipAmount = (roundedBillAmount * tipPercentage)
         let roundedTipAmount = round(100*tipAmount)/100
-        let roundedTipAmountPerPerson = roundedTipAmount / numberOfPeopleAmount!
         let totalAmount = roundedBillAmount + roundedTipAmount
+        let roundedTipAmountPerPerson = roundedTipAmount / numberOfPeopleAmount!
         let totalAmountPerPerson = totalAmount / numberOfPeopleAmount!
         
         billAmountField.text = String(format: "$%.2f", roundedBillAmount)
         tipAmountField.text = String(format: "$%.2f", roundedTipAmount)
-        tipAmountPerPersonField.text = String(format: "$%.2f", roundedTipAmountPerPerson)
         totalField.text = String(format: "$%.2f", totalAmount)
+        tipAmountPerPersonField.text = String(format: "$%.2f", roundedTipAmountPerPerson)
         totalPerPersonField.text = String(format: "$%.2f", totalAmountPerPerson)
     }
 
