@@ -95,7 +95,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="CIc-ZH-36i" userLabel="Tip % Progress Bar Stack View">
                                         <rect key="frame" x="0.0" y="167" width="281" height="40.333333333333314"/>
                                         <subviews>
-                                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="kl6-DV-40w">
+                                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.14999999999999999" translatesAutoresizingMaskIntoConstraints="NO" id="kl6-DV-40w">
                                                 <rect key="frame" x="0.0" y="0.0" width="219.33333333333331" height="40.333333333333314"/>
                                             </progressView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vhA-ec-8qW">
