@@ -38,7 +38,9 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
 
         view.addGestureRecognizer(tap)
         
-        
+        //PickerView
+        pickerViewHandler()
+        self.view.addSubview(tipPickerView)        
     }
 
     //Calls this function when the tap is recognized.
@@ -292,7 +294,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     @IBAction func setTipPercentage(_ sender: Any) {
         //Show a Picker View here
         
-        
+        tipPickerView.isHidden = false
         print("TEST")
     }
 
