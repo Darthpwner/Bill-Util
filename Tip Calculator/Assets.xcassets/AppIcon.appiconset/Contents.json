@@ -1,9 +1,8 @@
 {
   "images" : [
     {
-      "size" : "20x20",
       "idiom" : "iphone",
-      "filename" : "Bill Util Logo 2x.png",
+      "size" : "20x20",
       "scale" : "2x"
     },
     {
@@ -13,15 +12,13 @@
       "scale" : "3x"
     },
     {
-      "size" : "29x29",
       "idiom" : "iphone",
-      "filename" : "Bill Util Logo 1x.png",
+      "size" : "29x29",
       "scale" : "1x"
     },
     {
-      "size" : "29x29",
       "idiom" : "iphone",
-      "filename" : "Bill Util Logo 2x-2.png",
+      "size" : "29x29",
       "scale" : "2x"
     },
     {
@@ -31,9 +28,8 @@
       "scale" : "3x"
     },
     {
-      "size" : "40x40",
       "idiom" : "iphone",
-      "filename" : "Bill Util Logo 2x-1.png",
+      "size" : "40x40",
       "scale" : "2x"
     },
     {
@@ -143,14 +139,6 @@
       "idiom" : "ipad",
       "filename" : "Icon-App-83.5x83.5@2x.png",
       "scale" : "2x"
-    },
-    {
-      "filename" : "Icon-App-60x60@1x.png",
-      "unassigned" : true
-    },
-    {
-      "filename" : "Icon-App-76x76@3x.png",
-      "unassigned" : true
     }
   ],
   "info" : {
