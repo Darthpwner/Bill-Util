@@ -37,6 +37,10 @@ class ViewController: UIViewController {
         
         var numberOfPeopleAmount = Double(numberOfPeopleTextField.text!)
         
+        if numberOfPeopleTextField.text == "" {
+            numberOfPeopleAmount = 1
+        }
+        
         var tipPercentage = 0.0
         
         switch tipSelector.selectedSegmentIndex {
