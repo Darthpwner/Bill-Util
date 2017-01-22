@@ -83,14 +83,11 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     
     //Updates the action when changing the Picker View
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        if(row == 0)
-        {
+        if(row == 0) {
             tipPercentageProgressView.progress = 0.00
-        }
-        else if(row == 1) {
+        } else if(row == 1) {
             tipPercentageProgressView.progress = 0.01
-        }
-        else if(row == 2) {
+        } else if(row == 2) {
            tipPercentageProgressView.progress = 0.02
         } else if(row == 3) {
             tipPercentageProgressView.progress = 0.03
@@ -100,8 +97,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             tipPercentageProgressView.progress = 0.05
         } else if(row == 6) {
             tipPercentageProgressView.progress = 0.06
-        }
-        else if(row == 7) {
+        } else if(row == 7) {
             tipPercentageProgressView.progress = 0.07
         }else if(row == 8) {
             tipPercentageProgressView.progress = 0.08
@@ -291,6 +287,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             tipPercentageProgressView.progress = 1.00
         }
         
+        //Update tipPercentageLabel after we set it
         tipPercentageLabel.text = "\(Int(tipPercentageProgressView.progress * 100))"
     }
     //
