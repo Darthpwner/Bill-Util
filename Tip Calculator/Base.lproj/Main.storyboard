@@ -313,7 +313,13 @@
                     <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                     <items>
-                        <navigationItem title="Tip Calculator" id="pHB-mn-u9S"/>
+                        <navigationItem title="Tip Calculator" id="pHB-mn-u9S">
+                            <barButtonItem key="leftBarButtonItem" title="&lt;- Back" id="cAt-T3-5UQ">
+                                <connections>
+                                    <segue destination="WjT-sR-QYl" kind="show" id="Jjj-81-ldF"/>
+                                </connections>
+                            </barButtonItem>
+                        </navigationItem>
                     </items>
                 </navigationBar>
             </objects>
@@ -567,11 +573,20 @@
                     <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                     <items>
-                        <navigationItem title="Sales Tax Calculator" id="LLv-na-bDW"/>
+                        <navigationItem title="Sales Tax Calculator" id="LLv-na-bDW">
+                            <barButtonItem key="leftBarButtonItem" title="&lt;- Back" id="YW5-Gk-WBB">
+                                <connections>
+                                    <segue destination="WjT-sR-QYl" kind="show" id="6a5-nY-hPe"/>
+                                </connections>
+                            </barButtonItem>
+                        </navigationItem>
                     </items>
                 </navigationBar>
             </objects>
             <point key="canvasLocation" x="329" y="61"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Jjj-81-ldF"/>
+    </inferredMetricsTieBreakers>
 </document>
