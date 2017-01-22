@@ -13,10 +13,23 @@ class IncomeViewController: UIViewController {
     //Left text fields
     @IBOutlet weak var leftIncomeTextField: UITextField!
     @IBOutlet weak var leftBonusesTextField: UITextField!
+    @IBOutlet weak var leftRSUsTextField: UITextField!
+    @IBOutlet weak var left_1_year_earnings_text_field: UITextField!
+    @IBOutlet weak var left_2_year_earnings_text_field: UITextField!
+    @IBOutlet weak var left_5_year_earnings_text_field: UITextField!
+    @IBOutlet weak var left_10_year_earnings_text_field: UITextField!
+    @IBOutlet weak var left_20_year_earnings_text_field: UITextField!
     //End of left text fields
     
     //Right text fields
-    
+    @IBOutlet weak var rightIncomeTextField: UITextField!
+    @IBOutlet weak var rightBonusesTextField: UITextField!
+    @IBOutlet weak var rightRSUsTextField: UITextField!
+    @IBOutlet weak var right_1_year_earnings_text_field: UITextField!
+    @IBOutlet weak var right_2_year_earnings_text_field: UITextField!
+    @IBOutlet weak var right_5_year_earnings_text_field: UITextField!
+    @IBOutlet weak var right_10_year_earnings_text_field: UITextField!
+    @IBOutlet weak var right_20_year_earnings_text_field: UITextField!
     //End of right text fields
     
     override func viewDidLoad() {
