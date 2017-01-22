@@ -8,7 +8,7 @@
 
 import UIKit
 
-class IncomeViewController: UIViewController {
+class IncomeViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource   {
 
     //Left text fields
     @IBOutlet weak var leftIncomeTextField: UITextField!
@@ -32,6 +32,13 @@ class IncomeViewController: UIViewController {
     @IBOutlet weak var right_20_year_earnings_text_field: UITextField!
     //End of right text fields
     
+    //Picker views
+    @IBOutlet weak var leftPickerView: UIPickerView!
+    @IBOutlet weak var rightPickerView: UIPickerView!
+    
+    var leftPickerDataSource = ["Hourly", "Monthly", "Yearly"]
+    var rightPickerDataSource = ["Hourly", "Monthly", "Yearly"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -54,6 +61,33 @@ class IncomeViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    //Boilerplate Left PickerView Methods
+    func numberOfComponents(in: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return leftPickerDataSource.count;
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return leftPickerDataSource[row]
+    }
+    
+    //Updates the action when changing the Picker View
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int)
+    {
+        if(row == 0) {
+           
+        } else if(row == 1) {
+
+        } else if(row == 2) {
+
+        }
+    }
+    //
+
     
     @IBAction func calculateIncomes(_ sender: Any) {
         

@@ -991,6 +991,7 @@
                     <connections>
                         <outlet property="leftBonusesTextField" destination="ASM-Ok-VaS" id="L95-zm-6ca"/>
                         <outlet property="leftIncomeTextField" destination="PD4-rG-jja" id="Xjf-pO-2cl"/>
+                        <outlet property="leftPickerView" destination="bjT-sR-Het" id="OZR-X9-nhb"/>
                         <outlet property="leftRSUsTextField" destination="jS7-X2-4B4" id="uaP-UI-gk0"/>
                         <outlet property="left_10_year_earnings_text_field" destination="saj-q9-sax" id="Khw-sW-ePx"/>
                         <outlet property="left_1_year_earnings_text_field" destination="DWD-qe-xfK" id="wt5-1h-2Vj"/>
@@ -999,6 +1000,7 @@
                         <outlet property="left_5_year_earnings_text_field" destination="60E-58-H7l" id="oiE-Ul-LJb"/>
                         <outlet property="rightBonusesTextField" destination="XXz-V7-2G0" id="BAR-fn-lvp"/>
                         <outlet property="rightIncomeTextField" destination="8ys-h6-REW" id="Zx7-JN-Kdb"/>
+                        <outlet property="rightPickerView" destination="oWP-Z1-cbd" id="egV-nc-48Y"/>
                         <outlet property="rightRSUsTextField" destination="mwq-Kf-Td7" id="13J-jL-fp2"/>
                         <outlet property="right_10_year_earnings_text_field" destination="TTf-c5-Npb" id="hc4-CH-wBr"/>
                         <outlet property="right_1_year_earnings_text_field" destination="n8o-gg-zzD" id="AQt-4A-9U8"/>
