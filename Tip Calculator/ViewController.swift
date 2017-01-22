@@ -26,8 +26,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     @IBOutlet weak var totalField: UITextField!
     @IBOutlet weak var tipAmountPerPersonField: UITextField!
     @IBOutlet weak var totalPerPersonField: UITextField!
-
-    @IBOutlet weak var calculateButton: UIButton!
+    @IBOutlet weak var calculateButton: UIBarButtonItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -317,8 +316,8 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             billAmountField.text = ""
             numberOfPeopleTextField.text = ""
             
-//            tipPercentageLabel.text = "0"
-//            tipPercentageProgressView.progress = 0
+            //            tipPercentageLabel.text = "0"
+            //            tipPercentageProgressView.progress = 0
             
             tipAmountField.text = ""
             totalField.text = ""
@@ -350,7 +349,6 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         tipAmountPerPersonField.text = String(format: "$%.2f", roundedTipAmountPerPerson)
         totalPerPersonField.text = String(format: "$%.2f", totalAmountPerPerson)
     }
-
 }
 
 
