@@ -19,7 +19,7 @@ class RentCalculatorViewController: UIViewController {
     @IBOutlet weak var parkingSpotCostTextField: UITextField!
     @IBOutlet weak var numberOfRoommatesTextField: UITextField!
     @IBOutlet weak var totalCostTextField: UITextField!
-    @IBOutlet var totalCostPerPersonTextField: UIView!
+    @IBOutlet weak var totalCostPerPersonTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,5 +42,33 @@ class RentCalculatorViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    @IBAction func calculateRent(_ sender: Any) {
+        //Costs
+        var monthlyBaseRentAmount = Double(monthlyBaseRentTextField.text!)
+        var electricAmount = Double(electricTextField.text!)
+        var gasAmount  = Double(gasTextField.text!)
+        var waterAmount = Double(waterTextField.text!)
+        var internetAmount = Double(internetTextField.text!)
+        //End of Costs
+        
+        //Gains
+        var subletterAmount = Double(subletterTextField.text!)
+        //End of Gains
+        
+        //Wildcard
+        var parkingSpotCostAmount = Double(parkingSpotCostTextField.text!)
+        //End of Wildcard
+        
+        //Divisibles
+        var numberOfRoommatesAmount = Double(numberOfRoommatesTextField.text!)
+        //End of Divisibles
+        
+        //Costs
+        var totalCostAmount = Double(totalCostTextField.text!)
+        var totalCostPerPersonAmount = Double(totalCostPerPersonTextField.text!)
+        //End of Costs
+        
+        
+    }
 
 }
