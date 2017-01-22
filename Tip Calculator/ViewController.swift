@@ -60,8 +60,8 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         self.tipPickerView.dataSource = self
         self.tipPickerView.delegate = self
         
-
-        self.tipPickerView.frame = CGRect(x: 0, y: 520, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height / 5)
+        print(UIScreen.main.bounds.height)
+        self.tipPickerView.frame = CGRect(x: 0, y: UIScreen.main.bounds.height - (UIScreen.main.bounds.height / 5), width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height / 5)
         self.tipPickerView.backgroundColor = UIColor.white
         self.tipPickerView.layer.borderColor = UIColor.white.cgColor
         self.tipPickerView.layer.borderWidth = 1
