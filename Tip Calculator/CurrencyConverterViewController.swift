@@ -126,8 +126,8 @@ class CurrencyConverterViewController: UIViewController, UIPickerViewDelegate, U
                 usDollarAmount = queryAmount * 1.24
                 euroAmount = queryAmount * 1.16
                 yenAmount = queryAmount * 141.91
-                poundAmount = queryAmount * 1.24
-                francAmount = queryAmount
+                poundAmount = queryAmount * 1.00
+                francAmount = queryAmount * 1.24
                 canadianDollarAmount = queryAmount * 1.65
             case "Franc":
                 usDollarAmount = queryAmount
