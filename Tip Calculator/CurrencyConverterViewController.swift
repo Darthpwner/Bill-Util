@@ -10,6 +10,20 @@ import UIKit
 
 class CurrencyConverterViewController: UIViewController {
 
+    //LHS
+    @IBOutlet weak var currencyPickerView: UIPickerView!
+    @IBOutlet weak var queryTextField: UITextField!
+    //End of LHS
+    
+    //RHS
+    @IBOutlet weak var usDollarTextField: UITextField!
+    @IBOutlet weak var euroTextField: UITextField!
+    @IBOutlet weak var yenTextField: UITextField!
+    @IBOutlet weak var poundTextField: UITextField!
+    @IBOutlet weak var francTextField: UITextField!
+    @IBOutlet weak var canadianDollarTextField: UITextField!
+    //End of RHS
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

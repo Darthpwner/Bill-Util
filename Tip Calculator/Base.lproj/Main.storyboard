@@ -214,6 +214,16 @@
                             <constraint firstItem="PX2-g1-PXC" firstAttribute="height" secondItem="BmB-Ms-Frl" secondAttribute="height" multiplier="0.5" id="qcp-TU-JtE"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="canadianDollarTextField" destination="iHV-uI-3bo" id="gfQ-bx-mg8"/>
+                        <outlet property="currencyPickerView" destination="n2K-AZ-hw4" id="g72-Mo-VwY"/>
+                        <outlet property="euroTextField" destination="VqM-iW-Jqx" id="otM-21-XVF"/>
+                        <outlet property="francTextField" destination="bWO-uT-NqD" id="Gmu-CO-04o"/>
+                        <outlet property="poundTextField" destination="wMb-T0-A3R" id="TH8-BT-ziv"/>
+                        <outlet property="queryTextField" destination="X2h-or-YYH" id="34E-b2-tOh"/>
+                        <outlet property="usDollarTextField" destination="KN4-DP-nHR" id="QqQ-J5-1CA"/>
+                        <outlet property="yenTextField" destination="Xuh-Sr-Cgz" id="gtD-3C-Vzc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lTz-uk-del" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
