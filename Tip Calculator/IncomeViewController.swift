@@ -10,6 +10,9 @@ import UIKit
 
 class IncomeViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource   {
 
+    let HOURS_PER_YEAR = 8760.0
+    let MONTHS_PER_YEAR = 12.0
+    
     //Left text fields
     @IBOutlet weak var leftIncomeTextField: UITextField!
     @IBOutlet weak var leftBonusesTextField: UITextField!
@@ -130,7 +133,7 @@ class IncomeViewController: UIViewController, UIPickerViewDelegate, UIPickerView
             return
         }
         
-        guard let rightIncomeType = Double(rightIncomeTextField.text!) else {
+        guard let rightIncomeAmount = Double(rightIncomeTextField.text!) else {
             //show error
             rightBonusesTextField.text = "0.00"
             rightRSUsTextField.text = "0.00"
@@ -140,6 +143,31 @@ class IncomeViewController: UIViewController, UIPickerViewDelegate, UIPickerView
             right_10_year_earnings_text_field.text = ""
             right_20_year_earnings_text_field.text = ""
             return
+        }
+        
+        var leftBonusesAmount = Double(leftBonusesTextField.text!)
+        var leftRSUsAmount = Double(leftRSUsTextField.text!)
+        
+        var rightBonusesAmount = Double(rightBonusesTextField.text!)
+        var rightRSUsAmount = Double(rightRSUsTextField.text!)
+        
+        var leftAnnualSalary: Double
+        var rightAnnualSalary: Double
+        
+        if(leftIncomeType == "Hourly") {
+            leftAnnualSalary = Double(leftIncomeTextField.text!)! * HOURS_PER_YEAR + leftBonusesAmount! + leftRSUsAmount!
+        } else if(leftIncomeType == "Monthly") {
+            leftAnnualSalary = Double(leftIncomeTextField.text!)! * MONTHS_PER_YEAR + leftBonusesAmount! + leftRSUsAmount!
+        } else {
+            leftAnnualSalary = Double(leftIncomeTextField.text!)! * 1 + leftBonusesAmount! + leftRSUsAmount!
+        }
+        
+        if(rightIncomeType == "Hourly") {
+            rightAnnualSalary = Double(rightIncomeTextField.text!)! * HOURS_PER_YEAR + rightBonusesAmount! + rightBonusesAmount!
+        } else if(rightIncomeType == "Monthly") {
+            rightAnnualSalary = Double(rightIncomeTextField.text!)! * MONTHS_PER_YEAR + rightBonusesAmount! + rightBonusesAmount!
+        } else {
+            rightAnnualSalary = Double(rightIncomeTextField.text!)! * 1 + rightBonusesAmount! + rightBonusesAmount!
         }
     }
 
