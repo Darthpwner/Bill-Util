@@ -10,6 +10,15 @@ import UIKit
 
 class IncomeViewController: UIViewController {
 
+    //Left text fields
+    @IBOutlet weak var leftIncomeTextField: UITextField!
+    @IBOutlet weak var leftBonusesTextField: UITextField!
+    //End of left text fields
+    
+    //Right text fields
+    
+    //End of right text fields
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -33,6 +42,9 @@ class IncomeViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func calculateIncomes(_ sender: Any) {
+        
+    }
 
     /*
     // MARK: - Navigation
