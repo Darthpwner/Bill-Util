@@ -82,6 +82,10 @@ class SalesTaxCalculatorViewController: UIViewController, UIPickerViewDelegate, 
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(ViewController.dismissKeyboard))
         
         view.addGestureRecognizer(tap)
+        
+        //PickerView
+        pickerViewHandler()
+        self.view.addSubview(locationPickerView)
     }
     
     //Calls this function when the tap is recognized.
@@ -125,116 +129,8 @@ class SalesTaxCalculatorViewController: UIViewController, UIPickerViewDelegate, 
     
     //Updates the action when changing the Picker View
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        
+        locationTextField.text = pickerDataSource[row].state
         salesTaxTextField.text = "\(pickerDataSource[row].tax * Double(billAmountTextField.text!)!)"
-            
-            
-        
-        if(row == 0) {
-            
-        } else if(row == 1) {
-            
-        } else if(row == 2) {
-            
-        } else if(row == 3) {
-            
-        } else if(row == 4) {
-            
-        } else if(row == 5) {
-            
-        } else if(row == 6) {
-            
-        } else if(row == 7) {
-            
-        }else if(row == 8) {
-            
-        }else if(row == 9) {
-            
-        }else if(row == 10) {
-            
-        }else if(row == 11) {
-            
-        }else if(row == 12) {
-            
-        }else if(row == 13) {
-            
-        }else if(row == 14) {
-            
-        }else if(row == 15) {
-            
-        }else if(row == 16) {
-            
-        }else if(row == 17) {
-            
-        }else if(row == 18) {
-            
-        }else if(row == 19) {
-            
-        }else if(row == 20) {
-            
-        }else if(row == 21) {
-            
-        }else if(row == 22) {
-            
-        }else if(row == 23) {
-            
-        }else if(row == 24) {
-            
-        }else if(row == 25) {
-            
-        }else if(row == 26) {
-            
-        }else if(row == 27) {
-            
-        }else if(row == 28) {
-            
-        }else if(row == 29) {
-            
-        }else if(row == 30) {
-            
-        }else if(row == 31) {
-            
-        }else if(row == 32) {
-            
-        }else if(row == 33) {
-            
-        }else if(row == 34) {
-            
-        }else if(row == 35) {
-            
-        }else if(row == 36) {
-            
-        }else if(row == 37) {
-            
-        }else if(row == 38) {
-            
-        }else if(row == 39) {
-            
-        }else if(row == 40) {
-            
-        }else if(row == 41) {
-            
-        }else if(row == 42) {
-            
-        }else if(row == 43) {
-            
-        }else if(row == 44) {
-            
-        }else if(row == 45) {
-            
-        }else if(row == 46) {
-            
-        }else if(row == 47) {
-            
-        }else if(row == 48) {
-            
-        }else if(row == 49) {
-            
-        }else if(row == 50) {
-            
-        }else if(row == 51) {
-            
-        }
     }
     
     @IBAction func setLocation(_ sender: Any) {
