@@ -296,8 +296,16 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         //Show a Picker View here
         if(tipPickerView.isHidden) {
             tipPickerView.isHidden = false
+            
+            //Prevent selection of text fields
+            billAmountField.isUserInteractionEnabled = false
+            numberOfPeopleTextField.isUserInteractionEnabled = false
         } else {
             tipPickerView.isHidden = true
+            
+            //Allow selection of text fields
+            billAmountField.isUserInteractionEnabled = true
+            numberOfPeopleTextField.isUserInteractionEnabled = true
         }
         
         print("TEST")
