@@ -145,11 +145,33 @@ class IncomeViewController: UIViewController, UIPickerViewDelegate, UIPickerView
             return
         }
         
-        let leftBonusesAmount = Double(leftBonusesTextField.text!)
-        let leftRSUsAmount = Double(leftRSUsTextField.text!)
+        var leftBonusesAmount = Double(leftBonusesTextField.text!)
+        var leftRSUsAmount = Double(leftRSUsTextField.text!)
         
-        let rightBonusesAmount = Double(rightBonusesTextField.text!)
-        let rightRSUsAmount = Double(rightRSUsTextField.text!)
+        var rightBonusesAmount = Double(rightBonusesTextField.text!)
+        var rightRSUsAmount = Double(rightRSUsTextField.text!)
+        
+        //Error handling
+        if leftBonusesTextField.text == "" {
+            leftBonusesTextField.text = "0"
+            leftBonusesAmount = 0
+        }
+        
+        if leftRSUsTextField.text == "" {
+            leftRSUsTextField.text = "0"
+            leftRSUsAmount = 0
+        }
+        
+        if rightBonusesTextField.text == "" {
+            rightBonusesTextField.text = "0"
+            rightBonusesAmount = 0
+        }
+        
+        if rightRSUsTextField.text == "" {
+            rightRSUsTextField.text = "0"
+            rightBonusesAmount = 0
+        }
+
         
         var leftAnnualSalary: Double
         var rightAnnualSalary: Double

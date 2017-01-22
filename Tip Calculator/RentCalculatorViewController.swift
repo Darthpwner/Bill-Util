@@ -21,15 +21,33 @@ class RentCalculatorViewController: UIViewController {
     @IBOutlet weak var totalCostTextField: UITextField!
     @IBOutlet weak var totalCostPerPersonTextField: UITextField!
     
+    var isSwitchOn = true
+    
     //Switch
-    @IBOutlet weak var toggleSwitch: UISwitch!
+    @IBAction func toggleSwitch(_ sender: Any) {
+        if(isSwitchOn) {
+            isSwitchOn = false
+        } else {
+            isSwitchOn = true
+        }
+    }
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(ViewController.dismissKeyboard))
+        
+        view.addGestureRecognizer(tap)
     }
 
+    //Calls this function when the tap is recognized.
+    func dismissKeyboard() {
+        //Causes the view (or one of its embedded text fields) to resign the first responder status.
+        view.endEditing(true)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -46,32 +64,52 @@ class RentCalculatorViewController: UIViewController {
     }
     */
     @IBAction func calculateRent(_ sender: Any) {
+        
         //Costs
-        var monthlyBaseRentAmount = Double(monthlyBaseRentTextField.text!)
-        var electricAmount = Double(electricTextField.text!)
-        var gasAmount  = Double(gasTextField.text!)
-        var waterAmount = Double(waterTextField.text!)
-        var internetAmount = Double(internetTextField.text!)
+        guard let monthlyBaseRentAmount = Double(monthlyBaseRentTextField.text!) else {
+            electricTextField.text = "0"
+            gasTextField.text = "0"
+            waterTextField.text = "0"
+            internetTextField.text = "0"
+            subletterTextField.text = "0"
+            parkingSpotCostTextField.text = "0"
+            numberOfRoommatesTextField.text = "0"
+            return
+        }
+        
+        let electricAmount = Double(electricTextField.text!)
+        let gasAmount  = Double(gasTextField.text!)
+        let waterAmount = Double(waterTextField.text!)
+        let internetAmount = Double(internetTextField.text!)
         //End of Costs
         
         //Gains
-        var subletterAmount = Double(subletterTextField.text!)
+        let subletterAmount = Double(subletterTextField.text!)
         //End of Gains
         
         //Wildcard
-        var parkingSpotCostAmount = Double(parkingSpotCostTextField.text!)
+        let parkingSpotCostAmount = Double(parkingSpotCostTextField.text!)
         //End of Wildcard
         
         //Divisibles
-        var numberOfRoommatesAmount = Double(numberOfRoommatesTextField.text!)
+        let numberOfRoommatesAmount = Double(numberOfRoommatesTextField.text!)
         //End of Divisibles
         
-        //Costs
-        var totalCostAmount = Double(totalCostTextField.text!)
-        var totalCostPerPersonAmount = Double(totalCostPerPersonTextField.text!)
-        //End of Costs
+        //Final Costs
+        var totalCostAmount = monthlyBaseRentAmount + electricAmount! + gasAmount! + waterAmount! + internetAmount! - subletterAmount!
+
+        //Check if parking spot is subletted
+        if(isSwitchOn) {
+            totalCostAmount -= parkingSpotCostAmount!
+        } else {
+            totalCostAmount += parkingSpotCostAmount!
+        }
         
+        let totalCostPerPersonAmount = totalCostAmount / (numberOfRoommatesAmount! + 1) // Off by 1 error
         
+        totalCostTextField.text = String(format: "$%.2f", totalCostAmount)
+        totalCostPerPersonTextField.text = String(format: "$%.2f", totalCostPerPersonAmount)
+        //End of Final Costs
     }
 
 }
