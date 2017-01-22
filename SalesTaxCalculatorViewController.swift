@@ -154,7 +154,7 @@ class SalesTaxCalculatorViewController: UIViewController, UIPickerViewDelegate, 
         guard let billAmount = Double(billAmountTextField.text!) else {
             //show error
             billAmountTextField.text = ""
-            numberOfPeopleTextField.text = ""
+            numberOfPeopleTextField.text = "1"
             locationTextField.text = ""
             salesTaxTextField.text = ""
             taxCostTextField.text = ""
@@ -171,6 +171,7 @@ class SalesTaxCalculatorViewController: UIViewController, UIPickerViewDelegate, 
         }
         
         let roundedBillAmount = round(100*billAmount)/100
+        
         let taxCostAmount = Double(salesTaxTextField.text!)! * roundedBillAmount / 100
         let totalAmount = roundedBillAmount + taxCostAmount
         let totalAmountPerPerson = totalAmount / numberOfPeopleAmount!
