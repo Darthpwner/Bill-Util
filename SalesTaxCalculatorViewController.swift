@@ -85,11 +85,14 @@ class SalesTaxCalculatorViewController: UIViewController, UIPickerViewDelegate, 
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return pickerDataSource[row]
+        return pickerDataSource[row].state
     }
     
     //Updates the action when changing the Picker View
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        
+        
+        
         if(row == 0) {
             
         } else if(row == 1) {
