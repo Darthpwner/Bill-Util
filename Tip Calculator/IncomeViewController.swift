@@ -39,6 +39,9 @@ class IncomeViewController: UIViewController, UIPickerViewDelegate, UIPickerView
     var leftPickerDataSource = ["Hourly", "Monthly", "Yearly"]
     var rightPickerDataSource = ["Hourly", "Monthly", "Yearly"]
     
+    var leftIncomeType = "Hourly"
+    var rightIncomeType = "Hourly"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -87,20 +90,26 @@ class IncomeViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         if(row == 0) {
             if(pickerView.tag == 0) {
                 print("Left Hourly")
+                leftIncomeType = leftPickerDataSource[row]
             } else {
                 print("Right Hourly")
+                rightIncomeType = rightPickerDataSource[row]
             }
         } else if(row == 1) {
             if(pickerView.tag == 0) {
                 print("Left Monthly")
+                leftIncomeType = leftPickerDataSource[row]
             } else {
                 print("Right Monthly")
+                rightIncomeType = rightPickerDataSource[row]
             }
         } else if(row == 2) {
             if(pickerView.tag == 0) {
                 print("Left Yearly")
+                leftIncomeType = leftPickerDataSource[row]
             } else {
                 print("Right Yearly")
+                rightIncomeType = rightPickerDataSource[row]
             }
         }
     }
@@ -109,7 +118,29 @@ class IncomeViewController: UIViewController, UIPickerViewDelegate, UIPickerView
 
     
     @IBAction func calculateIncomes(_ sender: Any) {
+        guard let leftIncomeAmount = Double(leftIncomeTextField.text!) else {
+            //show error
+            leftBonusesTextField.text = "0.00"
+            leftRSUsTextField.text = "0.00"
+            left_1_year_earnings_text_field.text = ""
+            left_2_year_earnings_text_field.text = ""
+            left_5_year_earnings_text_field.text = ""
+            left_10_year_earnings_text_field.text = ""
+            left_20_year_earnings_text_field.text = ""
+            return
+        }
         
+        guard let rightIncomeType = Double(rightIncomeTextField.text!) else {
+            //show error
+            rightBonusesTextField.text = "0.00"
+            rightRSUsTextField.text = "0.00"
+            right_1_year_earnings_text_field.text = ""
+            right_2_year_earnings_text_field.text = ""
+            right_5_year_earnings_text_field.text = ""
+            right_10_year_earnings_text_field.text = ""
+            right_20_year_earnings_text_field.text = ""
+            return
+        }
     }
 
     /*
