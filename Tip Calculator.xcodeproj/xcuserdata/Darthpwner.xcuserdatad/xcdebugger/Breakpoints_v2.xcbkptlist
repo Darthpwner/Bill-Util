@@ -130,7 +130,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SalesTaxCalculatorViewController.swift"
@@ -143,7 +143,7 @@
             landmarkType = "3">
             <Locations>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "Tip_Calculator.SalesTaxCalculatorViewController.__deallocating_deinit"
@@ -158,7 +158,7 @@
                   offsetFromSymbolStart = "12">
                </Location>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "Tip_Calculator.SalesTaxCalculatorViewController.init (nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; Tip_Calculator.SalesTaxCalculatorViewController"
@@ -173,7 +173,7 @@
                   offsetFromSymbolStart = "60">
                </Location>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "Tip_Calculator.SalesTaxCalculatorViewController.__allocating_init (nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; Tip_Calculator.SalesTaxCalculatorViewController"
@@ -188,7 +188,7 @@
                   offsetFromSymbolStart = "32">
                </Location>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "Tip_Calculator.SalesTaxCalculatorViewController.__allocating_init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;Tip_Calculator.SalesTaxCalculatorViewController&gt;"
@@ -203,7 +203,7 @@
                   offsetFromSymbolStart = "12">
                </Location>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "Tip_Calculator.SalesTaxCalculatorViewController.init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;Tip_Calculator.SalesTaxCalculatorViewController&gt;"
