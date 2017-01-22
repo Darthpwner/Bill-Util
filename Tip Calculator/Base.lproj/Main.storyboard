@@ -599,6 +599,10 @@
                                             </label>
                                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bjT-sR-Het">
                                                 <rect key="frame" x="0.0" y="29.999999999999972" width="186.33333333333334" height="30"/>
+                                                <connections>
+                                                    <outlet property="dataSource" destination="nsb-1b-W6n" id="KXj-2w-hnu"/>
+                                                    <outlet property="delegate" destination="nsb-1b-W6n" id="10l-y3-kvZ"/>
+                                                </connections>
                                             </pickerView>
                                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="OUb-Ta-kkc" userLabel="Income Stack View">
                                                 <rect key="frame" x="0.0" y="59.999999999999972" width="186.33333333333334" height="30"/>
@@ -792,6 +796,10 @@
                                             </label>
                                             <pickerView tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oWP-Z1-cbd">
                                                 <rect key="frame" x="0.0" y="29.999999999999972" width="186.33333333333334" height="30"/>
+                                                <connections>
+                                                    <outlet property="dataSource" destination="nsb-1b-W6n" id="SRZ-M6-U7B"/>
+                                                    <outlet property="delegate" destination="nsb-1b-W6n" id="wzu-Yb-MGA"/>
+                                                </connections>
                                             </pickerView>
                                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="eXQ-xe-x38" userLabel="Income Stack View">
                                                 <rect key="frame" x="0.0" y="59.999999999999972" width="186.33333333333334" height="30"/>
