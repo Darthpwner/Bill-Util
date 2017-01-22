@@ -70,6 +70,7 @@ class SalesTaxCalculatorViewController: UIViewController, UIPickerViewDelegate, 
     @IBOutlet weak var numberOfPeopleTextField: UITextField!
     @IBOutlet weak var locationTextField: UITextField!
     @IBOutlet weak var salesTaxTextField: UITextField!
+    @IBOutlet weak var taxCostTextField: UITextField!
     @IBOutlet weak var totalAmountTextField: UITextField!
     @IBOutlet weak var totalAmountPerPersonTextField: UITextField!
     
@@ -156,6 +157,7 @@ class SalesTaxCalculatorViewController: UIViewController, UIPickerViewDelegate, 
             numberOfPeopleTextField.text = ""
             locationTextField.text = ""
             salesTaxTextField.text = ""
+            taxCostTextField.text = ""
             totalAmountTextField.text = ""
             totalAmountPerPersonTextField.text = ""
             return
@@ -169,11 +171,12 @@ class SalesTaxCalculatorViewController: UIViewController, UIPickerViewDelegate, 
         }
         
         let roundedBillAmount = round(100*billAmount)/100
-        let totalAmount = roundedBillAmount + (roundedBillAmount *  Double(salesTaxTextField.text!)! / 100)
+        let taxCostAmount = Double(salesTaxTextField.text!)! * roundedBillAmount / 100
+        let totalAmount = roundedBillAmount + taxCostAmount
         let totalAmountPerPerson = totalAmount / numberOfPeopleAmount!
         
         billAmountTextField.text = String(format: "%.2f", roundedBillAmount)
-        
+        taxCostTextField.text = String(format: "$%.2f", taxCostAmount)
         totalAmountTextField.text = String(format: "$%.2f", totalAmount)
         totalAmountPerPersonTextField.text = String(format: "$%.2f", totalAmountPerPerson)
     }
