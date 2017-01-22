@@ -8,8 +8,10 @@
 
 import UIKit
 
-class CurrencyConverterViewController: UIViewController {
+class CurrencyConverterViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 
+    var pickerDataSource = ["US $", "Euro", "Yen", "Pound", "Franc", "CA $"]
+    
     //LHS
     @IBOutlet weak var currencyPickerView: UIPickerView!
     @IBOutlet weak var queryTextField: UITextField!
@@ -24,12 +26,26 @@ class CurrencyConverterViewController: UIViewController {
     @IBOutlet weak var canadianDollarTextField: UITextField!
     //End of RHS
     
+    var pickerValue = "US $"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        //Looks for single or multiple taps.
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(ViewController.dismissKeyboard))
+        
+        view.addGestureRecognizer(tap)
     }
 
+    //Calls this function when the tap is recognized.
+    func dismissKeyboard() {
+        //Causes the view (or one of its embedded text fields) to resign the first responder status.
+        view.endEditing(true)
+    }
+
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -45,5 +61,25 @@ class CurrencyConverterViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    //Boilerplate PickerView Methods
+    func numberOfComponents(in: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return pickerDataSource.count;
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return pickerDataSource[row]
+    }
+    
+    //Updates the action when changing the Picker View
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        pickerValue = pickerDataSource[row]
+        print(pickerValue)
+    }
+
 
 }
