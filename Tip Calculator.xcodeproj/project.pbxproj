@@ -15,6 +15,8 @@
 		6B53FF431E2AA093001DC5F1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B53FF411E2AA093001DC5F1 /* LaunchScreen.storyboard */; };
 		6B53FF4E1E2AA093001DC5F1 /* Tip_CalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B53FF4D1E2AA093001DC5F1 /* Tip_CalculatorTests.swift */; };
 		6B53FF591E2AA093001DC5F1 /* Tip_CalculatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B53FF581E2AA093001DC5F1 /* Tip_CalculatorUITests.swift */; };
+		6BBEA1DB1E344987007D88E5 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BBEA1DA1E344987007D88E5 /* StartViewController.swift */; };
+		6BBEA1DD1E344998007D88E5 /* SalesTaxCalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BBEA1DC1E344998007D88E5 /* SalesTaxCalculatorViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		6B53FF541E2AA093001DC5F1 /* Tip CalculatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tip CalculatorUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B53FF581E2AA093001DC5F1 /* Tip_CalculatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tip_CalculatorUITests.swift; sourceTree = "<group>"; };
 		6B53FF5A1E2AA093001DC5F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6BBEA1DA1E344987007D88E5 /* StartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
+		6BBEA1DC1E344998007D88E5 /* SalesTaxCalculatorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SalesTaxCalculatorViewController.swift; path = ../SalesTaxCalculatorViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,7 +104,9 @@
 			isa = PBXGroup;
 			children = (
 				6B53FF351E2AA093001DC5F1 /* AppDelegate.swift */,
+				6BBEA1DA1E344987007D88E5 /* StartViewController.swift */,
 				6B53FF371E2AA093001DC5F1 /* ViewController.swift */,
+				6BBEA1DC1E344998007D88E5 /* SalesTaxCalculatorViewController.swift */,
 				6B53FF391E2AA093001DC5F1 /* Main.storyboard */,
 				6B53FF3F1E2AA093001DC5F1 /* Assets.xcassets */,
 				6B53FF411E2AA093001DC5F1 /* LaunchScreen.storyboard */,
@@ -266,8 +272,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				6B53FF381E2AA093001DC5F1 /* ViewController.swift in Sources */,
+				6BBEA1DB1E344987007D88E5 /* StartViewController.swift in Sources */,
 				6B53FF3E1E2AA093001DC5F1 /* Tip_Calculator.xcdatamodeld in Sources */,
 				6B53FF361E2AA093001DC5F1 /* AppDelegate.swift in Sources */,
+				6BBEA1DD1E344998007D88E5 /* SalesTaxCalculatorViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
