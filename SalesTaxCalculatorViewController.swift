@@ -64,16 +64,51 @@ class SalesTaxCalculatorViewController: UIViewController, UIPickerViewDelegate, 
         ("D.C.", 0.0575)
     ]
     
+    var locationPickerView: UIPickerView = UIPickerView()
+    
+    @IBOutlet weak var billAmountTextField: UITextField!
+    @IBOutlet weak var numberOfPeopleTextField: UITextField!
+    @IBOutlet weak var locationTextField: UITextField!
+    @IBOutlet weak var salesTaxTextField: UITextField!
+    @IBOutlet weak var totalAmountTextField: UITextField!
+    @IBOutlet weak var totalAmountPerPersonTextField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
+        
+        //Looks for single or multiple taps.
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(ViewController.dismissKeyboard))
+        
+        view.addGestureRecognizer(tap)
     }
+    
+    //Calls this function when the tap is recognized.
+    func dismissKeyboard() {
+        //Causes the view (or one of its embedded text fields) to resign the first responder status.
+        view.endEditing(true)
+    }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    //Custom PickerView methods
+    func pickerViewHandler () {
+        self.locationPickerView.isHidden = true
+        self.locationPickerView.dataSource = self
+        self.locationPickerView.delegate = self
+        
+        print(UIScreen.main.bounds.height)
+        self.locationPickerView.frame = CGRect(x: 0, y: UIScreen.main.bounds.height - (UIScreen.main.bounds.height / 4), width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height / 4)
+        self.locationPickerView.backgroundColor = UIColor.white
+        self.locationPickerView.layer.borderColor = UIColor.white.cgColor
+        self.locationPickerView.layer.borderWidth = 1
+    }
+    //End of custom PickerView methods
     
     //Boilerplate PickerView Methods
     func numberOfComponents(in: UIPickerView) -> Int {
@@ -91,7 +126,9 @@ class SalesTaxCalculatorViewController: UIViewController, UIPickerViewDelegate, 
     //Updates the action when changing the Picker View
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         
-        
+        salesTaxTextField.text = "\(pickerDataSource[row].tax * Double(billAmountTextField.text!)!)"
+            
+            
         
         if(row == 0) {
             
@@ -198,12 +235,53 @@ class SalesTaxCalculatorViewController: UIViewController, UIPickerViewDelegate, 
         }else if(row == 51) {
             
         }
-        
-        //Update tipPercentageLabel after we set it
-//        tipPercentageLabel.text = "\(Int(tipPercentageProgressView.progress * 100))"
     }
-    //
-
+    
+    @IBAction func setLocation(_ sender: Any) {
+        if(locationPickerView.isHidden) {
+            locationPickerView.isHidden = false
+            
+            //Prevent selection of text fields
+            billAmountTextField.isUserInteractionEnabled = false
+            numberOfPeopleTextField.isUserInteractionEnabled = false
+        } else {
+            locationPickerView.isHidden = true
+            
+            //Allow selection of text fields
+            billAmountTextField.isUserInteractionEnabled = true
+            numberOfPeopleTextField.isUserInteractionEnabled = true
+        }
+    }
+    
+    @IBAction func calculateSalesTax(_ sender: Any) {
+        guard let billAmount = Double(billAmountTextField.text!) else {
+            //show error
+            billAmountTextField.text = ""
+            numberOfPeopleTextField.text = ""
+            locationTextField.text = ""
+            salesTaxTextField.text = ""
+            totalAmountTextField.text = ""
+            totalAmountPerPersonTextField.text = ""
+            return
+        }
+        
+        var numberOfPeopleAmount = Double(numberOfPeopleTextField.text!)
+        
+        if numberOfPeopleTextField.text == "" {
+            numberOfPeopleTextField.text = "1";
+            numberOfPeopleAmount = 1
+        }
+        
+        let roundedBillAmount = round(100*billAmount)/100
+        let totalAmount = roundedBillAmount
+        let totalAmountPerPerson = totalAmount / numberOfPeopleAmount!
+        
+        billAmountTextField.text = String(format: "%.2f", roundedBillAmount)
+        
+        totalAmountTextField.text = String(format: "$%.2f", totalAmount)
+        totalAmountPerPersonTextField.text = String(format: "$%.2f", totalAmountPerPerson)
+    }
+    
     /*
     // MARK: - Navigation
 

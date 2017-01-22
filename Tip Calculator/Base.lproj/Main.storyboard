@@ -120,7 +120,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="x2l-ED-pIi" userLabel="Bill Amount Text Field">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="x2l-ED-pIi" userLabel="Number of People Text Field">
                                                 <rect key="frame" x="196" y="0.0" width="85" height="41"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="85" id="pYI-er-S5I"/>
@@ -360,7 +360,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3Jd-TN-COX" userLabel="Bill Amount Text Field">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3Jd-TN-COX" userLabel="Number of People Text Field">
                                                 <rect key="frame" x="144.66666666666669" y="0.0" width="85" height="39.666666666666657"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="85" id="8iz-r7-f7h"/>
@@ -388,6 +388,9 @@
                                                 <rect key="frame" x="199.66666666666669" y="0.0" width="30" height="39.666666666666686"/>
                                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="15"/>
                                                 <state key="normal" title="Set"/>
+                                                <connections>
+                                                    <action selector="setLocation:" destination="8cG-nT-761" eventType="touchUpInside" id="rir-wS-v4Y"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -455,6 +458,9 @@
                                         <rect key="frame" x="0.0" y="328.33333333333337" width="229.66666666666669" height="39.666666666666629"/>
                                         <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="15"/>
                                         <state key="normal" title="Calculate"/>
+                                        <connections>
+                                            <action selector="calculateSalesTax:" destination="8cG-nT-761" eventType="touchUpInside" id="6PX-4I-m1i"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -496,12 +502,20 @@
                             <constraint firstItem="pc5-dz-87k" firstAttribute="height" secondItem="uMe-ij-OsH" secondAttribute="height" multiplier="0.1" id="1th-8n-VgI"/>
                             <constraint firstItem="pxf-EQ-cz4" firstAttribute="centerY" secondItem="uMe-ij-OsH" secondAttribute="centerY" id="FSv-a2-5yR"/>
                             <constraint firstItem="pc5-dz-87k" firstAttribute="centerX" secondItem="uMe-ij-OsH" secondAttribute="centerX" id="JzI-Hi-yGU"/>
+                            <constraint firstItem="pc5-dz-87k" firstAttribute="top" secondItem="STS-gZ-oq6" secondAttribute="bottom" id="KgM-IE-bQH"/>
                             <constraint firstItem="pxf-EQ-cz4" firstAttribute="centerX" secondItem="uMe-ij-OsH" secondAttribute="centerX" id="eK0-kV-odR"/>
                             <constraint firstItem="pxf-EQ-cz4" firstAttribute="height" secondItem="uMe-ij-OsH" secondAttribute="height" multiplier="0.5" id="fKV-cV-8J4"/>
                             <constraint firstItem="pc5-dz-87k" firstAttribute="width" secondItem="uMe-ij-OsH" secondAttribute="width" id="mwb-oT-8RR"/>
-                            <constraint firstItem="pc5-dz-87k" firstAttribute="top" secondItem="STS-gZ-oq6" secondAttribute="bottom" id="q6l-31-Dyr"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="billAmountTextField" destination="SHV-bZ-Sru" id="yHx-ed-6ye"/>
+                        <outlet property="locationTextField" destination="rHa-sY-U9g" id="KaO-21-1cO"/>
+                        <outlet property="numberOfPeopleTextField" destination="rHa-sY-U9g" id="aEv-Vz-JAz"/>
+                        <outlet property="salesTaxTextField" destination="Pda-3u-Bju" id="yD4-0A-Pfn"/>
+                        <outlet property="totalAmountPerPersonTextField" destination="pWg-YK-5in" id="BoE-Fr-5gK"/>
+                        <outlet property="totalAmountTextField" destination="EoY-jv-eTs" id="lPq-8G-lpa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PSV-wt-cC7" sceneMemberID="firstResponder"/>
             </objects>
