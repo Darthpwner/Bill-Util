@@ -21,6 +21,9 @@ class RentCalculatorViewController: UIViewController {
     @IBOutlet weak var totalCostTextField: UITextField!
     @IBOutlet weak var totalCostPerPersonTextField: UITextField!
     
+    //Switch
+    @IBOutlet weak var toggleSwitch: UISwitch!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
