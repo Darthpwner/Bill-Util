@@ -78,6 +78,7 @@
                                                     </label>
                                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KN4-DP-nHR" userLabel="US $ Text Field">
                                                         <rect key="frame" x="62.333333333333314" y="0.0" width="124.66666666666669" height="41.333333333333314"/>
+                                                        <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
@@ -98,6 +99,7 @@
                                                     </label>
                                                     <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VqM-iW-Jqx" userLabel="Euro Text Field">
                                                         <rect key="frame" x="62.333333333333314" y="0.0" width="124.66666666666669" height="41.333333333333371"/>
+                                                        <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
@@ -118,6 +120,7 @@
                                                     </label>
                                                     <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xuh-Sr-Cgz" userLabel="Yen Text Field">
                                                         <rect key="frame" x="62.333333333333314" y="0.0" width="124.66666666666669" height="41.333333333333314"/>
+                                                        <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
@@ -138,6 +141,7 @@
                                                     </label>
                                                     <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wMb-T0-A3R" userLabel="Pound Text Field">
                                                         <rect key="frame" x="62.333333333333314" y="0.0" width="124.66666666666669" height="40.666666666666686"/>
+                                                        <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
@@ -158,6 +162,7 @@
                                                     </label>
                                                     <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bWO-uT-NqD" userLabel="Franc Text Field">
                                                         <rect key="frame" x="62.333333333333314" y="0.0" width="124.66666666666669" height="41"/>
+                                                        <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
@@ -178,6 +183,7 @@
                                                     </label>
                                                     <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iHV-uI-3bo" userLabel="CA $ Text Field">
                                                         <rect key="frame" x="62.333333333333314" y="0.0" width="124.66666666666669" height="40.333333333333314"/>
+                                                        <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
@@ -287,20 +293,33 @@
                                     <segue destination="WKh-on-L9j" kind="show" id="SeL-s1-IK2"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Jc-Bh-p5O">
+                                <rect key="frame" x="0.0" y="324" width="414" height="30"/>
+                                <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Calculate Rent"/>
+                                <connections>
+                                    <segue destination="gUB-us-pCW" kind="show" id="h6A-uI-oSK"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="zu8-Sb-KjC" firstAttribute="centerX" secondItem="sck-FD-lNZ" secondAttribute="centerX" id="0zh-6O-AR5"/>
                             <constraint firstItem="xQf-zS-OL1" firstAttribute="width" secondItem="sck-FD-lNZ" secondAttribute="width" id="Cgk-uk-VDm"/>
                             <constraint firstItem="xQf-zS-OL1" firstAttribute="centerX" secondItem="sck-FD-lNZ" secondAttribute="centerX" id="CkT-1F-z3J"/>
+                            <constraint firstItem="0Jc-Bh-p5O" firstAttribute="top" secondItem="YwL-tq-c15" secondAttribute="bottom" id="HKi-Es-4TW"/>
                             <constraint firstItem="ct7-t1-KWb" firstAttribute="leading" secondItem="zu8-Sb-KjC" secondAttribute="leading" id="ISS-hg-WPK"/>
                             <constraint firstItem="6Mf-KH-c5W" firstAttribute="height" secondItem="ct7-t1-KWb" secondAttribute="height" id="KDM-Bq-har"/>
                             <constraint firstItem="xQf-zS-OL1" firstAttribute="height" secondItem="sck-FD-lNZ" secondAttribute="height" multiplier="0.25" id="KJg-rN-Yao"/>
+                            <constraint firstItem="0Jc-Bh-p5O" firstAttribute="height" secondItem="YwL-tq-c15" secondAttribute="height" id="MbV-HC-PuP"/>
                             <constraint firstItem="YwL-tq-c15" firstAttribute="leading" secondItem="6Mf-KH-c5W" secondAttribute="leading" id="Mht-Jv-yGD"/>
                             <constraint firstItem="YwL-tq-c15" firstAttribute="width" secondItem="6Mf-KH-c5W" secondAttribute="width" id="P63-zr-HkJ"/>
                             <constraint firstItem="6Mf-KH-c5W" firstAttribute="leading" secondItem="ct7-t1-KWb" secondAttribute="leading" id="Q4h-HF-OMN"/>
                             <constraint firstItem="YwL-tq-c15" firstAttribute="height" secondItem="6Mf-KH-c5W" secondAttribute="height" id="Y8C-Hl-1kI"/>
                             <constraint firstItem="YwL-tq-c15" firstAttribute="top" secondItem="6Mf-KH-c5W" secondAttribute="bottom" id="c18-1C-KAp"/>
+                            <constraint firstItem="0Jc-Bh-p5O" firstAttribute="width" secondItem="YwL-tq-c15" secondAttribute="width" id="c6X-LY-fCb"/>
+                            <constraint firstItem="0Jc-Bh-p5O" firstAttribute="leading" secondItem="YwL-tq-c15" secondAttribute="leading" id="cOK-YY-b38"/>
                             <constraint firstItem="xQf-zS-OL1" firstAttribute="top" secondItem="NLQ-pd-c8g" secondAttribute="bottom" id="fwv-vZ-Nai"/>
                             <constraint firstItem="ct7-t1-KWb" firstAttribute="top" secondItem="zu8-Sb-KjC" secondAttribute="bottom" id="iQB-2h-y9N"/>
                             <constraint firstItem="6Mf-KH-c5W" firstAttribute="top" secondItem="ct7-t1-KWb" secondAttribute="bottom" id="iig-2d-5Pa"/>
@@ -791,6 +810,230 @@
             </objects>
             <point key="canvasLocation" x="329" y="61"/>
         </scene>
+        <!--Rent Calculator View Controller-->
+        <scene sceneID="FDq-kQ-Klu">
+            <objects>
+                <viewController id="gUB-us-pCW" customClass="RentCalculatorViewController" customModule="Tip_Calculator" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="miI-kb-TYt"/>
+                        <viewControllerLayoutGuide type="bottom" id="mWo-s1-GgB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9MI-ED-X2J">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VDE-at-wy4">
+                                <rect key="frame" x="0.0" y="20" width="414" height="73.666666666666671"/>
+                                <items>
+                                    <navigationItem title="Rent Calculator" id="pEn-1a-jMT">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="A0X-mD-RTv">
+                                            <connections>
+                                                <segue destination="WjT-sR-QYl" kind="show" id="KHa-Py-2M0"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Calculate" id="bwG-nt-aVU"/>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="k6t-mA-qk4" userLabel="Super Stack View">
+                                <rect key="frame" x="78" y="251" width="195" height="300"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EPb-Gl-b6w" userLabel="Monthly Base Rent Stack View">
+                                        <rect key="frame" x="0.0" y="0.0" width="194.66666666666666" height="30"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Monthly Base Rent: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LMS-aD-Wwj">
+                                                <rect key="frame" x="0.0" y="0.0" width="152.66666666666666" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4UC-Cj-DGQ" userLabel="Monthly Base Rent Text Field">
+                                                <rect key="frame" x="152.66666666666666" y="0.0" width="42" height="30"/>
+                                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="czD-Cb-lcc" userLabel="Electric Stack View">
+                                        <rect key="frame" x="0.0" y="30" width="194.66666666666666" height="30"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Electric: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fGJ-XL-PpE">
+                                                <rect key="frame" x="0.0" y="0.0" width="66.333333333333329" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="80K-4X-nEx" userLabel="Electric Text Field">
+                                                <rect key="frame" x="66.333333333333343" y="0.0" width="128.33333333333331" height="30"/>
+                                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="M7l-7K-rKW" userLabel="Gas Stack View">
+                                        <rect key="frame" x="0.0" y="60" width="194.66666666666666" height="30"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Gas: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gph-K9-egu">
+                                                <rect key="frame" x="0.0" y="0.0" width="39" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xyq-qg-6wk" userLabel="Gas Text Field">
+                                                <rect key="frame" x="39" y="0.0" width="155.66666666666666" height="30"/>
+                                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="B9O-Ml-YIG" userLabel="Water Stack View">
+                                        <rect key="frame" x="0.0" y="90" width="194.66666666666666" height="30"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Water: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1wl-c4-7KH">
+                                                <rect key="frame" x="0.0" y="0.0" width="54.666666666666664" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aZR-xU-va1" userLabel="Water Text Field">
+                                                <rect key="frame" x="54.666666666666657" y="0.0" width="140" height="30"/>
+                                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gep-bt-nJj" userLabel="Internet Stack View">
+                                        <rect key="frame" x="0.0" y="120" width="194.66666666666666" height="30"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Internet: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4sB-6V-e7R">
+                                                <rect key="frame" x="0.0" y="0.0" width="68.666666666666671" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pJZ-a1-L3p" userLabel="Internet Text Field">
+                                                <rect key="frame" x="68.666666666666657" y="0.0" width="125.99999999999997" height="30"/>
+                                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cKu-yW-cMm" userLabel="Subletter Stack View">
+                                        <rect key="frame" x="0.0" y="150" width="194.66666666666666" height="30"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Subletter" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KYQ-m0-ri8">
+                                                <rect key="frame" x="0.0" y="0.0" width="70.333333333333329" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8qW-xV-4JI" userLabel="Subletter Text Field">
+                                                <rect key="frame" x="70.333333333333343" y="0.0" width="124.33333333333334" height="30"/>
+                                                <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QD7-CD-61o" userLabel="Parking Spot Cost Stack View">
+                                        <rect key="frame" x="0.0" y="180" width="194.66666666666666" height="30"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Parking Spot Cost: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dvZ-qV-XpL">
+                                                <rect key="frame" x="0.0" y="0.0" width="146.66666666666666" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dn3-YG-ckb" userLabel="Parking Spot Cost Text Field">
+                                                <rect key="frame" x="146.66666666666666" y="0.0" width="48" height="30"/>
+                                                <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gQF-TR-wtc" userLabel="# of Roommates Stack View">
+                                        <rect key="frame" x="0.0" y="210" width="194.66666666666666" height="30"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="# of Roommates: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xdK-J1-TyE">
+                                                <rect key="frame" x="0.0" y="0.0" width="135" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RyL-Cy-eXG" userLabel="# of Roommates Text Field">
+                                                <rect key="frame" x="135" y="0.0" width="59.666666666666657" height="30"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="q2b-Qp-8TR" userLabel="Total Cost Stack View">
+                                        <rect key="frame" x="0.0" y="240" width="194.66666666666666" height="30"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Total Cost:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fdh-BB-f7m">
+                                                <rect key="frame" x="0.0" y="0.0" width="82.333333333333329" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rxO-Pl-p7x" userLabel="Total Cost Text Field">
+                                                <rect key="frame" x="82.333333333333343" y="0.0" width="112.33333333333334" height="30"/>
+                                                <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Kn-O9-WVm" userLabel="Total Cost Per Person Stack View">
+                                        <rect key="frame" x="0.0" y="270" width="194.66666666666666" height="30"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Total Cost Per Person:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3rk-sc-h7n">
+                                                <rect key="frame" x="0.0" y="0.0" width="169.66666666666666" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xKf-H9-SpD" userLabel="Total Cost Per Person Text Field">
+                                                <rect key="frame" x="169.66666666666666" y="0.0" width="25" height="30"/>
+                                                <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="VDE-at-wy4" firstAttribute="centerX" secondItem="9MI-ED-X2J" secondAttribute="centerX" id="3pV-pE-rO7"/>
+                            <constraint firstItem="VDE-at-wy4" firstAttribute="top" secondItem="miI-kb-TYt" secondAttribute="bottom" id="UNK-dy-pKb"/>
+                            <constraint firstItem="VDE-at-wy4" firstAttribute="width" secondItem="9MI-ED-X2J" secondAttribute="width" id="oBZ-eG-Hck"/>
+                            <constraint firstItem="VDE-at-wy4" firstAttribute="height" secondItem="9MI-ED-X2J" secondAttribute="height" multiplier="0.1" id="wdR-QG-ZpD"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LU2-nZ-t6g" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-893" y="508"/>
+        </scene>
         <!--Income Calculator View Controller-->
         <scene sceneID="exf-JZ-3pX">
             <objects>
@@ -1274,6 +1517,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="OzA-7d-JrQ"/>
+        <segue reference="KHa-Py-2M0"/>
     </inferredMetricsTieBreakers>
 </document>
