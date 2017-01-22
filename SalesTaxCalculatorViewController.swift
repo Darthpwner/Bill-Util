@@ -181,6 +181,7 @@ class SalesTaxCalculatorViewController: UIViewController, UIPickerViewDelegate, 
         totalAmountTextField.text = String(format: "$%.2f", totalAmount)
         totalAmountPerPersonTextField.text = String(format: "$%.2f", totalAmountPerPerson)
     }
+
     
     /*
     // MARK: - Navigation
