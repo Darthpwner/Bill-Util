@@ -32,7 +32,11 @@
                                                 <segue destination="WjT-sR-QYl" kind="show" id="OzA-7d-JrQ"/>
                                             </connections>
                                         </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" title="Convert" id="Ccb-tg-hyU"/>
+                                        <barButtonItem key="rightBarButtonItem" title="Convert" id="Ccb-tg-hyU">
+                                            <connections>
+                                                <action selector="convertCurrency:" destination="WKh-on-L9j" id="DmK-ca-plg"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -53,7 +57,7 @@
                                                 <rect key="frame" x="23.666666666666657" y="216" width="140" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                             </textField>
                                         </subviews>
                                         <constraints>
