@@ -62,31 +62,50 @@ class IncomeViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         // Dispose of any resources that can be recreated.
     }
     
-    //Boilerplate Left PickerView Methods
+    //Boilerplate PickerView Methods
     func numberOfComponents(in: UIPickerView) -> Int {
         return 1
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return leftPickerDataSource.count;
+        if(pickerView.tag == 0) {
+            return leftPickerDataSource.count;
+        }
+        return rightPickerDataSource.count;
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return leftPickerDataSource[row]
+        if(pickerView.tag == 0) {
+            return leftPickerDataSource[row]
+        }
+        return rightPickerDataSource[row]
     }
     
     //Updates the action when changing the Picker View
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int)
     {
         if(row == 0) {
-           
+            if(pickerView.tag == 0) {
+                print("Left Hourly")
+            } else {
+                print("Right Hourly")
+            }
         } else if(row == 1) {
-
+            if(pickerView.tag == 0) {
+                print("Left Monthly")
+            } else {
+                print("Right Monthly")
+            }
         } else if(row == 2) {
-
+            if(pickerView.tag == 0) {
+                print("Left Yearly")
+            } else {
+                print("Right Yearly")
+            }
         }
     }
-    //
+    //End of Boilerplate PickerView Methods
+
 
     
     @IBAction func calculateIncomes(_ sender: Any) {
