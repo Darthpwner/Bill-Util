@@ -556,10 +556,10 @@
             </objects>
             <point key="canvasLocation" x="329" y="61"/>
         </scene>
-        <!--Income Controller Scene-->
+        <!--Income Calculator View Controller-->
         <scene sceneID="exf-JZ-3pX">
             <objects>
-                <viewController id="nsb-1b-W6n" userLabel="Income Controller Scene" sceneMemberID="viewController">
+                <viewController id="nsb-1b-W6n" userLabel="Income Calculator View Controller" customClass="IncomeViewController" customModule="Tip_Calculator" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="CT6-Vl-xS1"/>
                         <viewControllerLayoutGuide type="bottom" id="Oj2-GD-4jO"/>
