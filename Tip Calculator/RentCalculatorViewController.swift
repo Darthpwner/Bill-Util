@@ -10,6 +10,17 @@ import UIKit
 
 class RentCalculatorViewController: UIViewController {
 
+    @IBOutlet weak var monthlyBaseRentTextField: UITextField!
+    @IBOutlet weak var electricTextField: UITextField!
+    @IBOutlet weak var gasTextField: UITextField!
+    @IBOutlet weak var waterTextField: UITextField!
+    @IBOutlet weak var internetTextField: UITextField!
+    @IBOutlet weak var subletterTextField: UITextField!
+    @IBOutlet weak var parkingSpotCostTextField: UITextField!
+    @IBOutlet weak var numberOfRoommatesTextField: UITextField!
+    @IBOutlet weak var totalCostTextField: UITextField!
+    @IBOutlet var totalCostPerPersonTextField: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

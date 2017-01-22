@@ -1083,6 +1083,18 @@
                             <constraint firstItem="VDE-at-wy4" firstAttribute="height" secondItem="9MI-ED-X2J" secondAttribute="height" multiplier="0.1" id="wdR-QG-ZpD"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="electricTextField" destination="80K-4X-nEx" id="RTR-tX-U6a"/>
+                        <outlet property="gasTextField" destination="Xyq-qg-6wk" id="rSr-Xn-b2i"/>
+                        <outlet property="internetTextField" destination="pJZ-a1-L3p" id="JKq-yi-yze"/>
+                        <outlet property="monthlyBaseRentTextField" destination="4UC-Cj-DGQ" id="WpA-zY-iQP"/>
+                        <outlet property="numberOfRoommatesTextField" destination="RyL-Cy-eXG" id="cnD-jv-Qir"/>
+                        <outlet property="parkingSpotCostTextField" destination="Dn3-YG-ckb" id="pgm-Is-9bo"/>
+                        <outlet property="subletterTextField" destination="8qW-xV-4JI" id="2vk-ef-Qxc"/>
+                        <outlet property="totalCostPerPersonTextField" destination="9MI-ED-X2J" id="ORH-pF-26N"/>
+                        <outlet property="totalCostTextField" destination="rxO-Pl-p7x" id="Jxm-lF-BHS"/>
+                        <outlet property="waterTextField" destination="aZR-xU-va1" id="MfV-Hi-eg8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LU2-nZ-t6g" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1571,6 +1583,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="OzA-7d-JrQ"/>
+        <segue reference="KHa-Py-2M0"/>
     </inferredMetricsTieBreakers>
 </document>
