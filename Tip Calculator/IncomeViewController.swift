@@ -145,48 +145,54 @@ class IncomeViewController: UIViewController, UIPickerViewDelegate, UIPickerView
             return
         }
         
-        var leftBonusesAmount = Double(leftBonusesTextField.text!)
-        var leftRSUsAmount = Double(leftRSUsTextField.text!)
+        let leftBonusesAmount = Double(leftBonusesTextField.text!)
+        let leftRSUsAmount = Double(leftRSUsTextField.text!)
         
-        var rightBonusesAmount = Double(rightBonusesTextField.text!)
-        var rightRSUsAmount = Double(rightRSUsTextField.text!)
+        let rightBonusesAmount = Double(rightBonusesTextField.text!)
+        let rightRSUsAmount = Double(rightRSUsTextField.text!)
         
         var leftAnnualSalary: Double
         var rightAnnualSalary: Double
         
         if(leftIncomeType == "Hourly") {
-            leftAnnualSalary = leftIncomeAmount * HOURS_PER_YEAR + leftBonusesAmount! + leftRSUsAmount!
+            leftAnnualSalary = leftIncomeAmount * HOURS_PER_YEAR + leftRSUsAmount!
         } else if(leftIncomeType == "Monthly") {
-            leftAnnualSalary = leftIncomeAmount * MONTHS_PER_YEAR + leftBonusesAmount! + leftRSUsAmount!
+            leftAnnualSalary = leftIncomeAmount * MONTHS_PER_YEAR + leftRSUsAmount!
         } else {
-            leftAnnualSalary = leftIncomeAmount * 1 + leftBonusesAmount! + leftRSUsAmount!
+            leftAnnualSalary = leftIncomeAmount * 1 + leftRSUsAmount!
         }
         
         if(rightIncomeType == "Hourly") {
-            rightAnnualSalary = rightIncomeAmount * HOURS_PER_YEAR + rightBonusesAmount! + rightBonusesAmount!
+            rightAnnualSalary = rightIncomeAmount * HOURS_PER_YEAR + rightRSUsAmount!
         } else if(rightIncomeType == "Monthly") {
-            rightAnnualSalary = rightIncomeAmount * MONTHS_PER_YEAR + rightBonusesAmount! + rightBonusesAmount!
+            rightAnnualSalary = rightIncomeAmount * MONTHS_PER_YEAR + rightRSUsAmount!
         } else {
-            rightAnnualSalary = rightIncomeAmount * 1 + rightBonusesAmount! + rightBonusesAmount!
+            rightAnnualSalary = rightIncomeAmount * 1 + rightRSUsAmount!
         }
         
-        let rounded_left_1_year_earnings_amount = round(100 * leftAnnualSalary) / 100
-        let rounded_left_2_year_earnings_amount = round(100 * 2 * leftAnnualSalary) / 100
-        let rounded_left_5_year_earnings_amount = round(100 * 5 * leftAnnualSalary) / 100
-        let rounded_left_10_year_earnings_amount = round(100 * 10 * leftAnnualSalary) / 100
-        let rounded_left_20_year_earnings_amount = round(100 * 20 * leftAnnualSalary) / 100
+        let rounded_left_1_year_earnings_amount = round(100 * leftAnnualSalary + leftBonusesAmount!) / 100
+        let rounded_left_2_year_earnings_amount = round(100 * 2 * leftAnnualSalary + leftBonusesAmount!) / 100
+        let rounded_left_5_year_earnings_amount = round(100 * 5 * leftAnnualSalary + leftBonusesAmount!) / 100
+        let rounded_left_10_year_earnings_amount = round(100 * 10 * leftAnnualSalary + leftBonusesAmount!) / 100
+        let rounded_left_20_year_earnings_amount = round(100 * 20 * leftAnnualSalary + leftBonusesAmount!) / 100
         
-        let rounded_right_1_year_earnings_amount = round(100 * rightAnnualSalary) / 100
-        let rounded_right_2_year_earnings_amount = round(100 * 2 * rightAnnualSalary) / 100
-        let rounded_right_5_year_earnings_amount = round(100 * 5 * rightAnnualSalary) / 100
-        let rounded_right_10_year_earnings_amount = round(100 * 10 * rightAnnualSalary) / 100
-        let rounded_right_20_year_earnings_amount = round(100 * 20 * rightAnnualSalary) / 100
+        let rounded_right_1_year_earnings_amount = round(100 * rightAnnualSalary + rightBonusesAmount!) / 100
+        let rounded_right_2_year_earnings_amount = round(100 * 2 * rightAnnualSalary + rightBonusesAmount!) / 100
+        let rounded_right_5_year_earnings_amount = round(100 * 5 * rightAnnualSalary + rightBonusesAmount!) / 100
+        let rounded_right_10_year_earnings_amount = round(100 * 10 * rightAnnualSalary + rightBonusesAmount!) / 100
+        let rounded_right_20_year_earnings_amount = round(100 * 20 * rightAnnualSalary + rightBonusesAmount!) / 100
         
-        left_1_year_earnings_text_field.text = String(format: "%.2f", rounded_left_1_year_earnings_amount)
-        left_2_year_earnings_text_field.text = String(format: "%.2f", rounded_left_2_year_earnings_amount)
-        left_5_year_earnings_text_field.text = String(format: "%.2f", rounded_left_5_year_earnings_amount)
-        left_10_year_earnings_text_field.text = String(format: "%.2f", rounded_left_10_year_earnings_amount)
-        left_20_year_earnings_text_field.text = String(format: "%.2f", rounded_left_20_year_earnings_amount)
+        left_1_year_earnings_text_field.text = String(format: "$%.2f", rounded_left_1_year_earnings_amount)
+        left_2_year_earnings_text_field.text = String(format: "$%.2f", rounded_left_2_year_earnings_amount)
+        left_5_year_earnings_text_field.text = String(format: "$%.2f", rounded_left_5_year_earnings_amount)
+        left_10_year_earnings_text_field.text = String(format: "$%.2f", rounded_left_10_year_earnings_amount)
+        left_20_year_earnings_text_field.text = String(format: "$%.2f", rounded_left_20_year_earnings_amount)
+        
+        right_1_year_earnings_text_field.text = String(format: "$%.2f", rounded_right_1_year_earnings_amount)
+        right_2_year_earnings_text_field.text = String(format: "$%.2f", rounded_right_2_year_earnings_amount)
+        right_5_year_earnings_text_field.text = String(format: "$%.2f", rounded_right_5_year_earnings_amount)
+        right_10_year_earnings_text_field.text = String(format: "$%.2f", rounded_right_10_year_earnings_amount)
+        right_20_year_earnings_text_field.text = String(format: "$%.2f", rounded_right_20_year_earnings_amount)
     }
 
     /*
