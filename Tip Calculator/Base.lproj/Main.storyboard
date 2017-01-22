@@ -511,7 +511,7 @@
                     <connections>
                         <outlet property="billAmountTextField" destination="SHV-bZ-Sru" id="yHx-ed-6ye"/>
                         <outlet property="locationTextField" destination="rHa-sY-U9g" id="KaO-21-1cO"/>
-                        <outlet property="numberOfPeopleTextField" destination="rHa-sY-U9g" id="aEv-Vz-JAz"/>
+                        <outlet property="numberOfPeopleTextField" destination="3Jd-TN-COX" id="l2M-zx-6ai"/>
                         <outlet property="salesTaxTextField" destination="Pda-3u-Bju" id="yD4-0A-Pfn"/>
                         <outlet property="totalAmountPerPersonTextField" destination="pWg-YK-5in" id="BoE-Fr-5gK"/>
                         <outlet property="totalAmountTextField" destination="EoY-jv-eTs" id="lPq-8G-lpa"/>

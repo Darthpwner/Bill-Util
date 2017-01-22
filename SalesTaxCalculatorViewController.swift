@@ -130,7 +130,7 @@ class SalesTaxCalculatorViewController: UIViewController, UIPickerViewDelegate, 
     //Updates the action when changing the Picker View
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         locationTextField.text = pickerDataSource[row].state
-        salesTaxTextField.text = "\(pickerDataSource[row].tax * Double(billAmountTextField.text!)!)"
+        salesTaxTextField.text = "\(pickerDataSource[row].tax * 100)"
     }
     
     @IBAction func setLocation(_ sender: Any) {
@@ -169,7 +169,7 @@ class SalesTaxCalculatorViewController: UIViewController, UIPickerViewDelegate, 
         }
         
         let roundedBillAmount = round(100*billAmount)/100
-        let totalAmount = roundedBillAmount
+        let totalAmount = roundedBillAmount + (roundedBillAmount *  Double(salesTaxTextField.text!)! / 100)
         let totalAmountPerPerson = totalAmount / numberOfPeopleAmount!
         
         billAmountTextField.text = String(format: "%.2f", roundedBillAmount)
