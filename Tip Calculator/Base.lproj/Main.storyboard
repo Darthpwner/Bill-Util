@@ -76,7 +76,7 @@
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KN4-DP-nHR" userLabel="US $ Text Field">
+                                                    <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KN4-DP-nHR" userLabel="US $ Text Field">
                                                         <rect key="frame" x="48" y="0.0" width="96" height="30"/>
                                                         <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="textColor"/>
@@ -885,7 +885,7 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="M7l-7K-rKW" userLabel="Gas Stack View">
-                                        <rect key="frame" x="0.0" y="61" width="288" height="31"/>
+                                        <rect key="frame" x="0.0" y="61" width="288" height="31.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gas: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="gph-K9-egu">
                                                 <rect key="frame" x="0.0" y="0.0" width="144" height="20.5"/>
@@ -906,7 +906,7 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="B9O-Ml-YIG" userLabel="Water Stack View">
-                                        <rect key="frame" x="0.0" y="92" width="288" height="30.5"/>
+                                        <rect key="frame" x="0.0" y="92.5" width="288" height="30.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Water: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="1wl-c4-7KH">
                                                 <rect key="frame" x="0.0" y="0.0" width="144" height="20.5"/>
@@ -927,7 +927,7 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="gep-bt-nJj" userLabel="Internet Stack View">
-                                        <rect key="frame" x="0.0" y="122.5" width="288" height="31"/>
+                                        <rect key="frame" x="0.0" y="123" width="288" height="31"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Internet: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="4sB-6V-e7R">
                                                 <rect key="frame" x="0.0" y="0.0" width="144" height="20.5"/>
@@ -948,7 +948,7 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="cKu-yW-cMm" userLabel="Subletter Stack View">
-                                        <rect key="frame" x="0.0" y="153.5" width="288" height="30.5"/>
+                                        <rect key="frame" x="0.0" y="154" width="288" height="30.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subletter" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="KYQ-m0-ri8">
                                                 <rect key="frame" x="0.0" y="0.0" width="144" height="20.5"/>
@@ -969,7 +969,7 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="QD7-CD-61o" userLabel="Parking Spot Cost Stack View">
-                                        <rect key="frame" x="0.0" y="184" width="288" height="31"/>
+                                        <rect key="frame" x="0.0" y="184.5" width="288" height="31"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Parking Spot Cost: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="dvZ-qV-XpL">
                                                 <rect key="frame" x="0.0" y="0.0" width="144" height="20.5"/>
@@ -990,7 +990,7 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="Qg3-No-92q" userLabel="Parking Spot Subletter? Stack View">
-                                        <rect key="frame" x="0.0" y="215" width="288" height="30.5"/>
+                                        <rect key="frame" x="0.0" y="215.5" width="288" height="30.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Parking Spot Subleased?: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="MTi-US-4pW">
                                                 <rect key="frame" x="0.0" y="0.0" width="144" height="20.5"/>
@@ -1010,7 +1010,7 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="gQF-TR-wtc" userLabel="# of Roommates Stack View">
-                                        <rect key="frame" x="0.0" y="245.5" width="288" height="31.5"/>
+                                        <rect key="frame" x="0.0" y="246" width="288" height="31"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="# of Roommates: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="xdK-J1-TyE">
                                                 <rect key="frame" x="0.0" y="0.0" width="144" height="20.5"/>
@@ -1610,6 +1610,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Lt4-F9-ODd"/>
+        <segue reference="OzA-7d-JrQ"/>
     </inferredMetricsTieBreakers>
 </document>
