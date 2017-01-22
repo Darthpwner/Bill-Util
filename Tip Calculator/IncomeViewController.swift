@@ -169,9 +169,9 @@ class IncomeViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         
         if rightRSUsTextField.text == "" {
             rightRSUsTextField.text = "0"
-            rightBonusesAmount = 0
+            rightRSUsAmount = 0
         }
-
+        //End of Error handling
         
         var leftAnnualSalary: Double
         var rightAnnualSalary: Double

@@ -77,23 +77,60 @@ class RentCalculatorViewController: UIViewController {
             return
         }
         
-        let electricAmount = Double(electricTextField.text!)
-        let gasAmount  = Double(gasTextField.text!)
-        let waterAmount = Double(waterTextField.text!)
-        let internetAmount = Double(internetTextField.text!)
+        var electricAmount = Double(electricTextField.text!)
+        var gasAmount  = Double(gasTextField.text!)
+        var waterAmount = Double(waterTextField.text!)
+        var internetAmount = Double(internetTextField.text!)
         //End of Costs
         
         //Gains
-        let subletterAmount = Double(subletterTextField.text!)
+        var subletterAmount = Double(subletterTextField.text!)
         //End of Gains
         
         //Wildcard
-        let parkingSpotCostAmount = Double(parkingSpotCostTextField.text!)
+        var parkingSpotCostAmount = Double(parkingSpotCostTextField.text!)
         //End of Wildcard
         
         //Divisibles
-        let numberOfRoommatesAmount = Double(numberOfRoommatesTextField.text!)
+        var numberOfRoommatesAmount = Double(numberOfRoommatesTextField.text!)
         //End of Divisibles
+        
+        //Error handling
+        if electricTextField.text == "" {
+            electricTextField.text = "0"
+            electricAmount = 0
+        }
+        
+        if gasTextField.text == "" {
+            gasTextField.text = "0"
+            gasAmount = 0
+        }
+        
+        if waterTextField.text == "" {
+            waterTextField.text = "0"
+            waterAmount = 0
+        }
+        
+        if internetTextField.text == "" {
+            internetTextField.text = "0"
+            internetAmount = 0
+        }
+        
+        if subletterTextField.text == "" {
+            subletterTextField.text = "0"
+            subletterAmount = 0
+        }
+        
+        if parkingSpotCostTextField.text == "" {
+            parkingSpotCostTextField.text = "0"
+            parkingSpotCostAmount = 0
+        }
+        
+        if numberOfRoommatesTextField.text == "" {
+            numberOfRoommatesTextField.text = "0"
+            numberOfRoommatesAmount = 0
+        }
+        //End of Error handling
         
         //Final Costs
         var totalCostAmount = monthlyBaseRentAmount + electricAmount! + gasAmount! + waterAmount! + internetAmount! - subletterAmount!
