@@ -27,7 +27,7 @@ class ViewController: UIViewController {
     var totalAmount = 0.00
     var billAmount = 0.00
     
-    let step: Float = 5
+    let step: Float = 2
     
     @IBAction func billAmountChanged(_ sender: Any) {
         billAmount = Double(billAmountField.text!)!
