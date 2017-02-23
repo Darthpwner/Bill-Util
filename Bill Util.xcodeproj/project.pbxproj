@@ -17,6 +17,7 @@
 		681820FF1E5D18BA00D70FBD /* Bill_UtilUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 681820FE1E5D18BA00D70FBD /* Bill_UtilUITests.swift */; };
 		682153AD1E5D22CE002E0ED4 /* TipViewUISlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 682153AC1E5D22CE002E0ED4 /* TipViewUISlider.swift */; };
 		682153AF1E5D22E1002E0ED4 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 682153AE1E5D22E1002E0ED4 /* StartViewController.swift */; };
+		68E0F6021E5E405400FD82D5 /* CurrencyConvertorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68E0F6011E5E405400FD82D5 /* CurrencyConvertorViewController.swift */; };
 		68F2DC8A1E5D72500065B9E3 /* SalesTaxCalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F2DC891E5D72500065B9E3 /* SalesTaxCalculatorViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -54,6 +55,7 @@
 		681821001E5D18BA00D70FBD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		682153AC1E5D22CE002E0ED4 /* TipViewUISlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TipViewUISlider.swift; sourceTree = "<group>"; };
 		682153AE1E5D22E1002E0ED4 /* StartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
+		68E0F6011E5E405400FD82D5 /* CurrencyConvertorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrencyConvertorViewController.swift; sourceTree = "<group>"; };
 		68F2DC891E5D72500065B9E3 /* SalesTaxCalculatorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SalesTaxCalculatorViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -138,6 +140,7 @@
 		68F2DC8B1E5D72590065B9E3 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				68E0F6011E5E405400FD82D5 /* CurrencyConvertorViewController.swift */,
 				682153AE1E5D22E1002E0ED4 /* StartViewController.swift */,
 				68F2DC891E5D72500065B9E3 /* SalesTaxCalculatorViewController.swift */,
 				681820DD1E5D18BA00D70FBD /* ViewController.swift */,
@@ -283,6 +286,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				682153AF1E5D22E1002E0ED4 /* StartViewController.swift in Sources */,
+				68E0F6021E5E405400FD82D5 /* CurrencyConvertorViewController.swift in Sources */,
 				68F2DC8A1E5D72500065B9E3 /* SalesTaxCalculatorViewController.swift in Sources */,
 				681820DE1E5D18BA00D70FBD /* ViewController.swift in Sources */,
 				682153AD1E5D22CE002E0ED4 /* TipViewUISlider.swift in Sources */,
