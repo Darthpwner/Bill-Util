@@ -10,59 +10,9 @@ import UIKit
 
 class CurrencyConvertorViewController: UIViewController,UIPickerViewDelegate, UIPickerViewDataSource {
     
-    var pickerDataSource: [(state: String, tax: Double)] = [
-        ("Alabama", 0.04),
-        ("Alaska", 0.00),
-        ("Arizona", 0.056),
-        ("Arkansas", 0.065),
-        ("California", 0.075),
-        ("Colorado", 0.029),
-        ("Connecticut", 0.0635),
-        ("Delaware", 0.00),
-        ("Florida", 0.06),
-        ("Georgia", 0.04),
-        ("Hawaii", 0.04),
-        ("Idaho", 0.06),
-        ("Illinois", 0.0625),
-        ("Indiana", 0.07),
-        ("Iowa", 0.06),
-        ("Kansas", 0.065),
-        ("Kentucky", 0.06),
-        ("Louisiana", 0.04),
-        ("Maine", 0.055),
-        ("Maryland", 0.06),
-        ("Massachusetts", 0.0625),
-        ("Michigan", 0.06),
-        ("Minnesota", 0.06875),
-        ("Mississippi", 0.07),
-        ("Missouri", 0.04225),
-        ("Montana", 0.00),
-        ("Nebraska", 0.0550),
-        ("Nevada", 0.0685),
-        ("New Hampshire", 0.00),
-        ("New Jersey", 0.07),
-        ("New Mexico", 0.05125),
-        ("New York", 0.04),
-        ("North Carolina", 0.0475),
-        ("North Dakota", 0.05),
-        ("Ohio", 0.0575),
-        ("Oklahoma", 0.045),
-        ("Oregon", 0.00),
-        ("Pennsylvania", 0.06),
-        ("Rhode Island", 0.07),
-        ("South Carolina", 0.06),
-        ("South Dakota", 0.04),
-        ("Tennessee", 0.07),
-        ("Texas", 0.0625),
-        ("Utah", 0.0595),
-        ("Vermont", 0.06),
-        ("Virginia", 0.053),
-        ("Washington", 0.065),
-        ("West Virginia", 0.06),
-        ("Wisconsin", 0.05),
-        ("Wyoming", 0.04),
-        ("D.C.", 0.0575)
-    ]
+    var pickerDataSource = ["US Dollar", "Euro", "Pound", "Yen", "China Yuan", "Canada Dollar", "Mexico Peso"]
+    
+    var pickerValue = "US Dollar"
     
     var queryAmount: Double = 0
     var usdAmount: Double = 0
@@ -73,8 +23,9 @@ class CurrencyConvertorViewController: UIViewController,UIPickerViewDelegate, UI
     var pesoAmount: Double = 0
     var cadAmount: Double = 0
     
-    var locationPickerView: UIPickerView = UIPickerView()
+    var currencyPickerView: UIPickerView = UIPickerView()
     
+    @IBOutlet weak var pickerViewContainer: UIView!
     @IBOutlet weak var usdLabel: UILabel!
     @IBOutlet weak var euroLabel: UILabel!
     @IBOutlet weak var yenLabel: UILabel!
@@ -88,7 +39,8 @@ class CurrencyConvertorViewController: UIViewController,UIPickerViewDelegate, UI
     @IBOutlet weak var currencyAmountTextField: UITextField!
     
     @IBAction func currencyButtonDidClick(_ sender: Any) {
-         locationPickerView.isHidden = false
+        pickerViewContainer.isHidden = false
+        currencyPickerView.isHidden = false
         print("button clicked")
     }
     
@@ -103,7 +55,11 @@ class CurrencyConvertorViewController: UIViewController,UIPickerViewDelegate, UI
 
         // Do any additional setup after loading the view. 
         self.hideKeyboardWhenTappedAround()
-        //pickerViewHandler()
+        pickerViewContainer.isHidden = true
+        pickerViewHandler()
+        
+        self.pickerViewContainer.addSubview(currencyPickerView)
+        self.pickerViewContainer.addSubview(inputToolbar)
     }
 
 
@@ -112,18 +68,46 @@ class CurrencyConvertorViewController: UIViewController,UIPickerViewDelegate, UI
         // Dispose of any resources that can be recreated.
     }
     
+    lazy var inputToolbar: UIToolbar = {
+        let toolbar = UIToolbar()
+        toolbar.barStyle = .default
+        toolbar.isTranslucent = true
+        toolbar.sizeToFit()
+        
+        var doneButton = UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.done, target: self, action: #selector(CurrencyConvertorViewController.inputToolbarDonePressed))
+        
+        doneButton.tintColor = UIColor.black
+        
+        if let font = UIFont(name: "AvenirNext-Medium", size: 18) {
+            doneButton.setTitleTextAttributes([NSFontAttributeName: font], for: UIControlState.normal)
+        }
+        
+        var spaceButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace, target: nil, action: nil)
+        
+        toolbar.setItems([spaceButton, doneButton], animated: false)
+        toolbar.isUserInteractionEnabled = true
+        
+        return toolbar
+    }()
+    
+    func inputToolbarDonePressed() {
+        pickerViewContainer.isHidden = true
+    }
+    
     //Custom PickerView methods
     func pickerViewHandler() {
-        self.locationPickerView.isHidden = true
-        self.locationPickerView.dataSource = self
-        self.locationPickerView.delegate = self
-        
-        print(UIScreen.main.bounds.height)
-        self.locationPickerView.frame = CGRect(x: 0, y: UIScreen.main.bounds.height - (UIScreen.main.bounds.height / 4), width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height / 4)
-        self.locationPickerView.backgroundColor = UIColor.white
-        self.locationPickerView.layer.borderColor = UIColor.white.cgColor
-        self.locationPickerView.layer.borderWidth = 1
+        self.currencyPickerView.dataSource = self
+        self.currencyPickerView.delegate = self
+
+        currencyPickerView.frame.size.width = UIScreen.main.bounds.width
+        currencyPickerView.frame.size.height = pickerViewContainer.frame.height
+        currencyPickerView.frame.origin.y = inputToolbar.frame.origin.y + inputToolbar.frame.height
+
+        self.currencyPickerView.backgroundColor = UIColor.white
+        self.currencyPickerView.layer.borderColor = UIColor.white.cgColor
+        self.currencyPickerView.layer.borderWidth = 1
     }
+    
     //End of custom PickerView methods
     
     //Boilerplate PickerView Methods
@@ -132,17 +116,40 @@ class CurrencyConvertorViewController: UIViewController,UIPickerViewDelegate, UI
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        
         return pickerDataSource.count;
     }
     
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return pickerDataSource[row].state
+//    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+//        return pickerDataSource[row]
+//    }
+    
+    func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
+        
+        var label = view as! UILabel!
+        if label == nil {
+            label = UILabel()
+        }
+        
+        let data = pickerDataSource[row]
+        let title = NSAttributedString(string: data, attributes: [NSFontAttributeName: UIFont.systemFont(ofSize: 20.0, weight: UIFontWeightRegular)])
+        label?.font = UIFont(name: "Avenir Next", size: 20)
+        label?.attributedText = title
+        label?.textAlignment = .center
+        return label!
+        
     }
     
     //Updates the action when changing the Picker View
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        currencyUnitLabel.text = pickerDataSource[row].state
-        currencyUnitLabel.text = "\(pickerDataSource[row].tax * 100)"
+        pickerValue = pickerDataSource[row]
+        updateAmounts(unit: pickerValue)
+        updateCurrencyLabel(unit: pickerValue)
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, rowHeightForComponent component: Int) -> CGFloat
+    {
+        return 35
     }
     
     func updateAmounts(unit: String) {
@@ -150,47 +157,60 @@ class CurrencyConvertorViewController: UIViewController,UIPickerViewDelegate, UI
         switch unit {
         case "US Dollar":
             usdAmount = queryAmount
-            euroAmount = queryAmount * 0.95
-            yenAmount = queryAmount * 113.20
-            poundAmount = queryAmount * 0.80
-            cadAmount = queryAmount * 1.32
-            pesoAmount = queryAmount * 19.92
-            rmbAmount = queryAmount * 6.88
-//        case "Euro":
-//            usDollarAmount = queryAmount * 1.07
-//            euroAmount = queryAmount
-//            yenAmount = queryAmount * 122.67
-//            poundAmount = queryAmount * 0.86
-//            francAmount = queryAmount * 1.07
-//            canadianDollarAmount = queryAmount * 1.43
-//        case "Yen":
-//            usDollarAmount = queryAmount * 0.0087
-//            euroAmount = queryAmount * 0.0082
-//            yenAmount = queryAmount
-//            poundAmount = queryAmount * 0.007
-//            francAmount = queryAmount * 0.0087
-//            canadianDollarAmount = queryAmount * 0.012
-//        case "Pound":
-//            usDollarAmount = queryAmount * 1.24
-//            euroAmount = queryAmount * 1.16
-//            yenAmount = queryAmount * 141.91
-//            poundAmount = queryAmount * 1.00
-//            francAmount = queryAmount * 1.24
-//            canadianDollarAmount = queryAmount * 1.65
-//        case "Franc":
-//            usDollarAmount = queryAmount
-//            euroAmount = queryAmount * 0.93
-//            yenAmount = queryAmount * 114.42
-//            poundAmount = queryAmount * 0.81
-//            francAmount = queryAmount
-//            canadianDollarAmount = queryAmount * 1.33
-//        case "CA $":
-//            usDollarAmount = queryAmount * 0.75
-//            euroAmount = queryAmount * 0.7
-//            yenAmount = queryAmount * 86.06
-//            poundAmount = queryAmount * 0.61
-//            francAmount = queryAmount * 0.75
-//            canadianDollarAmount = queryAmount
+            euroAmount = queryAmount * 0.946890
+            yenAmount = queryAmount * 112.144000
+            poundAmount = queryAmount * 0.802472
+            cadAmount = queryAmount * 1.309250
+            pesoAmount = queryAmount * 19.910750
+            rmbAmount = queryAmount * 6.867550
+        case "Euro":
+            usdAmount = queryAmount * 1.056089
+            euroAmount = queryAmount
+            yenAmount = queryAmount * 118.434031
+            poundAmount = queryAmount * 0.847481
+            cadAmount = queryAmount * 1.382684
+            pesoAmount = queryAmount * 21.027522
+            rmbAmount = queryAmount * 7.252743
+        case "Yen":
+            usdAmount = queryAmount * 0.008917
+            euroAmount = queryAmount * 0.008444
+            yenAmount = queryAmount
+            poundAmount = queryAmount * 0.007156
+            cadAmount = queryAmount * 0.011675
+            pesoAmount = queryAmount * 0.177546
+            rmbAmount = queryAmount * 0.061239
+        case "Pound":
+            usdAmount = queryAmount * 1.246150
+            euroAmount = queryAmount * 1.179967
+            yenAmount = queryAmount * 139.748246
+            poundAmount = queryAmount
+            cadAmount = queryAmount * 1.631522
+            pesoAmount = queryAmount * 24.811781
+            rmbAmount = queryAmount * 8.557997
+        case "China Yuan":
+            usdAmount = queryAmount * 0.145612
+            euroAmount = queryAmount * 0.137879
+            yenAmount = queryAmount * 16.329550
+            poundAmount = queryAmount * 0.116850
+            cadAmount = queryAmount * 0.190643
+            pesoAmount = queryAmount * 2.899251
+            rmbAmount = queryAmount
+        case "Canada Dollar":
+            usdAmount = queryAmount * 0.763796
+            euroAmount = queryAmount * 0.723231
+            yenAmount = queryAmount * 85.655146
+            poundAmount = queryAmount * 0.612925
+            cadAmount = queryAmount
+            pesoAmount = queryAmount * 15.207753
+            rmbAmount = queryAmount * 5.245408
+        case "Mexico Peso":
+            usdAmount = queryAmount * 0.050224
+            euroAmount = queryAmount * 0.047557
+            yenAmount = queryAmount * 5.632334
+            poundAmount = queryAmount * 0.040303
+            cadAmount = queryAmount * 0.065756
+            pesoAmount = queryAmount
+            rmbAmount = queryAmount * 0.344917
         default:
             usdAmount = 0
             euroAmount = 0
@@ -208,6 +228,26 @@ class CurrencyConvertorViewController: UIViewController,UIPickerViewDelegate, UI
         cadLabel.text = String(format: "$%.2f", cadAmount)
         rmbLabel.text = String(format: "¥%.2f", rmbAmount)
         pesoLabel.text = String(format: "$%.2f", pesoAmount)
-
+    }
+    
+    func updateCurrencyLabel(unit: String) {
+        switch unit {
+        case "US Dollar":
+            self.currencyUnitLabel.text = "USD"
+        case "Euro":
+            self.currencyUnitLabel.text = "EUR"
+        case "Yen":
+            self.currencyUnitLabel.text = "JPY"
+        case "Pound":
+            self.currencyUnitLabel.text = "GBP"
+        case "China Yuan":
+            self.currencyUnitLabel.text = "CNY"
+        case "Canada Dollar":
+            self.currencyUnitLabel.text = "CAD"
+        case "Mexico Peso":
+            self.currencyUnitLabel.text = "MXN"
+        default:
+            self.currencyUnitLabel.text = "USD"
+        }
     }
 }
