@@ -10,6 +10,9 @@ import UIKit
 
 class StartViewController: UIViewController {
 
+    @IBAction func likeButtonDidClick(_ sender: Any) {
+        UIApplication.shared.canOpenURL(NSURL(string: "itms://itunes.apple.com/app/id1198074300") as! URL)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 
