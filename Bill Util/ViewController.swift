@@ -112,7 +112,6 @@ class ViewController: UIViewController {
         
         let tipPerPercentStr = String(format: "%.2f", tipAmount/Double(numberOfPeople))
         tipPerPersonField.text = "$\(tipPerPercentStr)"
-        
     }
 }
 
