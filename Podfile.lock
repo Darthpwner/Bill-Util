@@ -1,0 +1,12 @@
+PODS:
+  - VENCalculatorInputView (1.5.4)
+
+DEPENDENCIES:
+  - VENCalculatorInputView (~> 1.5)
+
+SPEC CHECKSUMS:
+  VENCalculatorInputView: 988fa681ba6bb9b1f067842493bb622e80cc8da2
+
+PODFILE CHECKSUM: 48c69118fd388026998033aa04bd489a23e5c245
+
+COCOAPODS: 1.2.0

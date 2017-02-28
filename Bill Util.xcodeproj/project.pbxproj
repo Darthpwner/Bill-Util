@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4992938F4C063DEC5CAAABCA /* Pods_Bill_Util.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76786999FC021D1349DA2119 /* Pods_Bill_Util.framework */; };
 		681820DC1E5D18BA00D70FBD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 681820DB1E5D18BA00D70FBD /* AppDelegate.swift */; };
 		681820DE1E5D18BA00D70FBD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 681820DD1E5D18BA00D70FBD /* ViewController.swift */; };
 		681820E11E5D18BA00D70FBD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 681820DF1E5D18BA00D70FBD /* Main.storyboard */; };
@@ -17,6 +18,7 @@
 		681820FF1E5D18BA00D70FBD /* Bill_UtilUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 681820FE1E5D18BA00D70FBD /* Bill_UtilUITests.swift */; };
 		682153AD1E5D22CE002E0ED4 /* TipViewUISlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 682153AC1E5D22CE002E0ED4 /* TipViewUISlider.swift */; };
 		682153AF1E5D22E1002E0ED4 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 682153AE1E5D22E1002E0ED4 /* StartViewController.swift */; };
+		685DB1311E65FD0800B5698E /* RentCalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 685DB1301E65FD0800B5698E /* RentCalculatorViewController.swift */; };
 		68E0F6021E5E405400FD82D5 /* CurrencyConvertorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68E0F6011E5E405400FD82D5 /* CurrencyConvertorViewController.swift */; };
 		68F2DC8A1E5D72500065B9E3 /* SalesTaxCalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F2DC891E5D72500065B9E3 /* SalesTaxCalculatorViewController.swift */; };
 /* End PBXBuildFile section */
@@ -39,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3C90F22233395511BF90172F /* Pods-Bill Util.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bill Util.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Bill Util/Pods-Bill Util.debug.xcconfig"; sourceTree = "<group>"; };
 		681820D81E5D18BA00D70FBD /* Bill Util.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bill Util.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		681820DB1E5D18BA00D70FBD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		681820DD1E5D18BA00D70FBD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -55,8 +58,11 @@
 		681821001E5D18BA00D70FBD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		682153AC1E5D22CE002E0ED4 /* TipViewUISlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TipViewUISlider.swift; sourceTree = "<group>"; };
 		682153AE1E5D22E1002E0ED4 /* StartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
+		685DB1301E65FD0800B5698E /* RentCalculatorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RentCalculatorViewController.swift; sourceTree = "<group>"; };
 		68E0F6011E5E405400FD82D5 /* CurrencyConvertorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrencyConvertorViewController.swift; sourceTree = "<group>"; };
 		68F2DC891E5D72500065B9E3 /* SalesTaxCalculatorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SalesTaxCalculatorViewController.swift; sourceTree = "<group>"; };
+		76786999FC021D1349DA2119 /* Pods_Bill_Util.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bill_Util.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AAF4E26A9EAB2823DD66567C /* Pods-Bill Util.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bill Util.release.xcconfig"; path = "Pods/Target Support Files/Pods-Bill Util/Pods-Bill Util.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4992938F4C063DEC5CAAABCA /* Pods_Bill_Util.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,6 +91,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		280C48B4C7DE8C7957F1E558 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				76786999FC021D1349DA2119 /* Pods_Bill_Util.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2998E7C2D21A8928CC10B013 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3C90F22233395511BF90172F /* Pods-Bill Util.debug.xcconfig */,
+				AAF4E26A9EAB2823DD66567C /* Pods-Bill Util.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		681820CF1E5D18BA00D70FBD = {
 			isa = PBXGroup;
 			children = (
@@ -91,6 +115,8 @@
 				681820F21E5D18BA00D70FBD /* Bill UtilTests */,
 				681820FD1E5D18BA00D70FBD /* Bill UtilUITests */,
 				681820D91E5D18BA00D70FBD /* Products */,
+				2998E7C2D21A8928CC10B013 /* Pods */,
+				280C48B4C7DE8C7957F1E558 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -140,6 +166,7 @@
 		68F2DC8B1E5D72590065B9E3 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				685DB1301E65FD0800B5698E /* RentCalculatorViewController.swift */,
 				68E0F6011E5E405400FD82D5 /* CurrencyConvertorViewController.swift */,
 				682153AE1E5D22E1002E0ED4 /* StartViewController.swift */,
 				68F2DC891E5D72500065B9E3 /* SalesTaxCalculatorViewController.swift */,
@@ -155,9 +182,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 681821031E5D18BA00D70FBD /* Build configuration list for PBXNativeTarget "Bill Util" */;
 			buildPhases = (
+				8354B1E0CBBE18FDFC254C9E /* [CP] Check Pods Manifest.lock */,
 				681820D41E5D18BA00D70FBD /* Sources */,
 				681820D51E5D18BA00D70FBD /* Frameworks */,
 				681820D61E5D18BA00D70FBD /* Resources */,
+				4A1F8CFFD8B37DED57AC4175 /* [CP] Embed Pods Frameworks */,
+				173F87B98175A4E696385731 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -280,6 +310,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		173F87B98175A4E696385731 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Bill Util/Pods-Bill Util-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4A1F8CFFD8B37DED57AC4175 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Bill Util/Pods-Bill Util-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8354B1E0CBBE18FDFC254C9E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		681820D41E5D18BA00D70FBD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -288,6 +366,7 @@
 				682153AF1E5D22E1002E0ED4 /* StartViewController.swift in Sources */,
 				68E0F6021E5E405400FD82D5 /* CurrencyConvertorViewController.swift in Sources */,
 				68F2DC8A1E5D72500065B9E3 /* SalesTaxCalculatorViewController.swift in Sources */,
+				685DB1311E65FD0800B5698E /* RentCalculatorViewController.swift in Sources */,
 				681820DE1E5D18BA00D70FBD /* ViewController.swift in Sources */,
 				682153AD1E5D22CE002E0ED4 /* TipViewUISlider.swift in Sources */,
 				681820E41E5D18BA00D70FBD /* Bill_Util.xcdatamodeld in Sources */,
@@ -441,6 +520,7 @@
 		};
 		681821041E5D18BA00D70FBD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3C90F22233395511BF90172F /* Pods-Bill Util.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = M2R6TER3AU;
@@ -454,6 +534,7 @@
 		};
 		681821051E5D18BA00D70FBD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AAF4E26A9EAB2823DD66567C /* Pods-Bill Util.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = M2R6TER3AU;

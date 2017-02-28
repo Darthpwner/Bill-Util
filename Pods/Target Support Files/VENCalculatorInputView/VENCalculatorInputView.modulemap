@@ -1,0 +1,6 @@
+framework module VENCalculatorInputView {
+  umbrella header "VENCalculatorInputView-umbrella.h"
+
+  export *
+  module * { export * }
+}
