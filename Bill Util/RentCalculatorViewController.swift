@@ -107,7 +107,7 @@ class RentCalculatorViewController: UIViewController {
     }
     
     func updateAmounts() {
-        totalAmount = baseAmount + utitiliesAmount + parkingAmount*parkingSubleased - sublettingAmount
+        totalAmount = baseAmount + utitiliesAmount + parkingAmount*Double(parkingSubleased) - sublettingAmount
         totalAmountPerPerson = totalAmount/Double(numberOfPeople)
         
         totalAmountTextField.text = "$" + String(format: "%.2f", totalAmount)
