@@ -14,8 +14,9 @@ class RentCalculatorViewController: UIViewController {
     var utitiliesAmount: Double = 0
     var parkingAmount: Double = 0
     var sublettingAmount: Double = 0
-    var parkingSubleased: Bool = false
+    var parkingSubleased: Int = 1
     var totalAmount: Double = 0
+    var totalAmountPerPerson: Double = 0
     var numberOfPeople: Int = 1
     
     @IBOutlet weak var baseAmountTextField: UITextField!
@@ -23,6 +24,53 @@ class RentCalculatorViewController: UIViewController {
     @IBOutlet weak var parkingTextField: UITextField!
     @IBOutlet weak var sublettingTextField: UITextField!
     @IBOutlet weak var numberOfPeopleLabel: UILabel!
+    @IBOutlet weak var parkingSubleasedSwitch: UISwitch!
+    @IBOutlet weak var totalAmountTextField: UITextField!
+    @IBOutlet weak var numberOfPeopleSlider: TipViewUISlider!
+    @IBOutlet weak var totalPerPersonTextField: UITextField!
+    
+    @IBAction func monthlyTextFieldDidChange(_ sender: Any) {
+        baseAmount = Double(baseAmountTextField.text!)!
+        
+        updateAmounts()
+    }
+    
+    @IBAction func utilitiesTextFieldDidChange(_ sender: Any) {
+        utitiliesAmount = Double(utilitiesTextField.text!)!
+        
+        updateAmounts()
+    }
+    
+    @IBAction func parkingTextFieldDidChange(_ sender: Any) {
+        parkingAmount = Double(parkingTextField.text!)!
+        
+        updateAmounts()
+    }
+    
+    @IBAction func sublettingTextFieldDidChange(_ sender: Any) {
+        sublettingAmount = Double(sublettingTextField.text!)!
+        
+        updateAmounts()
+    }
+    
+    @IBAction func parkSubleasedDidChange(_ sender: Any) {
+        if parkingSubleasedSwitch.isOn {
+            parkingSubleased = 0
+        } else {
+            parkingSubleased = 1
+        }
+        
+        updateAmounts()
+    }
+    
+    @IBAction func numberOfPeopleSliderDidChange(_ sender: Any) {
+        numberOfPeople = Int(numberOfPeopleSlider.value)
+        numberOfPeopleLabel.text =  "\(numberOfPeople)"
+        
+        updateAmounts()
+    }
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,21 +101,17 @@ class RentCalculatorViewController: UIViewController {
         
     }
     
-    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
     func updateAmounts() {
-//        totalAmountTextField.text = "$" + String(format: "%.2f", totalAmount)
-//        taxCostTextField.text = "$" + String(format: "%.2f", taxAmount)
-//        
-//        let totalPerPerson = totalAmount/Double(numberOfPeople)
-//        let totalPerPersonStr = String(format: "%.2f", totalPerPerson)
-//        totalAmountPerPersonTextField.text = "$\(totalPerPersonStr)"
-//        
-//        let taxPerPercentStr = String(format: "%.2f", taxAmount/Double(numberOfPeople))
-//        taxCostPerPersonTextField.text = "$\(taxPerPercentStr)"
+        totalAmount = baseAmount + utitiliesAmount + parkingAmount*parkingSubleased - sublettingAmount
+        totalAmountPerPerson = totalAmount/Double(numberOfPeople)
+        
+        totalAmountTextField.text = "$" + String(format: "%.2f", totalAmount)
+        
+        totalPerPersonTextField.text = "$" + String(format: "%.2f", totalAmountPerPerson)
     }
 }
