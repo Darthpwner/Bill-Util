@@ -30,24 +30,48 @@ class RentCalculatorViewController: UIViewController {
     @IBOutlet weak var totalPerPersonTextField: UITextField!
     
     @IBAction func monthlyTextFieldDidChange(_ sender: Any) {
-        baseAmount = Double(baseAmountTextField.text!)!
+        guard let amount = baseAmountTextField.text, !amount.isEmpty else {
+            baseAmount = 0.00
+            updateAmounts()
+            
+            return
+        }
         
+        baseAmount = Double(baseAmountTextField.text!)!
         updateAmounts()
     }
     
     @IBAction func utilitiesTextFieldDidChange(_ sender: Any) {
+        guard let amount = utilitiesTextField.text, !amount.isEmpty else {
+            utitiliesAmount = 0.00
+            updateAmounts()
+            
+            return
+        }
         utitiliesAmount = Double(utilitiesTextField.text!)!
-        
         updateAmounts()
     }
     
     @IBAction func parkingTextFieldDidChange(_ sender: Any) {
-        parkingAmount = Double(parkingTextField.text!)!
         
+        guard let amount = parkingTextField.text, !amount.isEmpty else {
+            parkingAmount = 0.00
+            updateAmounts()
+            
+            return
+        }
+        
+        parkingAmount = Double(parkingTextField.text!)!
         updateAmounts()
     }
     
     @IBAction func sublettingTextFieldDidChange(_ sender: Any) {
+        
+        guard let amount = sublettingTextField.text, !amount.isEmpty else {
+            sublettingAmount = 0.00
+            updateAmounts()
+            return
+        }
         sublettingAmount = Double(sublettingTextField.text!)!
         
         updateAmounts()
