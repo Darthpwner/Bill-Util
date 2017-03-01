@@ -7,87 +7,170 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		01F789E2D8E1D0DA1A6A0D8F2ECC472D /* VENCalculatorInputView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C0CE10D6881C67786CFE6A2FCC45DD40 /* VENCalculatorInputView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1E6C7863883EEB4B589AE6B38912E7F9 /* VENCalculatorInputView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B10F266EEF54D5185DA8C0C57FB6395 /* VENCalculatorInputView-dummy.m */; };
-		387907C1238C8605F57A93ACCBC11FB0 /* VENCalculatorIconBackspace@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C5A2B5D12E34F454936143837F4689D7 /* VENCalculatorIconBackspace@2x.png */; };
-		4A537D2D2C44915BD6409BF1950177B7 /* VENCalculatorInputTextField.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F8E8AF15DC471077C418143F7E594C1 /* VENCalculatorInputTextField.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7669B01895AB225F3316804C729D8921 /* VENCalculatorIconBackspace.png in Resources */ = {isa = PBXBuildFile; fileRef = 51009A9FED82421631A4F8512D7D4F0E /* VENCalculatorIconBackspace.png */; };
-		8C14A6DD8AFCDE37A52C627CB33806B3 /* VENMoneyCalculator.h in Headers */ = {isa = PBXBuildFile; fileRef = A30A2E3EE5B4ACD4DED83DD673DC98C4 /* VENMoneyCalculator.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		99F33541ADCB87D54D21249679D4653C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
-		A56F9ABCEA7EACE5C29DAD8381E6939E /* VENCalculatorInputView.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FAD4AD46EA1B70E077E6746093F3079 /* VENCalculatorInputView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B147A830D70582D844D88FBAA1AE980C /* Pods-Bill Util-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5805C90E78FE9008221D2C3C415EE917 /* Pods-Bill Util-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B3B627E728609C48F0564DCE25BB7471 /* UITextField+VENCalculatorInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = F0413A7989E434220FB404231B1DA8FD /* UITextField+VENCalculatorInputView.m */; };
-		BE7A28611E66B00197AB33D13B1C2DDB /* NSString+VENCalculatorInputView.h in Headers */ = {isa = PBXBuildFile; fileRef = 18EF0C83ECEFE9112CDBB5E342CB6863 /* NSString+VENCalculatorInputView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C87FFDA6DEF1BC4CBA972E189420D8B8 /* UITextField+VENCalculatorInputView.h in Headers */ = {isa = PBXBuildFile; fileRef = 650F3D53517378140A668ED79CCAD4ED /* UITextField+VENCalculatorInputView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C9178D4C65A297480590BF032E9F8119 /* VENCalculatorInputTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = BD712A7763C90BFC1248736B86B5FE67 /* VENCalculatorInputTextField.m */; };
-		CA7D06E3965CE13080C8D30C2C268899 /* Pods-Bill Util-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C56D9506F0A950C4ED6B51C5437E3040 /* Pods-Bill Util-dummy.m */; };
-		D9DED59D8F3D68F1410E417F8303286A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
-		DAFC21EC8BCA372DF074EE8460A2E3D5 /* VENCalculatorInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BAA954B4209242A4E43CAD0C6171B89 /* VENCalculatorInputView.m */; };
-		E9146AD8261BFC1B03F93DEAC00674B5 /* VENMoneyCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = B1568469C9042A8CB8C9979984537B77 /* VENMoneyCalculator.m */; };
-		F378136F91352E47F23A017754E05E87 /* VENCalculatorInputView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0373C36BA74E88C18B0EEDF36F13C953 /* VENCalculatorInputView.xib */; };
-		F93E5926D5CED50C2C18C94EB85F6264 /* NSString+VENCalculatorInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = AE37DEF515B6AD5B48047E91D20E9A35 /* NSString+VENCalculatorInputView.m */; };
+		021F30C6EB5549044F67F0A5290BE732 /* DesignableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604F8008F385DB9DF238278F45A4E016 /* DesignableView.swift */; };
+		032B7981A964A6A0A2C12246C57C34E5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
+		06BF385915AD49C19C7EFAA7DA812BD9 /* SpringTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 332955E86E0982E00DEB86E296F484A6 /* SpringTextField.swift */; };
+		0E68D1682FE3C19E9D1E90B42398AD3A /* DesignableTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B04BC69261186606A464AE33BCBCF9B /* DesignableTextView.swift */; };
+		11996DF23881CBBAF947428187594D5F /* TransitionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC847874FDD46727C7D8091713B57896 /* TransitionManager.swift */; };
+		1338BB069F4C8E21018666C76CAC76EB /* UnwindSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D8509AAF29F3C793A940CBAD04F567 /* UnwindSegue.swift */; };
+		158A9E114561EC0578A6138B234F6BC5 /* NSString+VENCalculatorInputView.h in Headers */ = {isa = PBXBuildFile; fileRef = 34C0BF12D003BEBF636C1D164404ED9D /* NSString+VENCalculatorInputView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		19B44A9CA9269B440A7D4EAB31487FB3 /* VENCalculatorInputView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1BC3635F4F3A18AF2F33352E3DFF0FB9 /* VENCalculatorInputView.xib */; };
+		1AB0802003689403C7484C7C22F86FC4 /* Spring.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36ACF57041DE25F39D4941180E78E18C /* Spring.swift */; };
+		1B656604892D604C70AF72BE1A58E4A3 /* SpringButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A013BAE78DC43F6281057889C2A32378 /* SpringButton.swift */; };
+		1C910589AE2A72B098B73CC2104BF2DE /* Spring-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7052039B1F75775158D7E3583694BCCC /* Spring-dummy.m */; };
+		25E69DAC3390E287278F2F726BD2C9C0 /* TransitionZoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ADB4E84BD5BBC4EDEF9A58FC39DFECC /* TransitionZoom.swift */; };
+		282CB683E9F5F2D4E45A0E552A933380 /* AutoTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51082FDD11406FEF1340067F43F475F8 /* AutoTextView.swift */; };
+		2D20A7F15AB28ACBFB56A526E1E19981 /* Pods-Bill Util-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5805C90E78FE9008221D2C3C415EE917 /* Pods-Bill Util-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2E44C57919E1B3726829E568BFC3FECF /* LoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E8EB7317518FF653CC1F628B94EBE99A /* LoadingView.xib */; };
+		306C552734D37D4F3E5284B720AD1289 /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4BD99E82E6C0B9FF011E51428AE96D /* BlurView.swift */; };
+		3B3DA3AC33B3A8CFB5AFEA544075A7FC /* SpringView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53CFAE97007BAB8A983CDFD45577DCC /* SpringView.swift */; };
+		425BA15C0465EF54D7135D441AF25515 /* SpringTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B04CBB4EB3462B5BD6E4A425CF7639 /* SpringTextView.swift */; };
+		43A821C7D3CF03C17316B2894941972B /* VENCalculatorInputView.h in Headers */ = {isa = PBXBuildFile; fileRef = 40CC2DEAAD9BAE0E8C59015B72225A86 /* VENCalculatorInputView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		45204E99261F3D84272B872109EA8919 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA5AA0C8AAAE5B63705048840F5CB96 /* ImageLoader.swift */; };
+		4F0AD139749101FF86A133078D717FBA /* VENCalculatorIconBackspace@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B7A9CE1A24F5A4BE9396BBE3D1AF39F3 /* VENCalculatorIconBackspace@2x.png */; };
+		533A97401812D75B3FFE7D17033489DC /* DesignableImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4978F20C57E1BB571F7309803D8AC69 /* DesignableImageView.swift */; };
+		55022A07BDC7E9464E15A102D24B371C /* VENMoneyCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 486F3F33B569CA72666D71BC1FEE1AE0 /* VENMoneyCalculator.m */; };
+		5D9896FEF7B78FBEA392BD9DD7A85890 /* SpringAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3EAA20A5A0569C8C8055F8FFF04E96 /* SpringAnimation.swift */; };
+		5E0855304CF52077DE874BA95C5C81FB /* UITextField+VENCalculatorInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EFDA3F60B40C1007F91FDD15CB535EF /* UITextField+VENCalculatorInputView.m */; };
+		6204CE6E0F426D8B77FE75B3B989E2B7 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027BA53B5945A074192E878632BC1BE7 /* LoadingView.swift */; };
+		62D5B1CBB75C6BF6574B3D910F8A91FE /* SpringImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F4D76E008B08177D0142DAF1D4EA3B /* SpringImageView.swift */; };
+		781D753761B8A09B9CCDB173C85C3405 /* VENCalculatorIconBackspace.png in Resources */ = {isa = PBXBuildFile; fileRef = 448BBABDEC807B31FD19CFCF830B711D /* VENCalculatorIconBackspace.png */; };
+		7A816EFEAE0E6E8768026A470CFA4368 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
+		8197CB68D1C3488D2C452B002FFD4897 /* VENCalculatorInputTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = EB918102702086FBAFE76F0B9C8F4B07 /* VENCalculatorInputTextField.m */; };
+		8F4C217C5840A53DA09E0D6FD1EC064D /* SoundPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C0E0A27FEF8418A39529B3803713108 /* SoundPlayer.swift */; };
+		93CE49F47A9C3848DF4ED997D0B44793 /* Misc.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC6628441386876B18CDA9589AE987F /* Misc.swift */; };
+		9440B01370768A180AE522BFF7CD76C8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
+		9E19483C10F6291E656AF729A4CA0A97 /* VENCalculatorInputTextField.h in Headers */ = {isa = PBXBuildFile; fileRef = 0939C5C172803416DB3FBB5A7070CD55 /* VENCalculatorInputTextField.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AB56DF13F3DCFB53A6711F2F29ACD1FE /* VENCalculatorInputView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FF6A1039E900C75D6BB0AD9438FD6233 /* VENCalculatorInputView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AD3F195FBB5829314D2B4D5BBBD423F5 /* SpringLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34BD64F23798CFB44DED2B39EEBC27D1 /* SpringLabel.swift */; };
+		B17704DA28E12260A96BD98DBDBFD84C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 179CB1A3069F5E3F93F7EA33FE0D06C7 /* Images.xcassets */; };
+		B56E1A37D45EE5EF15C7A8659ADBAF79 /* VENMoneyCalculator.h in Headers */ = {isa = PBXBuildFile; fileRef = 3EBA4DA003B1C3EEC86E6F31AEEE8386 /* VENMoneyCalculator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B5B2002C743C1F8048AEE852C405382F /* DesignableTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B6822B6D6C975C02CA883FFF489267 /* DesignableTabBarController.swift */; };
+		C9F3DC7BE0C4504DBBC7F7C66CA70C94 /* Pods-Bill Util-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C56D9506F0A950C4ED6B51C5437E3040 /* Pods-Bill Util-dummy.m */; };
+		CBF17BE1967AB8E1A150F3EA36EB67CD /* DesignableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7EB8791E01B2C5B4719F92C5D3E6A6 /* DesignableTextField.swift */; };
+		D9157622297EC889717B7AC1616F7B2B /* NSString+VENCalculatorInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 295A9A9DAC8587558339CA3B444602D6 /* NSString+VENCalculatorInputView.m */; };
+		DBAB89FAD9E82F2BF68B364360465C2B /* Spring-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 74460B2F05D804325B2F0D7B86FBB888 /* Spring-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DC98714A5A80B30C8099A65AA93FCF7E /* KeyboardLayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A31D0E195CC5951A8E096D4C73BB7BB /* KeyboardLayoutConstraint.swift */; };
+		E0FD2815269EA3F88EB4E0E26A1BD645 /* VENCalculatorInputView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B3088717273673E6D6C3C277507D6F60 /* VENCalculatorInputView-dummy.m */; };
+		E33A413B2F3B17E4AFFC2D450C91E2B4 /* DesignableButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB53B76D92806E9FB689DDD5549D21E /* DesignableButton.swift */; };
+		EDEE4714FC6D0A3DA4570EA18BC50C59 /* DesignableLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994F627960DB6CC307F66E8DCC8FD7E9 /* DesignableLabel.swift */; };
+		F19F06B1DDB42A2792B656AC5EA3E7B2 /* UITextField+VENCalculatorInputView.h in Headers */ = {isa = PBXBuildFile; fileRef = 84313791480017553F43B2F998CD5B54 /* UITextField+VENCalculatorInputView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F2445600B9D16A9B365AC63F4898883B /* VENCalculatorInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4548F1A5C8139BB92AA0888C4FDEED3E /* VENCalculatorInputView.m */; };
+		FAAD1BA30568042F0CFCFE720E571B4A /* AsyncImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20BCCDB68AFBE96FDC5C4BF74957DB8 /* AsyncImageView.swift */; };
+		FEE9966C0B895AE54A5EA2BFDD875BBC /* AsyncButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A6FD3D55DF2913C579807CC0FEC512 /* AsyncButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		F5420AD587E9EB771B046D5B062EB6E5 /* PBXContainerItemProxy */ = {
+		4FA88887775BC9686EA96DE905FD9515 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 434410BAB9E109BC7044B51DBDD4E3E1;
+			remoteGlobalIDString = 914EB5EBB950B032CEA7E2DDFBFD41E7;
 			remoteInfo = VENCalculatorInputView;
+		};
+		9AC1B88829DE6E0D1669F24E0AE0E6CE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 93AC2CCDA1B122CCBC965556FECED99B;
+			remoteInfo = Spring;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0373C36BA74E88C18B0EEDF36F13C953 /* VENCalculatorInputView.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = VENCalculatorInputView.xib; path = VENCalculatorInputView/VENCalculatorInputView.xib; sourceTree = "<group>"; };
-		16C1394102E7233AFB91AB2EAD76FDAD /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		18EF0C83ECEFE9112CDBB5E342CB6863 /* NSString+VENCalculatorInputView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+VENCalculatorInputView.h"; path = "VENCalculatorInputView/NSString+VENCalculatorInputView.h"; sourceTree = "<group>"; };
-		3BAA954B4209242A4E43CAD0C6171B89 /* VENCalculatorInputView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VENCalculatorInputView.m; path = VENCalculatorInputView/VENCalculatorInputView.m; sourceTree = "<group>"; };
-		3F8E8AF15DC471077C418143F7E594C1 /* VENCalculatorInputTextField.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VENCalculatorInputTextField.h; path = VENCalculatorInputView/VENCalculatorInputTextField.h; sourceTree = "<group>"; };
-		3FAD4AD46EA1B70E077E6746093F3079 /* VENCalculatorInputView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VENCalculatorInputView.h; path = VENCalculatorInputView/VENCalculatorInputView.h; sourceTree = "<group>"; };
-		51009A9FED82421631A4F8512D7D4F0E /* VENCalculatorIconBackspace.png */ = {isa = PBXFileReference; includeInIndex = 1; name = VENCalculatorIconBackspace.png; path = VENCalculatorInputView/Images/VENCalculatorIconBackspace.png; sourceTree = "<group>"; };
-		571282F2673C431D495DC5905085AE87 /* VENCalculatorInputView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = VENCalculatorInputView.framework; path = VENCalculatorInputView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		027BA53B5945A074192E878632BC1BE7 /* LoadingView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LoadingView.swift; path = Spring/LoadingView.swift; sourceTree = "<group>"; };
+		0939C5C172803416DB3FBB5A7070CD55 /* VENCalculatorInputTextField.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VENCalculatorInputTextField.h; path = VENCalculatorInputView/VENCalculatorInputTextField.h; sourceTree = "<group>"; };
+		179CB1A3069F5E3F93F7EA33FE0D06C7 /* Images.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = SpringApp/Images.xcassets; sourceTree = "<group>"; };
+		1BC3635F4F3A18AF2F33352E3DFF0FB9 /* VENCalculatorInputView.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = VENCalculatorInputView.xib; path = VENCalculatorInputView/VENCalculatorInputView.xib; sourceTree = "<group>"; };
+		295A9A9DAC8587558339CA3B444602D6 /* NSString+VENCalculatorInputView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+VENCalculatorInputView.m"; path = "VENCalculatorInputView/NSString+VENCalculatorInputView.m"; sourceTree = "<group>"; };
+		31B6822B6D6C975C02CA883FFF489267 /* DesignableTabBarController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DesignableTabBarController.swift; path = Spring/DesignableTabBarController.swift; sourceTree = "<group>"; };
+		332955E86E0982E00DEB86E296F484A6 /* SpringTextField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SpringTextField.swift; path = Spring/SpringTextField.swift; sourceTree = "<group>"; };
+		3435A6B90A8E59465BF2405FE5E5B481 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		34BD64F23798CFB44DED2B39EEBC27D1 /* SpringLabel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SpringLabel.swift; path = Spring/SpringLabel.swift; sourceTree = "<group>"; };
+		34C0BF12D003BEBF636C1D164404ED9D /* NSString+VENCalculatorInputView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+VENCalculatorInputView.h"; path = "VENCalculatorInputView/NSString+VENCalculatorInputView.h"; sourceTree = "<group>"; };
+		35A380E67E68C511C60CE5645774CE45 /* VENCalculatorInputView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = VENCalculatorInputView.framework; path = VENCalculatorInputView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		36ACF57041DE25F39D4941180E78E18C /* Spring.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Spring.swift; path = Spring/Spring.swift; sourceTree = "<group>"; };
+		3D4BD99E82E6C0B9FF011E51428AE96D /* BlurView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BlurView.swift; path = Spring/BlurView.swift; sourceTree = "<group>"; };
+		3EBA4DA003B1C3EEC86E6F31AEEE8386 /* VENMoneyCalculator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VENMoneyCalculator.h; path = VENCalculatorInputView/VENMoneyCalculator.h; sourceTree = "<group>"; };
+		3EFDA3F60B40C1007F91FDD15CB535EF /* UITextField+VENCalculatorInputView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UITextField+VENCalculatorInputView.m"; path = "VENCalculatorInputView/UITextField+VENCalculatorInputView.m"; sourceTree = "<group>"; };
+		40CC2DEAAD9BAE0E8C59015B72225A86 /* VENCalculatorInputView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VENCalculatorInputView.h; path = VENCalculatorInputView/VENCalculatorInputView.h; sourceTree = "<group>"; };
+		43EDA71B9FAE4E855CDCF45F2519E6A9 /* Spring-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Spring-prefix.pch"; sourceTree = "<group>"; };
+		448BBABDEC807B31FD19CFCF830B711D /* VENCalculatorIconBackspace.png */ = {isa = PBXFileReference; includeInIndex = 1; name = VENCalculatorIconBackspace.png; path = VENCalculatorInputView/Images/VENCalculatorIconBackspace.png; sourceTree = "<group>"; };
+		4548F1A5C8139BB92AA0888C4FDEED3E /* VENCalculatorInputView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VENCalculatorInputView.m; path = VENCalculatorInputView/VENCalculatorInputView.m; sourceTree = "<group>"; };
+		486F3F33B569CA72666D71BC1FEE1AE0 /* VENMoneyCalculator.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VENMoneyCalculator.m; path = VENCalculatorInputView/VENMoneyCalculator.m; sourceTree = "<group>"; };
+		4B04BC69261186606A464AE33BCBCF9B /* DesignableTextView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DesignableTextView.swift; path = Spring/DesignableTextView.swift; sourceTree = "<group>"; };
+		51082FDD11406FEF1340067F43F475F8 /* AutoTextView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AutoTextView.swift; path = Spring/AutoTextView.swift; sourceTree = "<group>"; };
+		53B04CBB4EB3462B5BD6E4A425CF7639 /* SpringTextView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SpringTextView.swift; path = Spring/SpringTextView.swift; sourceTree = "<group>"; };
+		56F4D76E008B08177D0142DAF1D4EA3B /* SpringImageView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SpringImageView.swift; path = Spring/SpringImageView.swift; sourceTree = "<group>"; };
 		5805C90E78FE9008221D2C3C415EE917 /* Pods-Bill Util-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Bill Util-umbrella.h"; sourceTree = "<group>"; };
+		5A04934B1EF5A210DEB286BDB3072EAA /* VENCalculatorInputView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "VENCalculatorInputView-prefix.pch"; sourceTree = "<group>"; };
+		5A31D0E195CC5951A8E096D4C73BB7BB /* KeyboardLayoutConstraint.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KeyboardLayoutConstraint.swift; path = Spring/KeyboardLayoutConstraint.swift; sourceTree = "<group>"; };
 		5B6CCE0E51E7DF91ACCD7873AED3BD54 /* Pods-Bill Util-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Bill Util-resources.sh"; sourceTree = "<group>"; };
-		650F3D53517378140A668ED79CCAD4ED /* UITextField+VENCalculatorInputView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UITextField+VENCalculatorInputView.h"; path = "VENCalculatorInputView/UITextField+VENCalculatorInputView.h"; sourceTree = "<group>"; };
-		67F897702FC0D5C84F5AC18AF90C273D /* VENCalculatorInputView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "VENCalculatorInputView-prefix.pch"; sourceTree = "<group>"; };
-		74848CAB76B70573DAE63D207B51FAB8 /* VENCalculatorInputView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = VENCalculatorInputView.modulemap; sourceTree = "<group>"; };
+		604F8008F385DB9DF238278F45A4E016 /* DesignableView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DesignableView.swift; path = Spring/DesignableView.swift; sourceTree = "<group>"; };
+		69A6FD3D55DF2913C579807CC0FEC512 /* AsyncButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AsyncButton.swift; path = Spring/AsyncButton.swift; sourceTree = "<group>"; };
+		69DB7CA34148A45D3761207C70347767 /* Spring.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Spring.xcconfig; sourceTree = "<group>"; };
+		6C0E0A27FEF8418A39529B3803713108 /* SoundPlayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SoundPlayer.swift; path = Spring/SoundPlayer.swift; sourceTree = "<group>"; };
+		6EA658A63B596F08EB9939C298071689 /* Spring.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Spring.framework; path = Spring.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6EB53B76D92806E9FB689DDD5549D21E /* DesignableButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DesignableButton.swift; path = Spring/DesignableButton.swift; sourceTree = "<group>"; };
+		7052039B1F75775158D7E3583694BCCC /* Spring-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Spring-dummy.m"; sourceTree = "<group>"; };
+		74460B2F05D804325B2F0D7B86FBB888 /* Spring-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Spring-umbrella.h"; sourceTree = "<group>"; };
+		7AA5AA0C8AAAE5B63705048840F5CB96 /* ImageLoader.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageLoader.swift; path = Spring/ImageLoader.swift; sourceTree = "<group>"; };
 		7B31D4AE1D6E757601D3423848A37BEF /* Pods-Bill Util-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Bill Util-acknowledgements.plist"; sourceTree = "<group>"; };
+		82D8509AAF29F3C793A940CBAD04F567 /* UnwindSegue.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UnwindSegue.swift; path = Spring/UnwindSegue.swift; sourceTree = "<group>"; };
 		83B15AC22ED8654C98E63BEE0DEF1894 /* Pods-Bill Util.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-Bill Util.modulemap"; sourceTree = "<group>"; };
+		84313791480017553F43B2F998CD5B54 /* UITextField+VENCalculatorInputView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UITextField+VENCalculatorInputView.h"; path = "VENCalculatorInputView/UITextField+VENCalculatorInputView.h"; sourceTree = "<group>"; };
 		87DD03C43715D20A481695EF9C840792 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8ADB4E84BD5BBC4EDEF9A58FC39DFECC /* TransitionZoom.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TransitionZoom.swift; path = Spring/TransitionZoom.swift; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9B10F266EEF54D5185DA8C0C57FB6395 /* VENCalculatorInputView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "VENCalculatorInputView-dummy.m"; sourceTree = "<group>"; };
-		A30A2E3EE5B4ACD4DED83DD673DC98C4 /* VENMoneyCalculator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VENMoneyCalculator.h; path = VENCalculatorInputView/VENMoneyCalculator.h; sourceTree = "<group>"; };
-		A3D3B520FFD9F140B15D38A0011F382C /* VENCalculatorInputView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = VENCalculatorInputView.xcconfig; sourceTree = "<group>"; };
-		A86C308E25B8ACB8CB645F916A3D6717 /* Pods_Bill_Util.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Bill_Util.framework; path = "Pods-Bill Util.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		AE37DEF515B6AD5B48047E91D20E9A35 /* NSString+VENCalculatorInputView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+VENCalculatorInputView.m"; path = "VENCalculatorInputView/NSString+VENCalculatorInputView.m"; sourceTree = "<group>"; };
-		B1568469C9042A8CB8C9979984537B77 /* VENMoneyCalculator.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VENMoneyCalculator.m; path = VENCalculatorInputView/VENMoneyCalculator.m; sourceTree = "<group>"; };
+		994F627960DB6CC307F66E8DCC8FD7E9 /* DesignableLabel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DesignableLabel.swift; path = Spring/DesignableLabel.swift; sourceTree = "<group>"; };
+		A013BAE78DC43F6281057889C2A32378 /* SpringButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SpringButton.swift; path = Spring/SpringButton.swift; sourceTree = "<group>"; };
+		AE2FEFEE1D557084138C3ED15808BF0A /* VENCalculatorInputView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = VENCalculatorInputView.modulemap; sourceTree = "<group>"; };
+		B3088717273673E6D6C3C277507D6F60 /* VENCalculatorInputView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "VENCalculatorInputView-dummy.m"; sourceTree = "<group>"; };
+		B4978F20C57E1BB571F7309803D8AC69 /* DesignableImageView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DesignableImageView.swift; path = Spring/DesignableImageView.swift; sourceTree = "<group>"; };
 		B518000630FD79D2E85EC6103C22522F /* Pods-Bill Util.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Bill Util.debug.xcconfig"; sourceTree = "<group>"; };
-		BD712A7763C90BFC1248736B86B5FE67 /* VENCalculatorInputTextField.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VENCalculatorInputTextField.m; path = VENCalculatorInputView/VENCalculatorInputTextField.m; sourceTree = "<group>"; };
-		C0CE10D6881C67786CFE6A2FCC45DD40 /* VENCalculatorInputView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "VENCalculatorInputView-umbrella.h"; sourceTree = "<group>"; };
+		B7A9CE1A24F5A4BE9396BBE3D1AF39F3 /* VENCalculatorIconBackspace@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; name = "VENCalculatorIconBackspace@2x.png"; path = "VENCalculatorInputView/Images/VENCalculatorIconBackspace@2x.png"; sourceTree = "<group>"; };
+		BEEBB3B48E116D2892EBB820A563181E /* Spring.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = Spring.modulemap; sourceTree = "<group>"; };
 		C1C8896EDF9B514C2661EFA850B5AAC3 /* Pods-Bill Util.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Bill Util.release.xcconfig"; sourceTree = "<group>"; };
+		C20BCCDB68AFBE96FDC5C4BF74957DB8 /* AsyncImageView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AsyncImageView.swift; path = Spring/AsyncImageView.swift; sourceTree = "<group>"; };
 		C56D9506F0A950C4ED6B51C5437E3040 /* Pods-Bill Util-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Bill Util-dummy.m"; sourceTree = "<group>"; };
-		C5A2B5D12E34F454936143837F4689D7 /* VENCalculatorIconBackspace@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; name = "VENCalculatorIconBackspace@2x.png"; path = "VENCalculatorInputView/Images/VENCalculatorIconBackspace@2x.png"; sourceTree = "<group>"; };
 		C609C5E74CE5D28FCB8A9442C297CC8D /* Pods-Bill Util-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Bill Util-acknowledgements.markdown"; sourceTree = "<group>"; };
+		C8D533F4CB4CC9ACD6BB3A7FB22E6E6A /* VENCalculatorInputView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = VENCalculatorInputView.xcconfig; sourceTree = "<group>"; };
+		CB39DA1B615D1275EF70C7495B8D124C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		D74A186CCA259919DB826AC08955940E /* Pods-Bill Util-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Bill Util-frameworks.sh"; sourceTree = "<group>"; };
-		F0413A7989E434220FB404231B1DA8FD /* UITextField+VENCalculatorInputView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UITextField+VENCalculatorInputView.m"; path = "VENCalculatorInputView/UITextField+VENCalculatorInputView.m"; sourceTree = "<group>"; };
+		DA7EB8791E01B2C5B4719F92C5D3E6A6 /* DesignableTextField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DesignableTextField.swift; path = Spring/DesignableTextField.swift; sourceTree = "<group>"; };
+		E8EB7317518FF653CC1F628B94EBE99A /* LoadingView.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = LoadingView.xib; path = Spring/LoadingView.xib; sourceTree = "<group>"; };
+		EB918102702086FBAFE76F0B9C8F4B07 /* VENCalculatorInputTextField.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VENCalculatorInputTextField.m; path = VENCalculatorInputView/VENCalculatorInputTextField.m; sourceTree = "<group>"; };
+		F53CFAE97007BAB8A983CDFD45577DCC /* SpringView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SpringView.swift; path = Spring/SpringView.swift; sourceTree = "<group>"; };
+		F9278A123448AC615483812B49428DD8 /* Pods_Bill_Util.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Bill_Util.framework; path = "Pods-Bill Util.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FBC6628441386876B18CDA9589AE987F /* Misc.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Misc.swift; path = Spring/Misc.swift; sourceTree = "<group>"; };
+		FC847874FDD46727C7D8091713B57896 /* TransitionManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TransitionManager.swift; path = Spring/TransitionManager.swift; sourceTree = "<group>"; };
+		FE3EAA20A5A0569C8C8055F8FFF04E96 /* SpringAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SpringAnimation.swift; path = Spring/SpringAnimation.swift; sourceTree = "<group>"; };
+		FF6A1039E900C75D6BB0AD9438FD6233 /* VENCalculatorInputView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "VENCalculatorInputView-umbrella.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		0903E01728CF0AFB2C018E2F00AFDBD6 /* Frameworks */ = {
+		240EDA186D93E142390D461492BCFD6C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				99F33541ADCB87D54D21249679D4653C /* Foundation.framework in Frameworks */,
+				032B7981A964A6A0A2C12246C57C34E5 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3FBDDB9ED124997940AD61F5EEA4EA4C /* Frameworks */ = {
+		76734BDC1E093732B138F1DA91A08EA7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D9DED59D8F3D68F1410E417F8303286A /* Foundation.framework in Frameworks */,
+				9440B01370768A180AE522BFF7CD76C8 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C6BC85A7F7B0754E3DB5527A06C22040 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7A816EFEAE0E6E8768026A470CFA4368 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,32 +185,64 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		2CFBDC0A5BB0CD28E01A53584F671706 /* Pods */ = {
+		123093BAAD7D2C751B6351F83D35AF0E /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				4C93E309572BA96477B93D3AFE2056D6 /* VENCalculatorInputView */,
+				1EAD9F9D4F9ABA25336C1F436806F7A7 /* Spring */,
+				DA8EB249F2D4C093A38D4D3D00609E43 /* VENCalculatorInputView */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		4C93E309572BA96477B93D3AFE2056D6 /* VENCalculatorInputView */ = {
+		1EAD9F9D4F9ABA25336C1F436806F7A7 /* Spring */ = {
 			isa = PBXGroup;
 			children = (
-				18EF0C83ECEFE9112CDBB5E342CB6863 /* NSString+VENCalculatorInputView.h */,
-				AE37DEF515B6AD5B48047E91D20E9A35 /* NSString+VENCalculatorInputView.m */,
-				650F3D53517378140A668ED79CCAD4ED /* UITextField+VENCalculatorInputView.h */,
-				F0413A7989E434220FB404231B1DA8FD /* UITextField+VENCalculatorInputView.m */,
-				3F8E8AF15DC471077C418143F7E594C1 /* VENCalculatorInputTextField.h */,
-				BD712A7763C90BFC1248736B86B5FE67 /* VENCalculatorInputTextField.m */,
-				3FAD4AD46EA1B70E077E6746093F3079 /* VENCalculatorInputView.h */,
-				3BAA954B4209242A4E43CAD0C6171B89 /* VENCalculatorInputView.m */,
-				A30A2E3EE5B4ACD4DED83DD673DC98C4 /* VENMoneyCalculator.h */,
-				B1568469C9042A8CB8C9979984537B77 /* VENMoneyCalculator.m */,
-				69E2725A5E5D6784128F2489760C8A6E /* Resources */,
-				779912432A680FE735D8F8CD12E2E111 /* Support Files */,
+				69A6FD3D55DF2913C579807CC0FEC512 /* AsyncButton.swift */,
+				C20BCCDB68AFBE96FDC5C4BF74957DB8 /* AsyncImageView.swift */,
+				51082FDD11406FEF1340067F43F475F8 /* AutoTextView.swift */,
+				3D4BD99E82E6C0B9FF011E51428AE96D /* BlurView.swift */,
+				6EB53B76D92806E9FB689DDD5549D21E /* DesignableButton.swift */,
+				B4978F20C57E1BB571F7309803D8AC69 /* DesignableImageView.swift */,
+				994F627960DB6CC307F66E8DCC8FD7E9 /* DesignableLabel.swift */,
+				31B6822B6D6C975C02CA883FFF489267 /* DesignableTabBarController.swift */,
+				DA7EB8791E01B2C5B4719F92C5D3E6A6 /* DesignableTextField.swift */,
+				4B04BC69261186606A464AE33BCBCF9B /* DesignableTextView.swift */,
+				604F8008F385DB9DF238278F45A4E016 /* DesignableView.swift */,
+				7AA5AA0C8AAAE5B63705048840F5CB96 /* ImageLoader.swift */,
+				5A31D0E195CC5951A8E096D4C73BB7BB /* KeyboardLayoutConstraint.swift */,
+				027BA53B5945A074192E878632BC1BE7 /* LoadingView.swift */,
+				FBC6628441386876B18CDA9589AE987F /* Misc.swift */,
+				6C0E0A27FEF8418A39529B3803713108 /* SoundPlayer.swift */,
+				36ACF57041DE25F39D4941180E78E18C /* Spring.swift */,
+				FE3EAA20A5A0569C8C8055F8FFF04E96 /* SpringAnimation.swift */,
+				A013BAE78DC43F6281057889C2A32378 /* SpringButton.swift */,
+				56F4D76E008B08177D0142DAF1D4EA3B /* SpringImageView.swift */,
+				34BD64F23798CFB44DED2B39EEBC27D1 /* SpringLabel.swift */,
+				332955E86E0982E00DEB86E296F484A6 /* SpringTextField.swift */,
+				53B04CBB4EB3462B5BD6E4A425CF7639 /* SpringTextView.swift */,
+				F53CFAE97007BAB8A983CDFD45577DCC /* SpringView.swift */,
+				FC847874FDD46727C7D8091713B57896 /* TransitionManager.swift */,
+				8ADB4E84BD5BBC4EDEF9A58FC39DFECC /* TransitionZoom.swift */,
+				82D8509AAF29F3C793A940CBAD04F567 /* UnwindSegue.swift */,
+				608DC0ACF55900D0F8DDCC436E2AFEC1 /* Resources */,
+				576607E4CA009C4CD772024121793271 /* Support Files */,
 			);
-			name = VENCalculatorInputView;
-			path = VENCalculatorInputView;
+			name = Spring;
+			path = Spring;
+			sourceTree = "<group>";
+		};
+		576607E4CA009C4CD772024121793271 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				CB39DA1B615D1275EF70C7495B8D124C /* Info.plist */,
+				BEEBB3B48E116D2892EBB820A563181E /* Spring.modulemap */,
+				69DB7CA34148A45D3761207C70347767 /* Spring.xcconfig */,
+				7052039B1F75775158D7E3583694BCCC /* Spring-dummy.m */,
+				43EDA71B9FAE4E855CDCF45F2519E6A9 /* Spring-prefix.pch */,
+				74460B2F05D804325B2F0D7B86FBB888 /* Spring-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Spring";
 			sourceTree = "<group>";
 		};
 		5881148ADB7F3D3F0EEF510DE3CA508C /* Pods-Bill Util */ = {
@@ -148,14 +263,23 @@
 			path = "Target Support Files/Pods-Bill Util";
 			sourceTree = "<group>";
 		};
-		69E2725A5E5D6784128F2489760C8A6E /* Resources */ = {
+		608DC0ACF55900D0F8DDCC436E2AFEC1 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				51009A9FED82421631A4F8512D7D4F0E /* VENCalculatorIconBackspace.png */,
-				C5A2B5D12E34F454936143837F4689D7 /* VENCalculatorIconBackspace@2x.png */,
-				0373C36BA74E88C18B0EEDF36F13C953 /* VENCalculatorInputView.xib */,
+				179CB1A3069F5E3F93F7EA33FE0D06C7 /* Images.xcassets */,
+				E8EB7317518FF653CC1F628B94EBE99A /* LoadingView.xib */,
 			);
 			name = Resources;
+			sourceTree = "<group>";
+		};
+		6E33AE42F713B89951437B81CDA1F44D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F9278A123448AC615483812B49428DD8 /* Pods_Bill_Util.framework */,
+				6EA658A63B596F08EB9939C298071689 /* Spring.framework */,
+				35A380E67E68C511C60CE5645774CE45 /* VENCalculatorInputView.framework */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		7531C8F8DE19F1AA3C8A7AC97A91DC29 /* iOS */ = {
@@ -166,38 +290,25 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		76A6CC11223BDCF97C6CBE82940857A9 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				A86C308E25B8ACB8CB645F916A3D6717 /* Pods_Bill_Util.framework */,
-				571282F2673C431D495DC5905085AE87 /* VENCalculatorInputView.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		779912432A680FE735D8F8CD12E2E111 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				16C1394102E7233AFB91AB2EAD76FDAD /* Info.plist */,
-				74848CAB76B70573DAE63D207B51FAB8 /* VENCalculatorInputView.modulemap */,
-				A3D3B520FFD9F140B15D38A0011F382C /* VENCalculatorInputView.xcconfig */,
-				9B10F266EEF54D5185DA8C0C57FB6395 /* VENCalculatorInputView-dummy.m */,
-				67F897702FC0D5C84F5AC18AF90C273D /* VENCalculatorInputView-prefix.pch */,
-				C0CE10D6881C67786CFE6A2FCC45DD40 /* VENCalculatorInputView-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/VENCalculatorInputView";
-			sourceTree = "<group>";
-		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				2CFBDC0A5BB0CD28E01A53584F671706 /* Pods */,
-				76A6CC11223BDCF97C6CBE82940857A9 /* Products */,
+				123093BAAD7D2C751B6351F83D35AF0E /* Pods */,
+				6E33AE42F713B89951437B81CDA1F44D /* Products */,
 				11C532F7AF21A693F0ADA4DCDE3C2D19 /* Targets Support Files */,
 			);
+			sourceTree = "<group>";
+		};
+		9F32F949EB17004E062B5F88BB993F9F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				448BBABDEC807B31FD19CFCF830B711D /* VENCalculatorIconBackspace.png */,
+				B7A9CE1A24F5A4BE9396BBE3D1AF39F3 /* VENCalculatorIconBackspace@2x.png */,
+				1BC3635F4F3A18AF2F33352E3DFF0FB9 /* VENCalculatorInputView.xib */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
@@ -208,41 +319,83 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		DA8EB249F2D4C093A38D4D3D00609E43 /* VENCalculatorInputView */ = {
+			isa = PBXGroup;
+			children = (
+				34C0BF12D003BEBF636C1D164404ED9D /* NSString+VENCalculatorInputView.h */,
+				295A9A9DAC8587558339CA3B444602D6 /* NSString+VENCalculatorInputView.m */,
+				84313791480017553F43B2F998CD5B54 /* UITextField+VENCalculatorInputView.h */,
+				3EFDA3F60B40C1007F91FDD15CB535EF /* UITextField+VENCalculatorInputView.m */,
+				0939C5C172803416DB3FBB5A7070CD55 /* VENCalculatorInputTextField.h */,
+				EB918102702086FBAFE76F0B9C8F4B07 /* VENCalculatorInputTextField.m */,
+				40CC2DEAAD9BAE0E8C59015B72225A86 /* VENCalculatorInputView.h */,
+				4548F1A5C8139BB92AA0888C4FDEED3E /* VENCalculatorInputView.m */,
+				3EBA4DA003B1C3EEC86E6F31AEEE8386 /* VENMoneyCalculator.h */,
+				486F3F33B569CA72666D71BC1FEE1AE0 /* VENMoneyCalculator.m */,
+				9F32F949EB17004E062B5F88BB993F9F /* Resources */,
+				E6318204419559F19B21BB53AB11257B /* Support Files */,
+			);
+			name = VENCalculatorInputView;
+			path = VENCalculatorInputView;
+			sourceTree = "<group>";
+		};
+		E6318204419559F19B21BB53AB11257B /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				3435A6B90A8E59465BF2405FE5E5B481 /* Info.plist */,
+				AE2FEFEE1D557084138C3ED15808BF0A /* VENCalculatorInputView.modulemap */,
+				C8D533F4CB4CC9ACD6BB3A7FB22E6E6A /* VENCalculatorInputView.xcconfig */,
+				B3088717273673E6D6C3C277507D6F60 /* VENCalculatorInputView-dummy.m */,
+				5A04934B1EF5A210DEB286BDB3072EAA /* VENCalculatorInputView-prefix.pch */,
+				FF6A1039E900C75D6BB0AD9438FD6233 /* VENCalculatorInputView-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/VENCalculatorInputView";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		6FE514474D0FEF824E3A63AC3E29EB4D /* Headers */ = {
+		4FEE8EE773BE07E50DC86D6D3C57AE6D /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BE7A28611E66B00197AB33D13B1C2DDB /* NSString+VENCalculatorInputView.h in Headers */,
-				C87FFDA6DEF1BC4CBA972E189420D8B8 /* UITextField+VENCalculatorInputView.h in Headers */,
-				4A537D2D2C44915BD6409BF1950177B7 /* VENCalculatorInputTextField.h in Headers */,
-				01F789E2D8E1D0DA1A6A0D8F2ECC472D /* VENCalculatorInputView-umbrella.h in Headers */,
-				A56F9ABCEA7EACE5C29DAD8381E6939E /* VENCalculatorInputView.h in Headers */,
-				8C14A6DD8AFCDE37A52C627CB33806B3 /* VENMoneyCalculator.h in Headers */,
+				158A9E114561EC0578A6138B234F6BC5 /* NSString+VENCalculatorInputView.h in Headers */,
+				F19F06B1DDB42A2792B656AC5EA3E7B2 /* UITextField+VENCalculatorInputView.h in Headers */,
+				9E19483C10F6291E656AF729A4CA0A97 /* VENCalculatorInputTextField.h in Headers */,
+				AB56DF13F3DCFB53A6711F2F29ACD1FE /* VENCalculatorInputView-umbrella.h in Headers */,
+				43A821C7D3CF03C17316B2894941972B /* VENCalculatorInputView.h in Headers */,
+				B56E1A37D45EE5EF15C7A8659ADBAF79 /* VENMoneyCalculator.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7FCCC24625FAF4C58258DC3B6AC215A3 /* Headers */ = {
+		E42F60C7273AF3F8EC2709E42D1F63A6 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B147A830D70582D844D88FBAA1AE980C /* Pods-Bill Util-umbrella.h in Headers */,
+				DBAB89FAD9E82F2BF68B364360465C2B /* Spring-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FF0EE45E13A2AA5E895B8E96B23398EE /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2D20A7F15AB28ACBFB56A526E1E19981 /* Pods-Bill Util-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		434410BAB9E109BC7044B51DBDD4E3E1 /* VENCalculatorInputView */ = {
+		914EB5EBB950B032CEA7E2DDFBFD41E7 /* VENCalculatorInputView */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 73E0D19430FCE75394C4592951A070AA /* Build configuration list for PBXNativeTarget "VENCalculatorInputView" */;
+			buildConfigurationList = 55298CD6801B4A481BB6EF5784C3C948 /* Build configuration list for PBXNativeTarget "VENCalculatorInputView" */;
 			buildPhases = (
-				9C4E25255373FB3160189FA30C118219 /* Sources */,
-				0903E01728CF0AFB2C018E2F00AFDBD6 /* Frameworks */,
-				6FE514474D0FEF824E3A63AC3E29EB4D /* Headers */,
-				D43C1E80EDB43D28824101537CE43B06 /* Resources */,
+				E632B048E47A26A8DD3DB793CE9DAD13 /* Sources */,
+				76734BDC1E093732B138F1DA91A08EA7 /* Frameworks */,
+				4FEE8EE773BE07E50DC86D6D3C57AE6D /* Headers */,
+				28FCB0213F82B37A1EC8CAA4BFFA4B55 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -250,25 +403,44 @@
 			);
 			name = VENCalculatorInputView;
 			productName = VENCalculatorInputView;
-			productReference = 571282F2673C431D495DC5905085AE87 /* VENCalculatorInputView.framework */;
+			productReference = 35A380E67E68C511C60CE5645774CE45 /* VENCalculatorInputView.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		D6324D5D12B4F115B2293AE76EE53A2E /* Pods-Bill Util */ = {
+		93AC2CCDA1B122CCBC965556FECED99B /* Spring */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 599B10CE57EBBC5DDDDD75D2C504FFF9 /* Build configuration list for PBXNativeTarget "Pods-Bill Util" */;
+			buildConfigurationList = 40094F0E3F6715F160A46C4C0EE50D41 /* Build configuration list for PBXNativeTarget "Spring" */;
 			buildPhases = (
-				1EACA4B2EA08C2AF6517B5415688AD43 /* Sources */,
-				3FBDDB9ED124997940AD61F5EEA4EA4C /* Frameworks */,
-				7FCCC24625FAF4C58258DC3B6AC215A3 /* Headers */,
+				972AFBE2E923D6D640F634BEF8ED35D2 /* Sources */,
+				C6BC85A7F7B0754E3DB5527A06C22040 /* Frameworks */,
+				63080231B3FFD76DEEFB813EC73E5857 /* Resources */,
+				E42F60C7273AF3F8EC2709E42D1F63A6 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				E1FBA7055391C34A3EE746C54BB21085 /* PBXTargetDependency */,
+			);
+			name = Spring;
+			productName = Spring;
+			productReference = 6EA658A63B596F08EB9939C298071689 /* Spring.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		9C2FC03632780EC33D53E848C33F4E4C /* Pods-Bill Util */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BE9DAB962B18E38FDD40540E9CE53352 /* Build configuration list for PBXNativeTarget "Pods-Bill Util" */;
+			buildPhases = (
+				F9FBAAC8C4C4F69C154EAF5D020640FD /* Sources */,
+				240EDA186D93E142390D461492BCFD6C /* Frameworks */,
+				FF0EE45E13A2AA5E895B8E96B23398EE /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				14FAAD51CCD8C14F5A676966A35767A4 /* PBXTargetDependency */,
+				0069FF65A2067173A7446085788C4B1E /* PBXTargetDependency */,
 			);
 			name = "Pods-Bill Util";
 			productName = "Pods-Bill Util";
-			productReference = A86C308E25B8ACB8CB645F916A3D6717 /* Pods_Bill_Util.framework */;
+			productReference = F9278A123448AC615483812B49428DD8 /* Pods_Bill_Util.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -288,66 +460,182 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 76A6CC11223BDCF97C6CBE82940857A9 /* Products */;
+			productRefGroup = 6E33AE42F713B89951437B81CDA1F44D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D6324D5D12B4F115B2293AE76EE53A2E /* Pods-Bill Util */,
-				434410BAB9E109BC7044B51DBDD4E3E1 /* VENCalculatorInputView */,
+				9C2FC03632780EC33D53E848C33F4E4C /* Pods-Bill Util */,
+				93AC2CCDA1B122CCBC965556FECED99B /* Spring */,
+				914EB5EBB950B032CEA7E2DDFBFD41E7 /* VENCalculatorInputView */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		D43C1E80EDB43D28824101537CE43B06 /* Resources */ = {
+		28FCB0213F82B37A1EC8CAA4BFFA4B55 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7669B01895AB225F3316804C729D8921 /* VENCalculatorIconBackspace.png in Resources */,
-				387907C1238C8605F57A93ACCBC11FB0 /* VENCalculatorIconBackspace@2x.png in Resources */,
-				F378136F91352E47F23A017754E05E87 /* VENCalculatorInputView.xib in Resources */,
+				781D753761B8A09B9CCDB173C85C3405 /* VENCalculatorIconBackspace.png in Resources */,
+				4F0AD139749101FF86A133078D717FBA /* VENCalculatorIconBackspace@2x.png in Resources */,
+				19B44A9CA9269B440A7D4EAB31487FB3 /* VENCalculatorInputView.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		63080231B3FFD76DEEFB813EC73E5857 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B17704DA28E12260A96BD98DBDBFD84C /* Images.xcassets in Resources */,
+				2E44C57919E1B3726829E568BFC3FECF /* LoadingView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		1EACA4B2EA08C2AF6517B5415688AD43 /* Sources */ = {
+		972AFBE2E923D6D640F634BEF8ED35D2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CA7D06E3965CE13080C8D30C2C268899 /* Pods-Bill Util-dummy.m in Sources */,
+				FEE9966C0B895AE54A5EA2BFDD875BBC /* AsyncButton.swift in Sources */,
+				FAAD1BA30568042F0CFCFE720E571B4A /* AsyncImageView.swift in Sources */,
+				282CB683E9F5F2D4E45A0E552A933380 /* AutoTextView.swift in Sources */,
+				306C552734D37D4F3E5284B720AD1289 /* BlurView.swift in Sources */,
+				E33A413B2F3B17E4AFFC2D450C91E2B4 /* DesignableButton.swift in Sources */,
+				533A97401812D75B3FFE7D17033489DC /* DesignableImageView.swift in Sources */,
+				EDEE4714FC6D0A3DA4570EA18BC50C59 /* DesignableLabel.swift in Sources */,
+				B5B2002C743C1F8048AEE852C405382F /* DesignableTabBarController.swift in Sources */,
+				CBF17BE1967AB8E1A150F3EA36EB67CD /* DesignableTextField.swift in Sources */,
+				0E68D1682FE3C19E9D1E90B42398AD3A /* DesignableTextView.swift in Sources */,
+				021F30C6EB5549044F67F0A5290BE732 /* DesignableView.swift in Sources */,
+				45204E99261F3D84272B872109EA8919 /* ImageLoader.swift in Sources */,
+				DC98714A5A80B30C8099A65AA93FCF7E /* KeyboardLayoutConstraint.swift in Sources */,
+				6204CE6E0F426D8B77FE75B3B989E2B7 /* LoadingView.swift in Sources */,
+				93CE49F47A9C3848DF4ED997D0B44793 /* Misc.swift in Sources */,
+				8F4C217C5840A53DA09E0D6FD1EC064D /* SoundPlayer.swift in Sources */,
+				1C910589AE2A72B098B73CC2104BF2DE /* Spring-dummy.m in Sources */,
+				1AB0802003689403C7484C7C22F86FC4 /* Spring.swift in Sources */,
+				5D9896FEF7B78FBEA392BD9DD7A85890 /* SpringAnimation.swift in Sources */,
+				1B656604892D604C70AF72BE1A58E4A3 /* SpringButton.swift in Sources */,
+				62D5B1CBB75C6BF6574B3D910F8A91FE /* SpringImageView.swift in Sources */,
+				AD3F195FBB5829314D2B4D5BBBD423F5 /* SpringLabel.swift in Sources */,
+				06BF385915AD49C19C7EFAA7DA812BD9 /* SpringTextField.swift in Sources */,
+				425BA15C0465EF54D7135D441AF25515 /* SpringTextView.swift in Sources */,
+				3B3DA3AC33B3A8CFB5AFEA544075A7FC /* SpringView.swift in Sources */,
+				11996DF23881CBBAF947428187594D5F /* TransitionManager.swift in Sources */,
+				25E69DAC3390E287278F2F726BD2C9C0 /* TransitionZoom.swift in Sources */,
+				1338BB069F4C8E21018666C76CAC76EB /* UnwindSegue.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9C4E25255373FB3160189FA30C118219 /* Sources */ = {
+		E632B048E47A26A8DD3DB793CE9DAD13 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F93E5926D5CED50C2C18C94EB85F6264 /* NSString+VENCalculatorInputView.m in Sources */,
-				B3B627E728609C48F0564DCE25BB7471 /* UITextField+VENCalculatorInputView.m in Sources */,
-				C9178D4C65A297480590BF032E9F8119 /* VENCalculatorInputTextField.m in Sources */,
-				1E6C7863883EEB4B589AE6B38912E7F9 /* VENCalculatorInputView-dummy.m in Sources */,
-				DAFC21EC8BCA372DF074EE8460A2E3D5 /* VENCalculatorInputView.m in Sources */,
-				E9146AD8261BFC1B03F93DEAC00674B5 /* VENMoneyCalculator.m in Sources */,
+				D9157622297EC889717B7AC1616F7B2B /* NSString+VENCalculatorInputView.m in Sources */,
+				5E0855304CF52077DE874BA95C5C81FB /* UITextField+VENCalculatorInputView.m in Sources */,
+				8197CB68D1C3488D2C452B002FFD4897 /* VENCalculatorInputTextField.m in Sources */,
+				E0FD2815269EA3F88EB4E0E26A1BD645 /* VENCalculatorInputView-dummy.m in Sources */,
+				F2445600B9D16A9B365AC63F4898883B /* VENCalculatorInputView.m in Sources */,
+				55022A07BDC7E9464E15A102D24B371C /* VENMoneyCalculator.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F9FBAAC8C4C4F69C154EAF5D020640FD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9F3DC7BE0C4504DBBC7F7C66CA70C94 /* Pods-Bill Util-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		E1FBA7055391C34A3EE746C54BB21085 /* PBXTargetDependency */ = {
+		0069FF65A2067173A7446085788C4B1E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = VENCalculatorInputView;
-			target = 434410BAB9E109BC7044B51DBDD4E3E1 /* VENCalculatorInputView */;
-			targetProxy = F5420AD587E9EB771B046D5B062EB6E5 /* PBXContainerItemProxy */;
+			target = 914EB5EBB950B032CEA7E2DDFBFD41E7 /* VENCalculatorInputView */;
+			targetProxy = 4FA88887775BC9686EA96DE905FD9515 /* PBXContainerItemProxy */;
+		};
+		14FAAD51CCD8C14F5A676966A35767A4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Spring;
+			target = 93AC2CCDA1B122CCBC965556FECED99B /* Spring */;
+			targetProxy = 9AC1B88829DE6E0D1669F24E0AE0E6CE /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		3585F40E89A7C167F0592F0563744A09 /* Debug */ = {
+		159D67E4628B48B8085018A41508C5A0 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A3D3B520FFD9F140B15D38A0011F382C /* VENCalculatorInputView.xcconfig */;
+			baseConfigurationReference = 69DB7CA34148A45D3761207C70347767 /* Spring.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Spring/Spring-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Spring/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Spring/Spring.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = Spring;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		488A3256E4EC164D3E936FAF16D393C8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 69DB7CA34148A45D3761207C70347767 /* Spring.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Spring/Spring-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Spring/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Spring/Spring.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = Spring;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		5472717911BCFC15464C92ACD3EBC788 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C8D533F4CB4CC9ACD6BB3A7FB22E6E6A /* VENCalculatorInputView.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -376,41 +664,6 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
-		};
-		3FAD7B4D7D936E946C454D9806FE8DCF /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C1C8896EDF9B514C2661EFA850B5AAC3 /* Pods-Bill Util.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-Bill Util/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Bill Util/Pods-Bill Util.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_Bill_Util;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
 		};
 		59B042A655B7C20CBAB90E385BF4E4C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -456,44 +709,9 @@
 			};
 			name = Debug;
 		};
-		89699CF00DB16FB2F845C542367AF0FC /* Debug */ = {
+		85A692DD4E84B322480B1CAB9FAC60BE /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B518000630FD79D2E85EC6103C22522F /* Pods-Bill Util.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-Bill Util/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Bill Util/Pods-Bill Util.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_Bill_Util;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		98BF30FA91C34BDBC752D7511BE4CA0E /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = A3D3B520FFD9F140B15D38A0011F382C /* VENCalculatorInputView.xcconfig */;
+			baseConfigurationReference = C8D533F4CB4CC9ACD6BB3A7FB22E6E6A /* VENCalculatorInputView.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -517,6 +735,41 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		A9B486DC25C0360BBE454FAEC88627A0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C1C8896EDF9B514C2661EFA850B5AAC3 /* Pods-Bill Util.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Bill Util/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Bill Util/Pods-Bill Util.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Bill_Util;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -563,6 +816,42 @@
 			};
 			name = Release;
 		};
+		F2EAF76C42A3A92A102D8E1D962408DA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B518000630FD79D2E85EC6103C22522F /* Pods-Bill Util.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Bill Util/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Bill Util/Pods-Bill Util.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Bill_Util;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -575,20 +864,29 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		599B10CE57EBBC5DDDDD75D2C504FFF9 /* Build configuration list for PBXNativeTarget "Pods-Bill Util" */ = {
+		40094F0E3F6715F160A46C4C0EE50D41 /* Build configuration list for PBXNativeTarget "Spring" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				89699CF00DB16FB2F845C542367AF0FC /* Debug */,
-				3FAD7B4D7D936E946C454D9806FE8DCF /* Release */,
+				159D67E4628B48B8085018A41508C5A0 /* Debug */,
+				488A3256E4EC164D3E936FAF16D393C8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		73E0D19430FCE75394C4592951A070AA /* Build configuration list for PBXNativeTarget "VENCalculatorInputView" */ = {
+		55298CD6801B4A481BB6EF5784C3C948 /* Build configuration list for PBXNativeTarget "VENCalculatorInputView" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3585F40E89A7C167F0592F0563744A09 /* Debug */,
-				98BF30FA91C34BDBC752D7511BE4CA0E /* Release */,
+				5472717911BCFC15464C92ACD3EBC788 /* Debug */,
+				85A692DD4E84B322480B1CAB9FAC60BE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BE9DAB962B18E38FDD40540E9CE53352 /* Build configuration list for PBXNativeTarget "Pods-Bill Util" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F2EAF76C42A3A92A102D8E1D962408DA /* Debug */,
+				A9B486DC25C0360BBE454FAEC88627A0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

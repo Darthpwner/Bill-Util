@@ -7,5 +7,6 @@ target 'Bill Util' do
 
   # Pods for Bill Util
   pod 'VENCalculatorInputView', '~> 1.5'
+  pod 'Spring', :git => 'https://github.com/MengTo/Spring.git', :branch => 'swift3'
 
 end

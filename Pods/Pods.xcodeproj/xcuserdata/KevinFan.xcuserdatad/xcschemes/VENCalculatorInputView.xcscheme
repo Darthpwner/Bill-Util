@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '434410BAB9E109BC7044B51DBDD4E3E1'
+               BlueprintIdentifier = '914EB5EBB950B032CEA7E2DDFBFD41E7'
                BlueprintName = 'VENCalculatorInputView'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'VENCalculatorInputView.framework'>

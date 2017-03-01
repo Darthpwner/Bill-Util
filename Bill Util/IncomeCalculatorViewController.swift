@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Spring
 
 class IncomeCalculatorViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     
@@ -19,41 +20,195 @@ class IncomeCalculatorViewController: UIViewController, UIPickerViewDelegate, UI
     ]
     
     @IBOutlet weak var pickerViewContainer: UIView!
-    @IBOutlet weak var baseAmountTextField: UITextField!
-    @IBOutlet weak var bonusAmountTextField: UITextField!
-    @IBOutlet weak var stockAmountTextField: UITextField!
+    @IBOutlet weak var baseAmountATextField: UITextField!
+    @IBOutlet weak var bonusAmountATextField: UITextField!
+    @IBOutlet weak var stockAmountATextField: UITextField!
+    @IBOutlet weak var baseAmountBTextField: UITextField!
+    @IBOutlet weak var bonusAmountBTextField: UITextField!
+    @IBOutlet weak var stockAmountBTextField: UITextField!
+    
     @IBOutlet weak var numberOfYearsLabel: UILabel!
+    @IBOutlet weak var companyBButton: UIButton!
+    @IBOutlet weak var companyAButton: UIButton!
+    @IBOutlet weak var timeButton: UIButton!
+    @IBOutlet weak var numberOfYearsSlider: TipViewUISlider!
+    
+    @IBOutlet weak var totalAmountATextField: UITextField!
+    
+    @IBOutlet weak var totalAmountBTextField: UITextField!
+    @IBOutlet weak var amountsAView: DesignableView!
+    
+    @IBOutlet weak var amountsBView: DesignableView!
     
     var timePickerView: UIPickerView = UIPickerView()
     
-    var taxPercent = 0.075
-    var numberOfPeople = 1
-    var taxAmount = 0.00
-    var totalAmount = 0.00
-    var billAmount = 0.00
+    var baseAmountA = 0.00
+    var bonusAmountA = 0.00
+    var stockAmountA = 0.00
+    var baseAmountB = 0.00
+    var bonusAmountB = 0.00
+    var stockAmountB = 0.00
+    
+    var timeAmount = 1.00
+    
+    var totalAmountA = 0.00
+    var totalAmountB = 0.00
+    
+    var numberOfYears = 1
+    
+    @IBAction func baseAmountADidChange(_ sender: Any) {
+        baseAmountA = Double(baseAmountATextField.text!)!
+        updateAmounts()
+    }
+    
+    @IBAction func bonusAmountADidChange(_ sender: Any) {
+        bonusAmountA = Double(bonusAmountATextField.text!)!
+        updateAmounts()
+    }
+    
+    @IBAction func stockAmountADidChange(_ sender: Any) {
+        stockAmountA = Double(stockAmountATextField.text!)!
+        updateAmounts()
+    }
+    
+    @IBAction func baseAmountBDidChange(_ sender: Any) {
+        baseAmountB = Double(baseAmountBTextField.text!)!
+        updateAmounts()
+    }
+    
+    @IBAction func bonusAmountBDidChange(_ sender: Any) {
+        bonusAmountB = Double(bonusAmountBTextField.text!)!
+        updateAmounts()
+    }
+    
+    @IBAction func stockAmountBDidChange(_ sender: Any) {
+        stockAmountB = Double(stockAmountBTextField.text!)!
+        updateAmounts()
+    }
+    
+    @IBAction func numberOfYearsSliderDidChange(_ sender: Any) {
+        numberOfYears = Int(numberOfYearsSlider.value)
+        numberOfYearsLabel.text = "\(numberOfYears)"
+        
+        updateAmounts()
+    }
+    
+    
     
     @IBAction func timeButtonDidClick(_ sender: Any) {
         pickerViewContainer.isHidden = false
     }
     
+    @IBAction func companyBButtonDidClick(_ sender: Any) {
+    
+        // company view switching animations setups
+        amountsAView.animation = "fadeInLeft"
+        amountsAView.curve = "spring"
+        amountsAView.force = 1
+        amountsAView.duration = 0.5
+        
+        amountsBView.animation = "fadeInLeft"
+        amountsBView.curve = "spring"
+        amountsBView.force = 1
+        amountsBView.duration = 0.5
+        
+        if (companyBButton.isSelected)
+        {
+            amountsBView.isHidden = true
+            amountsAView.isHidden = false
+            
+            amountsAView.animate()
+            
+            companyBButton.isSelected = false
+            companyBButton.setImage(UIImage(named: "company-b"), for: .normal)
+            companyAButton.isSelected = true
+            companyAButton.setImage(UIImage(named: "company-a-fill"), for: .selected)
+        }
+        else
+        {
+            amountsBView.isHidden = false
+            amountsAView.isHidden = true
+            
+            amountsBView.animate()
+            companyBButton.isSelected = true
+            companyBButton.setImage(UIImage(named: "company-b-fill"), for: .selected)
+            companyAButton.isSelected = false
+            companyAButton.setImage(UIImage(named: "company-a"), for: .normal)
+        }
+    }
+    
+    @IBAction func companyAButtonDidClick(_ sender: Any) {
+        
+        // company view switching animations setups
+        amountsAView.animation = "fadeInLeft"
+        amountsAView.curve = "spring"
+        amountsAView.force = 1
+        amountsAView.duration = 0.5
+        
+        amountsBView.animation = "fadeInLeft"
+        amountsBView.curve = "spring"
+        amountsBView.force = 1
+        amountsBView.duration = 0.5
+        
+        if (companyAButton.isSelected)
+        {
+            amountsBView.isHidden = false
+            amountsAView.isHidden = true
+            
+            amountsBView.animate()
+            companyBButton.isSelected = true
+            companyBButton.setImage(UIImage(named: "company-b-fill"), for: .selected)
+            companyAButton.isSelected = false
+            companyAButton.setImage(UIImage(named: "company-a"), for: .normal)
+        }
+        else
+        {
+            amountsBView.isHidden = true
+            amountsAView.isHidden = false
+            
+            amountsAView.animate()
+            companyBButton.isSelected = false
+            companyBButton.setImage(UIImage(named: "company-b"), for: .normal)
+            companyAButton.isSelected = true
+            companyAButton.setImage(UIImage(named: "company-a-fill"), for: .selected)
+        }
+    }
+    
+    
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // hide company B page initially
+        amountsBView.isHidden = true
         
         // type anywhere to disable keyboard
         self.hideKeyboardWhenTappedAround()
         
         // Do any additional setup after loading the view.
-        baseAmountTextField.layer.borderWidth = 2
-        baseAmountTextField.layer.borderColor = UIColor(red: 184/255, green: 184/255, blue: 253/255, alpha: 1/1).cgColor
-        baseAmountTextField.layer.cornerRadius = 5
+        baseAmountATextField.layer.borderWidth = 2
+        baseAmountATextField.layer.borderColor = UIColor(red: 184/255, green: 184/255, blue: 253/255, alpha: 1/1).cgColor
+        baseAmountATextField.layer.cornerRadius = 5
         
-        bonusAmountTextField.layer.borderWidth = 2
-        bonusAmountTextField.layer.borderColor = UIColor(red: 184/255, green: 184/255, blue: 253/255, alpha: 1/1).cgColor
-        bonusAmountTextField.layer.cornerRadius = 5
+        bonusAmountATextField.layer.borderWidth = 2
+        bonusAmountATextField.layer.borderColor = UIColor(red: 184/255, green: 184/255, blue: 253/255, alpha: 1/1).cgColor
+        bonusAmountATextField.layer.cornerRadius = 5
         
-        stockAmountTextField.layer.borderWidth = 2
-        stockAmountTextField.layer.borderColor = UIColor(red: 184/255, green: 184/255, blue: 253/255, alpha: 1/1).cgColor
-        stockAmountTextField.layer.cornerRadius = 5
+        stockAmountATextField.layer.borderWidth = 2
+        stockAmountATextField.layer.borderColor = UIColor(red: 184/255, green: 184/255, blue: 253/255, alpha: 1/1).cgColor
+        stockAmountATextField.layer.cornerRadius = 5
+        
+        baseAmountBTextField.layer.borderWidth = 2
+        baseAmountBTextField.layer.borderColor = UIColor(red: 184/255, green: 184/255, blue: 253/255, alpha: 1/1).cgColor
+        baseAmountBTextField.layer.cornerRadius = 5
+        
+        bonusAmountBTextField.layer.borderWidth = 2
+        bonusAmountBTextField.layer.borderColor = UIColor(red: 184/255, green: 184/255, blue: 253/255, alpha: 1/1).cgColor
+        bonusAmountBTextField.layer.cornerRadius = 5
+        
+        stockAmountBTextField.layer.borderWidth = 2
+        stockAmountBTextField.layer.borderColor = UIColor(red: 184/255, green: 184/255, blue: 253/255, alpha: 1/1).cgColor
+        stockAmountBTextField.layer.cornerRadius = 5
         
         numberOfYearsLabel.layer.borderWidth = 2
         numberOfYearsLabel.layer.borderColor = UIColor(red: 184/255, green: 184/255, blue: 253/255, alpha: 1/1).cgColor
@@ -61,6 +216,9 @@ class IncomeCalculatorViewController: UIViewController, UIPickerViewDelegate, UI
         
         pickerViewHandler()
         pickerViewContainer.isHidden = true
+        
+        // set default picker value
+        timePickerView.selectRow(2, inComponent: 0, animated: false)
         
         self.pickerViewContainer.addSubview(timePickerView)
         self.pickerViewContainer.addSubview(inputToolbar)
@@ -148,9 +306,9 @@ class IncomeCalculatorViewController: UIViewController, UIPickerViewDelegate, UI
     //Updates the action when changing the Picker View
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         pickerValue = pickerDataSource[row].unit
-        taxPercent = pickerDataSource[row].amount
-        taxAmount = billAmount * taxPercent
-        totalAmount = billAmount + taxAmount
+        timeButton.setTitle(pickerValue, for: .normal)
+        
+        timeAmount = pickerDataSource[row].amount
         
         updateAmounts()
     }
@@ -160,16 +318,12 @@ class IncomeCalculatorViewController: UIViewController, UIPickerViewDelegate, UI
         return 35
     }
     
-    
     func updateAmounts() {
-//        totalAmountTextField.text = "$" + String(format: "%.2f", totalAmount)
-//        taxCostTextField.text = "$" + String(format: "%.2f", taxAmount)
-//        
-//        let totalPerPerson = totalAmount/Double(numberOfPeople)
-//        let totalPerPersonStr = String(format: "%.2f", totalPerPerson)
-//        totalAmountPerPersonTextField.text = "$\(totalPerPersonStr)"
-//        
-//        let taxPerPercentStr = String(format: "%.2f", taxAmount/Double(numberOfPeople))
-//        taxCostPerPersonTextField.text = "$\(taxPerPercentStr)"
+        totalAmountA = (baseAmountA*timeAmount + bonusAmountA + stockAmountA)*Double(numberOfYears)
+        totalAmountB = (baseAmountB*timeAmount + bonusAmountB + stockAmountB)*Double(numberOfYears)
+        
+        totalAmountATextField.text = "$" + String(format: "%.2f", totalAmountA)
+        totalAmountBTextField.text = "$" + String(format: "%.2f", totalAmountB)
+//
     }
 }

@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Spring.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>VENCalculatorInputView.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -17,12 +22,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>434410BAB9E109BC7044B51DBDD4E3E1</key>
+		<key>914EB5EBB950B032CEA7E2DDFBFD41E7</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>D6324D5D12B4F115B2293AE76EE53A2E</key>
+		<key>93AC2CCDA1B122CCBC965556FECED99B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9C2FC03632780EC33D53E848C33F4E4C</key>
 		<dict>
 			<key>primary</key>
 			<true/>

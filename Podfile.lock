@@ -1,12 +1,25 @@
 PODS:
+  - Spring (1.0.3)
   - VENCalculatorInputView (1.5.4)
 
 DEPENDENCIES:
+  - Spring (from `https://github.com/MengTo/Spring.git`, branch `swift3`)
   - VENCalculatorInputView (~> 1.5)
 
+EXTERNAL SOURCES:
+  Spring:
+    :branch: swift3
+    :git: https://github.com/MengTo/Spring.git
+
+CHECKOUT OPTIONS:
+  Spring:
+    :commit: 3a9227c6e9157e7b47f5ac1ee5abab2a56b50002
+    :git: https://github.com/MengTo/Spring.git
+
 SPEC CHECKSUMS:
+  Spring: 3f02b5dc3308572ef177b3cad0fa7bbc4b0706f7
   VENCalculatorInputView: 988fa681ba6bb9b1f067842493bb622e80cc8da2
 
-PODFILE CHECKSUM: 48c69118fd388026998033aa04bd489a23e5c245
+PODFILE CHECKSUM: b8e5cd973c87c22268e49a36325f1e6bfc5efa97
 
 COCOAPODS: 1.2.0
