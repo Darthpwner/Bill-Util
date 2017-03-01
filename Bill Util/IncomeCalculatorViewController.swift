@@ -57,36 +57,73 @@ class IncomeCalculatorViewController: UIViewController, UIPickerViewDelegate, UI
     var numberOfYears = 1
     
     @IBAction func baseAmountADidChange(_ sender: Any) {
+        guard let amount = baseAmountATextField.text, !amount.isEmpty else {
+            baseAmountA = 0.00
+            updateAmounts()
+            return
+        }
+        
         baseAmountA = Double(baseAmountATextField.text!)!
         updateAmounts()
     }
     
     @IBAction func bonusAmountADidChange(_ sender: Any) {
+        guard let amount = bonusAmountATextField.text, !amount.isEmpty else {
+            bonusAmountA = 0.00
+            updateAmounts()
+            return
+        }
+        
         bonusAmountA = Double(bonusAmountATextField.text!)!
         updateAmounts()
     }
     
     @IBAction func stockAmountADidChange(_ sender: Any) {
+        guard let amount = stockAmountATextField.text, !amount.isEmpty else {
+            stockAmountA = 0.00
+            updateAmounts()
+            return
+        }
+        
         stockAmountA = Double(stockAmountATextField.text!)!
         updateAmounts()
     }
     
     @IBAction func baseAmountBDidChange(_ sender: Any) {
+        guard let amount = baseAmountBTextField.text, !amount.isEmpty else {
+            baseAmountB = 0.00
+            updateAmounts()
+            return
+        }
+        
         baseAmountB = Double(baseAmountBTextField.text!)!
         updateAmounts()
     }
     
     @IBAction func bonusAmountBDidChange(_ sender: Any) {
+        guard let amount = bonusAmountBTextField.text, !amount.isEmpty else {
+            bonusAmountB = 0.00
+            updateAmounts()
+            return
+        }
+        
         bonusAmountB = Double(bonusAmountBTextField.text!)!
         updateAmounts()
     }
     
     @IBAction func stockAmountBDidChange(_ sender: Any) {
+        guard let amount = stockAmountBTextField.text, !amount.isEmpty else {
+            stockAmountB = 0.00
+            updateAmounts()
+            return
+        }
+        
         stockAmountB = Double(stockAmountBTextField.text!)!
         updateAmounts()
     }
     
     @IBAction func numberOfYearsSliderDidChange(_ sender: Any) {
+        
         numberOfYears = Int(numberOfYearsSlider.value)
         numberOfYearsLabel.text = "\(numberOfYears)"
         

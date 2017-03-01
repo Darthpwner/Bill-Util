@@ -93,8 +93,6 @@ class RentCalculatorViewController: UIViewController {
         
         updateAmounts()
     }
-    
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()
