@@ -80,7 +80,6 @@ class SalesTaxCalculatorViewController: UIViewController, UIPickerViewDelegate, 
 //        taxAmount = billAmount * taxPercent
 //        totalAmount = billAmount + taxAmount
         
-        updateAmounts()
         guard let amount = billAmountTextField.text, !amount.isEmpty else {
             billAmount = 0.00
             taxAmount = billAmount * taxPercent

@@ -45,9 +45,16 @@ class CurrencyConvertorViewController: UIViewController,UIPickerViewDelegate, UI
     }
     
     @IBAction func moneyAmountDidChange(_ sender: Any) {
-        queryAmount = Double(currencyAmountTextField.text!)!
+
+        guard let amount = currencyAmountTextField.text, !amount.isEmpty else {
+            queryAmount = 0.00
+            updateAmounts(unit: pickerValue)
+            
+            return
+        }
         
-        updateAmounts(unit: "US Dollar")
+        queryAmount = Double(currencyAmountTextField.text!)!
+        updateAmounts(unit: pickerValue)
     }
 
     override func viewDidLoad() {
