@@ -27,10 +27,20 @@ class ViewController: UIViewController {
     var totalAmount = 0.00
     var billAmount = 0.00
     
-    let step: Float = 2
+    let step: Float = 1
     
     @IBAction func billAmountChanged(_ sender: Any) {
-        billAmount = Double(billAmountField.text!)!
+        guard let amount = billAmountField.text, !amount.isEmpty else {
+            billAmount = 0.00
+            totalAmount = billAmount
+            
+            tipAmount = calculateTip(tipPercentage: tipPercent)
+            totalAmount = billAmount + tipAmount
+            
+            updateAmounts()
+            return
+        }
+        billAmount = Double(amount)!
         totalAmount = billAmount
         
         tipAmount = calculateTip(tipPercentage: tipPercent)

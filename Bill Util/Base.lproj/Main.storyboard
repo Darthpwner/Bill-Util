@@ -259,7 +259,7 @@
                                             <constraint firstItem="7ac-pk-pYW" firstAttribute="centerY" secondItem="hpA-cM-Y2N" secondAttribute="centerY" id="xPR-cV-bIH"/>
                                         </constraints>
                                     </view>
-                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="10" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="Wy5-ib-i9N" customClass="TipViewUISlider" customModule="Bill_Util" customModuleProvider="target">
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="10" minValue="0.0" maxValue="50" translatesAutoresizingMaskIntoConstraints="NO" id="Wy5-ib-i9N" customClass="TipViewUISlider" customModule="Bill_Util" customModuleProvider="target">
                                         <rect key="frame" x="-2" y="237" width="323" height="60.5"/>
                                         <color key="tintColor" red="1" green="0.81568627449999997" blue="0.58823529409999997" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
@@ -1962,6 +1962,6 @@
         <image name="tip-calculator" width="160" height="160"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="p5o-Yb-YXt"/>
+        <segue reference="TCJ-me-V63"/>
     </inferredMetricsTieBreakers>
 </document>
