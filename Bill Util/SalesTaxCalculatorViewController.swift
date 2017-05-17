@@ -95,6 +95,10 @@ class SalesTaxCalculatorViewController: UIViewController, UIPickerViewDelegate, 
         updateAmounts()
         
     }
+    
+    @IBAction func backButtonDidClick(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
 
     @IBAction func setStateButtonDidClick(_ sender: Any) {
         pickerViewContainer.isHidden = false

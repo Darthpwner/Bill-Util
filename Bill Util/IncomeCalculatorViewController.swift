@@ -56,6 +56,10 @@ class IncomeCalculatorViewController: UIViewController, UIPickerViewDelegate, UI
     
     var numberOfYears = 1
     
+    @IBAction func backButtonDidClick(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
     @IBAction func baseAmountADidChange(_ sender: Any) {
         guard let amount = baseAmountATextField.text, !amount.isEmpty else {
             baseAmountA = 0.00

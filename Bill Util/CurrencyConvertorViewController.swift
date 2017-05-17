@@ -38,6 +38,10 @@ class CurrencyConvertorViewController: UIViewController,UIPickerViewDelegate, UI
     @IBOutlet weak var currencyButton: UIButton!
     @IBOutlet weak var currencyAmountTextField: UITextField!
     
+    @IBAction func backButtonDidClick(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
     @IBAction func currencyButtonDidClick(_ sender: Any) {
         pickerViewContainer.isHidden = false
         currencyPickerView.isHidden = false

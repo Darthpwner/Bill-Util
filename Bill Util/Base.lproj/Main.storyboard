@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Goe-o0-VFE">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="axq-ev-qoC">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -27,7 +27,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YVL-jR-1fW">
-                                <rect key="frame" x="25" y="146" width="158" height="158"/>
+                                <rect key="frame" x="25" y="190" width="158" height="158"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="YVL-jR-1fW" secondAttribute="height" multiplier="1:1" id="Nkw-Jt-ASC"/>
                                 </constraints>
@@ -37,7 +37,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kmG-op-h6n">
-                                <rect key="frame" x="192" y="146" width="158" height="158"/>
+                                <rect key="frame" x="192" y="190" width="158" height="158"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="kmG-op-h6n" secondAttribute="height" multiplier="1:1" id="vyU-j3-sgr"/>
                                 </constraints>
@@ -47,7 +47,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RCH-Ha-2VQ">
-                                <rect key="frame" x="25" y="311" width="158" height="158"/>
+                                <rect key="frame" x="25" y="355" width="158" height="158"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="RCH-Ha-2VQ" secondAttribute="height" multiplier="1:1" id="LF0-im-ubu"/>
                                 </constraints>
@@ -57,7 +57,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w4k-bK-Ms3">
-                                <rect key="frame" x="192" y="311" width="158" height="158"/>
+                                <rect key="frame" x="192" y="355" width="158" height="158"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="w4k-bK-Ms3" secondAttribute="height" multiplier="1:1" id="B6z-9t-mwl"/>
                                 </constraints>
@@ -67,7 +67,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dej-q6-Hp3">
-                                <rect key="frame" x="25" y="474" width="158" height="158"/>
+                                <rect key="frame" x="25" y="518" width="158" height="158"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="dej-q6-Hp3" secondAttribute="height" multiplier="1:1" id="UEY-cQ-HTV"/>
                                 </constraints>
@@ -125,10 +125,11 @@
                             <constraint firstItem="dej-q6-Hp3" firstAttribute="top" secondItem="RCH-Ha-2VQ" secondAttribute="bottom" constant="5" id="zhH-xB-PCv"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="9jw-ZP-H04"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g48-AW-GIk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2273" y="-553"/>
+            <point key="canvasLocation" x="-1335.2" y="-553.67316341829087"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="cUd-s5-UcC">
@@ -157,7 +158,7 @@
                                         <barButtonItem key="leftBarButtonItem" image="arrow-left" id="wDJ-c7-Q07">
                                             <color key="tintColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.23529411759999999" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
-                                                <segue destination="Goe-o0-VFE" kind="show" id="TCJ-me-V63"/>
+                                                <action selector="backButtonDidClick:" destination="Ax1-NZ-Lwa" id="WxK-06-4Ih"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -437,7 +438,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="avs-EC-Nz5" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1258" y="-1025"/>
+            <point key="canvasLocation" x="-319.19999999999999" y="-1025.0374812593705"/>
         </scene>
         <!--Sales Tax Calculator View Controller-->
         <scene sceneID="mUV-hX-47n">
@@ -466,7 +467,7 @@
                                         <barButtonItem key="leftBarButtonItem" image="arrow-left" id="gxa-e4-PQ7">
                                             <color key="tintColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.23529411759999999" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
-                                                <segue destination="Goe-o0-VFE" kind="show" id="zUB-0c-LeD"/>
+                                                <action selector="backButtonDidClick:" destination="z0E-h9-n9o" id="LKd-1i-wFA"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -777,7 +778,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vw9-dm-jfb" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-587" y="-391"/>
+            <point key="canvasLocation" x="351.19999999999999" y="-391.75412293853077"/>
         </scene>
         <!--Currency Convertor View Controller-->
         <scene sceneID="FOv-sQ-9va">
@@ -806,7 +807,7 @@
                                         <barButtonItem key="leftBarButtonItem" image="arrow-left" id="bp1-p7-cxt">
                                             <color key="tintColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.23529411759999999" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
-                                                <segue destination="Goe-o0-VFE" kind="show" id="q1c-nD-rSr"/>
+                                                <action selector="backButtonDidClick:" destination="Dk5-yd-OGd" id="iQe-aS-Jx6"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -1160,7 +1161,7 @@
                                         <barButtonItem key="leftBarButtonItem" image="arrow-left" id="PyI-On-Z0h">
                                             <color key="tintColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.23529411759999999" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
-                                                <segue destination="Goe-o0-VFE" kind="show" id="sR8-ar-teD"/>
+                                                <action selector="backButtonDidClick:" destination="38p-MU-9Vn" id="dBL-jl-HKb"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -1489,7 +1490,7 @@
                                         <barButtonItem key="leftBarButtonItem" image="arrow-left" id="T6F-Vs-hJB">
                                             <color key="tintColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.23529411759999999" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
-                                                <segue destination="Goe-o0-VFE" kind="show" id="p5o-Yb-YXt"/>
+                                                <action selector="backButtonDidClick:" destination="PzV-fz-xSg" id="9en-Rg-M2s"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -1946,6 +1947,24 @@
             </objects>
             <point key="canvasLocation" x="-1295" y="1384"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Mqr-eK-bNC">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="axq-ev-qoC" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="sTG-XN-K5u">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Goe-o0-VFE" kind="relationship" relationship="rootViewController" id="fyp-UM-6Zv"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x2p-MG-lDX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2274.4000000000001" y="-553.67316341829087"/>
+        </scene>
     </scenes>
     <resources>
         <image name="arrow-left" width="10" height="17"/>
@@ -1961,7 +1980,4 @@
         <image name="sales-tax" width="160" height="160"/>
         <image name="tip-calculator" width="160" height="160"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="q1c-nD-rSr"/>
-    </inferredMetricsTieBreakers>
 </document>

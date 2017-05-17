@@ -29,6 +29,10 @@ class RentCalculatorViewController: UIViewController {
     @IBOutlet weak var numberOfPeopleSlider: TipViewUISlider!
     @IBOutlet weak var totalPerPersonTextField: UITextField!
     
+    @IBAction func backButtonDidClick(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
     @IBAction func monthlyTextFieldDidChange(_ sender: Any) {
         guard let amount = baseAmountTextField.text, !amount.isEmpty else {
             baseAmount = 0.00

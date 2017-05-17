@@ -29,6 +29,10 @@ class ViewController: UIViewController {
     
     let step: Float = 1
     
+    @IBAction func backButtonDidClick(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
     @IBAction func billAmountChanged(_ sender: Any) {
         guard let amount = billAmountField.text, !amount.isEmpty else {
             billAmount = 0.00
@@ -78,6 +82,9 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         
         super.viewDidLoad()
+        
+        // swipe right to dismiss navigation controller
+        self.navigationController?.interactivePopGestureRecognizer?.isEnabled = true
         
         // type anywhere to disable keyboard
         self.hideKeyboardWhenTappedAround()
