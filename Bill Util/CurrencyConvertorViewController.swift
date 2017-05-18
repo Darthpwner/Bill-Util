@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Alamofire
+import SwiftyJSON
 
 class CurrencyConvertorViewController: UIViewController,UIPickerViewDelegate, UIPickerViewDataSource {
     
@@ -22,6 +24,8 @@ class CurrencyConvertorViewController: UIViewController,UIPickerViewDelegate, UI
     var rmbAmount: Double = 0
     var pesoAmount: Double = 0
     var cadAmount: Double = 0
+    
+    
     
     var currencyPickerView: UIPickerView = UIPickerView()
     
@@ -60,6 +64,12 @@ class CurrencyConvertorViewController: UIViewController,UIPickerViewDelegate, UI
         queryAmount = Double(currencyAmountTextField.text!)!
         updateAmounts(unit: pickerValue)
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        
+        self.loadCurrencyData()
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -72,11 +82,18 @@ class CurrencyConvertorViewController: UIViewController,UIPickerViewDelegate, UI
         self.pickerViewContainer.addSubview(currencyPickerView)
         self.pickerViewContainer.addSubview(inputToolbar)
     }
-
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    func loadCurrencyData() {
+        Alamofire.request("http://api.fixer.io/latest?base=USD&symbols=USD,GBP,EUR")
+            .responseJSON(completionHandler: { (responseData) -> Void in
+                if responseData.result.error != nil {
+                    print(responseData.result.error!)
+                }
+                else {
+                    let json = JSON(responseData.result.value!)
+                    print(json)
+                }
+        })
     }
     
     lazy var inputToolbar: UIToolbar = {

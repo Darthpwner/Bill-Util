@@ -1,10 +1,12 @@
 PODS:
+  - Alamofire (4.4.0)
   - Spring (1.0.3)
-  - VENCalculatorInputView (1.5.4)
+  - SwiftyJSON (3.1.4)
 
 DEPENDENCIES:
+  - Alamofire (~> 4.4)
   - Spring (from `https://github.com/MengTo/Spring.git`, branch `swift3`)
-  - VENCalculatorInputView (~> 1.5)
+  - SwiftyJSON
 
 EXTERNAL SOURCES:
   Spring:
@@ -17,9 +19,10 @@ CHECKOUT OPTIONS:
     :git: https://github.com/MengTo/Spring.git
 
 SPEC CHECKSUMS:
+  Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
   Spring: 3f02b5dc3308572ef177b3cad0fa7bbc4b0706f7
-  VENCalculatorInputView: 988fa681ba6bb9b1f067842493bb622e80cc8da2
+  SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
 
-PODFILE CHECKSUM: b8e5cd973c87c22268e49a36325f1e6bfc5efa97
+PODFILE CHECKSUM: 668351decdbdeba51811fd8de5dd9e7a22bb3c30
 
 COCOAPODS: 1.2.0

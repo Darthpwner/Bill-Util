@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Alamofire.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-Bill Util.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -14,7 +19,7 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>VENCalculatorInputView.xcscheme</key>
+		<key>SwiftyJSON.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -22,17 +27,22 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>914EB5EBB950B032CEA7E2DDFBFD41E7</key>
+		<key>0F8F3F9DB44CE94B230BA44CFEABAE70</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>93AC2CCDA1B122CCBC965556FECED99B</key>
+		<key>81B9F178C1F11915723151550E7C6EB4</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9C2FC03632780EC33D53E848C33F4E4C</key>
+		<key>88E9EC28B8B46C3631E6B242B50F4442</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>EF36C1E54F634FA9B7AD79A3FF6B3E00</key>
 		<dict>
 			<key>primary</key>
 			<true/>

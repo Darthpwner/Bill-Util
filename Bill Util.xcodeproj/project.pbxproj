@@ -136,8 +136,8 @@
 			isa = PBXGroup;
 			children = (
 				681820DB1E5D18BA00D70FBD /* AppDelegate.swift */,
+				683C9C591ECD09C300B9339D /* Model */,
 				68F2DC8B1E5D72590065B9E3 /* Controllers */,
-				682153AC1E5D22CE002E0ED4 /* TipViewUISlider.swift */,
 				681820DF1E5D18BA00D70FBD /* Main.storyboard */,
 				681820E51E5D18BA00D70FBD /* Assets.xcassets */,
 				681820E71E5D18BA00D70FBD /* LaunchScreen.storyboard */,
@@ -163,6 +163,14 @@
 				681821001E5D18BA00D70FBD /* Info.plist */,
 			);
 			path = "Bill UtilUITests";
+			sourceTree = "<group>";
+		};
+		683C9C591ECD09C300B9339D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				682153AC1E5D22CE002E0ED4 /* TipViewUISlider.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 		68F2DC8B1E5D72590065B9E3 /* Controllers */ = {
