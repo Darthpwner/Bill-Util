@@ -1,5 +1,5 @@
 ### Open Source
-[Currency exchange rates](http://fixer.io)
+[Currency exchange rates](http://fixer.io)  
 [Venmo-style keyboard](https://github.com/venmo/VENCalculatorInputView)
 
 ### Copyright

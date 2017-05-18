@@ -25,14 +25,7 @@ class CurrencyConvertorViewController: UIViewController,UIPickerViewDelegate, UI
     var pesoAmount: Double = 0
     var cadAmount: Double = 0
     
-//    euroAmount = queryAmount * 0.946890
-//    yenAmount = queryAmount * 112.144000
-//    poundAmount = queryAmount * 0.802472
-//    cadAmount = queryAmount * 1.309250
-//    pesoAmount = queryAmount * 19.910750
-//    rmbAmount = queryAmount * 6.867550
-    
-    var usd_rates: Dictionary<String, Float> = [
+    var usd_rates: Dictionary<String, Double> = [
         "usd": 1.0,
         "euro": 0.946890,
         "yen": 112.144000,
@@ -42,6 +35,65 @@ class CurrencyConvertorViewController: UIViewController,UIPickerViewDelegate, UI
         "cad": 1.309250,
     ]
     
+    var euro_rates: Dictionary<String, Double> = [
+        "usd": 1.056089,
+        "euro": 1.0,
+        "yen": 118.434031,
+        "pound": 0.847481,
+        "rmb": 7.252743,
+        "peso": 21.027522,
+        "cad": 1.382684,
+    ]
+    
+    var yen_rates: Dictionary<String, Double> = [
+        "usd": 0.008917,
+        "euro": 0.008444,
+        "yen": 1.0,
+        "pound": 0.007156,
+        "rmb": 0.061239,
+        "peso": 0.177546,
+        "cad": 0.011675,
+    ]
+    
+    var pound_rates: Dictionary<String, Double> = [
+        "usd": 1.246150,
+        "euro": 1.179967,
+        "yen": 139.748246,
+        "pound": 1.0,
+        "rmb": 8.557997,
+        "peso": 24.811781,
+        "cad": 1.631522,
+    ]
+    
+    var rmb_rates: Dictionary<String, Double> = [
+        "usd": 0.145612,
+        "euro": 0.137879,
+        "yen": 16.329550,
+        "pound": 0.116850,
+        "rmb": 1.0,
+        "peso": 2.899251,
+        "cad": 0.190643,
+    ]
+    
+    var peso_rates: Dictionary<String, Double> = [
+        "usd": 0.050224,
+        "euro": 0.047557,
+        "yen": 5.632334,
+        "pound": 0.040303,
+        "rmb": 0.344917,
+        "peso": 1.0,
+        "cad": 0.065756,
+    ]
+    
+    var cad_rates: Dictionary<String, Double> = [
+        "usd": 0.763796,
+        "euro": 0.723231,
+        "yen": 85.655146,
+        "pound": 0.612925,
+        "rmb": 5.245408,
+        "peso": 15.207753,
+        "cad": 1.0,
+    ]
     
     
     var currencyPickerView: UIPickerView = UIPickerView()
@@ -66,7 +118,7 @@ class CurrencyConvertorViewController: UIViewController,UIPickerViewDelegate, UI
     @IBAction func currencyButtonDidClick(_ sender: Any) {
         pickerViewContainer.isHidden = false
         currencyPickerView.isHidden = false
-        print("button clicked")
+        //print("button clicked")
     }
     
     @IBAction func moneyAmountDidChange(_ sender: Any) {
@@ -85,7 +137,14 @@ class CurrencyConvertorViewController: UIViewController,UIPickerViewDelegate, UI
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         
-        self.loadCurrencyData()
+        // load curency exchange rates for each currency base
+        self.loadCurrencyData(base: "USD")
+        self.loadCurrencyData(base: "EUR")
+        self.loadCurrencyData(base: "GBP")
+        self.loadCurrencyData(base: "CAD")
+        self.loadCurrencyData(base: "CNY")
+        self.loadCurrencyData(base: "JPY")
+        self.loadCurrencyData(base: "MXN")
     }
 
     override func viewDidLoad() {
@@ -100,15 +159,81 @@ class CurrencyConvertorViewController: UIViewController,UIPickerViewDelegate, UI
         self.pickerViewContainer.addSubview(inputToolbar)
     }
     
-    func loadCurrencyData() {
-        Alamofire.request("http://api.fixer.io/latest?base=USD&symbols=USD,GBP,EUR")
+    func loadCurrencyData(base: String) {
+        Alamofire.request("http://api.fixer.io/latest?base=\(base)&symbols=USD,GBP,EUR,JPY,CNY,CAD,MXN")
             .responseJSON(completionHandler: { (responseData) -> Void in
                 if responseData.result.error != nil {
                     print(responseData.result.error!)
                 }
                 else {
                     let json = JSON(responseData.result.value!)["rates"]
-                    print(json)
+
+                    switch (base) {
+                    case "USD":
+                        self.usd_rates["usd"] = 1.0
+                        self.usd_rates["euro"] = json["EUR"].doubleValue
+                        self.usd_rates["yen"] = json["JPY"].doubleValue
+                        self.usd_rates["pound"] = json["GBP"].doubleValue
+                        self.usd_rates["cad"] = json["CAD"].doubleValue
+                        self.usd_rates["peso"] = json["MXN"].doubleValue
+                        self.usd_rates["rmb"] = json["CNY"].doubleValue
+                        break
+                    case "EUR":
+                        self.euro_rates["usd"] = json["USD"].doubleValue
+                        self.euro_rates["euro"] = 1.0
+                        self.euro_rates["yen"] = json["JPY"].doubleValue
+                        self.euro_rates["pound"] = json["GBP"].doubleValue
+                        self.euro_rates["cad"] = json["CAD"].doubleValue
+                        self.euro_rates["peso"] = json["MXN"].doubleValue
+                        self.euro_rates["rmb"] = json["CNY"].doubleValue
+                        break
+                    case "JPY":
+                        self.yen_rates["usd"] = json["USD"].doubleValue
+                        self.yen_rates["euro"] = json["EUR"].doubleValue
+                        self.yen_rates["yen"] = 1.0
+                        self.yen_rates["pound"] = json["GBP"].doubleValue
+                        self.yen_rates["cad"] = json["CAD"].doubleValue
+                        self.yen_rates["peso"] = json["MXN"].doubleValue
+                        self.yen_rates["rmb"] = json["CNY"].doubleValue
+                        break
+                    case "GBP":
+                        self.pound_rates["usd"] = json["USD"].doubleValue
+                        self.pound_rates["euro"] = json["EUR"].doubleValue
+                        self.pound_rates["yen"] = json["JPY"].doubleValue
+                        self.pound_rates["pound"] = 1.0
+                        self.pound_rates["cad"] = json["CAD"].doubleValue
+                        self.pound_rates["peso"] = json["MXN"].doubleValue
+                        self.pound_rates["rmb"] = json["CNY"].doubleValue
+                        break
+                    case "CNY":
+                        self.rmb_rates["usd"] = json["USD"].doubleValue
+                        self.rmb_rates["euro"] = json["EUR"].doubleValue
+                        self.rmb_rates["yen"] = json["JPY"].doubleValue
+                        self.rmb_rates["pound"] = json["GBP"].doubleValue
+                        self.rmb_rates["cad"] = json["CAD"].doubleValue
+                        self.rmb_rates["peso"] = json["MXN"].doubleValue
+                        self.rmb_rates["rmb"] = 1.0
+                        break
+                    case "CAD":
+                        self.cad_rates["usd"] = json["USD"].doubleValue
+                        self.cad_rates["euro"] = json["EUR"].doubleValue
+                        self.cad_rates["yen"] = json["JPY"].doubleValue
+                        self.cad_rates["pound"] = json["GBP"].doubleValue
+                        self.cad_rates["cad"] = 1.0
+                        self.cad_rates["peso"] = json["MXN"].doubleValue
+                        self.cad_rates["rmb"] = json["CNY"].doubleValue
+                        break
+                    case "MXN":
+                        self.peso_rates["usd"] = json["USD"].doubleValue
+                        self.peso_rates["euro"] = json["EUR"].doubleValue
+                        self.peso_rates["yen"] = json["JPY"].doubleValue
+                        self.peso_rates["pound"] = json["GBP"].doubleValue
+                        self.peso_rates["cad"] = json["CAD"].doubleValue
+                        self.peso_rates["peso"] = 1.0
+                        self.peso_rates["rmb"] = json["CNY"].doubleValue
+                        break
+                    default: break
+                    }
                 }
         })
     }
@@ -201,61 +326,61 @@ class CurrencyConvertorViewController: UIViewController,UIPickerViewDelegate, UI
         
         switch unit {
         case "US Dollar":
-            usdAmount = queryAmount
-            euroAmount = queryAmount * 0.946890
-            yenAmount = queryAmount * 112.144000
-            poundAmount = queryAmount * 0.802472
-            cadAmount = queryAmount * 1.309250
-            pesoAmount = queryAmount * 19.910750
-            rmbAmount = queryAmount * 6.867550
+            usdAmount = queryAmount * usd_rates["usd"]!
+            euroAmount = queryAmount * usd_rates["euro"]!
+            yenAmount = queryAmount * usd_rates["yen"]!
+            poundAmount = queryAmount * usd_rates["pound"]!
+            cadAmount = queryAmount * usd_rates["cad"]!
+            pesoAmount = queryAmount * usd_rates["peso"]!
+            rmbAmount = queryAmount * usd_rates["rmb"]!
         case "Euro":
-            usdAmount = queryAmount * 1.056089
-            euroAmount = queryAmount
-            yenAmount = queryAmount * 118.434031
-            poundAmount = queryAmount * 0.847481
-            cadAmount = queryAmount * 1.382684
-            pesoAmount = queryAmount * 21.027522
-            rmbAmount = queryAmount * 7.252743
+            usdAmount = queryAmount * euro_rates["usd"]!
+            euroAmount = queryAmount * euro_rates["euro"]!
+            yenAmount = queryAmount * euro_rates["yen"]!
+            poundAmount = queryAmount * euro_rates["pound"]!
+            cadAmount = queryAmount * euro_rates["cad"]!
+            pesoAmount = queryAmount * euro_rates["peso"]!
+            rmbAmount = queryAmount * euro_rates["rmb"]!
         case "Yen":
-            usdAmount = queryAmount * 0.008917
-            euroAmount = queryAmount * 0.008444
-            yenAmount = queryAmount
-            poundAmount = queryAmount * 0.007156
-            cadAmount = queryAmount * 0.011675
-            pesoAmount = queryAmount * 0.177546
-            rmbAmount = queryAmount * 0.061239
+            usdAmount = queryAmount * yen_rates["usd"]!
+            euroAmount = queryAmount * yen_rates["euro"]!
+            yenAmount = queryAmount * yen_rates["yen"]!
+            poundAmount = queryAmount * yen_rates["pound"]!
+            cadAmount = queryAmount * yen_rates["cad"]!
+            pesoAmount = queryAmount * yen_rates["peso"]!
+            rmbAmount = queryAmount * yen_rates["rmb"]!
         case "Pound":
-            usdAmount = queryAmount * 1.246150
-            euroAmount = queryAmount * 1.179967
-            yenAmount = queryAmount * 139.748246
-            poundAmount = queryAmount
-            cadAmount = queryAmount * 1.631522
-            pesoAmount = queryAmount * 24.811781
-            rmbAmount = queryAmount * 8.557997
+            usdAmount = queryAmount * pound_rates["usd"]!
+            euroAmount = queryAmount * pound_rates["euro"]!
+            yenAmount = queryAmount * pound_rates["yen"]!
+            poundAmount = queryAmount * pound_rates["pound"]!
+            cadAmount = queryAmount * pound_rates["cad"]!
+            pesoAmount = queryAmount * pound_rates["peso"]!
+            rmbAmount = queryAmount * pound_rates["rmb"]!
         case "China Yuan":
-            usdAmount = queryAmount * 0.145612
-            euroAmount = queryAmount * 0.137879
-            yenAmount = queryAmount * 16.329550
-            poundAmount = queryAmount * 0.116850
-            cadAmount = queryAmount * 0.190643
-            pesoAmount = queryAmount * 2.899251
-            rmbAmount = queryAmount
+            usdAmount = queryAmount * rmb_rates["usd"]!
+            euroAmount = queryAmount * rmb_rates["euro"]!
+            yenAmount = queryAmount * rmb_rates["yen"]!
+            poundAmount = queryAmount * rmb_rates["pound"]!
+            cadAmount = queryAmount * rmb_rates["cad"]!
+            pesoAmount = queryAmount * rmb_rates["peso"]!
+            rmbAmount = queryAmount * rmb_rates["rmb"]!
         case "Canada Dollar":
-            usdAmount = queryAmount * 0.763796
-            euroAmount = queryAmount * 0.723231
-            yenAmount = queryAmount * 85.655146
-            poundAmount = queryAmount * 0.612925
-            cadAmount = queryAmount
-            pesoAmount = queryAmount * 15.207753
-            rmbAmount = queryAmount * 5.245408
+            usdAmount = queryAmount * cad_rates["usd"]!
+            euroAmount = queryAmount * cad_rates["euro"]!
+            yenAmount = queryAmount * cad_rates["yen"]!
+            poundAmount = queryAmount * cad_rates["pound"]!
+            cadAmount = queryAmount * cad_rates["cad"]!
+            pesoAmount = queryAmount * cad_rates["peso"]!
+            rmbAmount = queryAmount * cad_rates["rmb"]!
         case "Mexico Peso":
-            usdAmount = queryAmount * 0.050224
-            euroAmount = queryAmount * 0.047557
-            yenAmount = queryAmount * 5.632334
-            poundAmount = queryAmount * 0.040303
-            cadAmount = queryAmount * 0.065756
-            pesoAmount = queryAmount
-            rmbAmount = queryAmount * 0.344917
+            usdAmount = queryAmount * peso_rates["usd"]!
+            euroAmount = queryAmount * peso_rates["euro"]!
+            yenAmount = queryAmount * peso_rates["yen"]!
+            poundAmount = queryAmount * peso_rates["pound"]!
+            cadAmount = queryAmount * peso_rates["cad"]!
+            pesoAmount = queryAmount * peso_rates["peso"]!
+            rmbAmount = queryAmount * peso_rates["rmb"]!
         default:
             usdAmount = 0
             euroAmount = 0
