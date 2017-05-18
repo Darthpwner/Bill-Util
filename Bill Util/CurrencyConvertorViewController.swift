@@ -25,6 +25,23 @@ class CurrencyConvertorViewController: UIViewController,UIPickerViewDelegate, UI
     var pesoAmount: Double = 0
     var cadAmount: Double = 0
     
+//    euroAmount = queryAmount * 0.946890
+//    yenAmount = queryAmount * 112.144000
+//    poundAmount = queryAmount * 0.802472
+//    cadAmount = queryAmount * 1.309250
+//    pesoAmount = queryAmount * 19.910750
+//    rmbAmount = queryAmount * 6.867550
+    
+    var usd_rates: Dictionary<String, Float> = [
+        "usd": 1.0,
+        "euro": 0.946890,
+        "yen": 112.144000,
+        "pound": 0.802472,
+        "rmb": 6.867550,
+        "peso": 19.910750,
+        "cad": 1.309250,
+    ]
+    
     
     
     var currencyPickerView: UIPickerView = UIPickerView()
@@ -90,7 +107,7 @@ class CurrencyConvertorViewController: UIViewController,UIPickerViewDelegate, UI
                     print(responseData.result.error!)
                 }
                 else {
-                    let json = JSON(responseData.result.value!)
+                    let json = JSON(responseData.result.value!)["rates"]
                     print(json)
                 }
         })
