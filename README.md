@@ -1,6 +1,6 @@
 ### Open Source
 [Currency exchange rates](http://fixer.io)  
-[Venmo-style keyboard](https://github.com/venmo/VENCalculatorInputView)
+~~[Venmo-style keyboard](https://github.com/venmo/VENCalculatorInputView)~~
 
 ### Copyright
 [Matthew Lin](https://github.com/Darthpwner)  
